@@ -3,8 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite",
+    "typecheck": "tsc --noEmit",
     "build": "node scripts/generate-sitemap.mjs && tsc && vite-react-ssg build",
     "sync:state-faqs": "node scripts/sync-state-faqs.mjs",
     "sync:state-games": "node scripts/sync-state-games.mjs",

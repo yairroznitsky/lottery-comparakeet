@@ -2,15 +2,11 @@ import { Link } from "react-router-dom";
 import SiteSeo from "@/components/seo/SiteSeo";
 import PageErrorState from "@/components/wordpress/PageErrorState";
 import PageLoadingState from "@/components/wordpress/PageLoadingState";
-import WordPressContent from "@/components/wordpress/WordPressContent";
 import { useUsaStates } from "@/hooks/useLotteryData";
 import { formatStateTitle } from "@/lib/parseDrawResults";
-import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 
 const UsStatesIndexPage = () => {
   const statesQuery = useUsaStates();
-  const usaLotteryQuery = useWordPressSlug("usa-lottery");
-  const usaLotteryContent = usaLotteryQuery.data;
 
   if (statesQuery.isPending) {
     return <PageLoadingState />;
@@ -60,12 +56,6 @@ const UsStatesIndexPage = () => {
           </Link>
         ))}
       </div>
-
-      {usaLotteryContent ? (
-        <div className="mt-12 border-t border-brand-200 pt-10">
-          <WordPressContent content={usaLotteryContent} />
-        </div>
-      ) : null}
     </article>
   );
 };
