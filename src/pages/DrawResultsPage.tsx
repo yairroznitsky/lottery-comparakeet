@@ -1,8 +1,7 @@
 import { useMemo } from "react";
 import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
-import BallRow from "@/components/lottery/BallRow";
 import IntlGameSidebar from "@/components/lottery/IntlGameSidebar";
-import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
+import LatestDrawCard from "@/components/lottery/LatestDrawCard";
 import StateFaqSection from "@/components/lottery/StateFaqSection";
 import StateQuickFacts from "@/components/lottery/StateQuickFacts";
 import ResultsTable from "@/components/lottery/ResultsTable";
@@ -16,11 +15,7 @@ import {
 } from "@/hooks/useLotteryData";
 import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import SiteSeo from "@/components/seo/SiteSeo";
-import {
-  formatDrawDate,
-  formatGameTitle,
-  formatStateTitle,
-} from "@/lib/parseDrawResults";
+import { formatGameTitle, formatStateTitle } from "@/lib/parseDrawResults";
 import { getIntlFaqItems, intlFaqPathsWithContent } from "@/lib/intlFaqs";
 import { getIntlGamePaths, getIntlRegionGames } from "@/lib/intlGames";
 import {
@@ -265,30 +260,12 @@ const DrawResultsPage = () => {
                 Latest results
               </h2>
               {latest ? (
-                <div className="mb-6 rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 shadow-sm">
-                  <p className="text-sm font-medium uppercase text-brand-600">
-                    Latest draw · {formatDrawDate(latest.drawDate)}
-                  </p>
-                  <div className="mt-4">
-                    <BallRow balls={latest.balls} size="lg" />
-                  </div>
-                  {latest.jackpot ? (
-                    <p className="mt-4 text-lg font-semibold text-brand-900">
-                      Jackpot: {latest.jackpot}
-                    </p>
-                  ) : null}
-                  {latest.nextDraw ? (
-                    <p className="mt-1 text-sm text-brand-700">
-                      Next draw: {new Date(latest.nextDraw).toLocaleString()}
-                    </p>
-                  ) : null}
-                  <div className="mt-5">
-                    <PlayTicketsCta
-                      href={playUrl.href}
-                      label={playUrl.label}
-                    />
-                  </div>
-                </div>
+                <LatestDrawCard
+                  draw={latest}
+                  playHref={playUrl.href}
+                  playLabel={playUrl.label}
+                  className="mb-6"
+                />
               ) : null}
               <ResultsTable rows={resultRows} />
             </section>
@@ -383,27 +360,13 @@ const DrawResultsPage = () => {
       </header>
 
       {latest ? (
-        <section className="mb-8 rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 shadow-sm">
-          <p className="text-sm font-medium uppercase text-brand-600">
-            Latest draw · {formatDrawDate(latest.drawDate)}
-          </p>
-          <div className="mt-4">
-            <BallRow balls={latest.balls} size="lg" />
-          </div>
-          {latest.jackpot ? (
-            <p className="mt-4 text-lg font-semibold text-brand-900">
-              Jackpot: {latest.jackpot}
-            </p>
-          ) : null}
-          {latest.nextDraw ? (
-            <p className="mt-1 text-sm text-brand-700">
-              Next draw: {new Date(latest.nextDraw).toLocaleString()}
-            </p>
-          ) : null}
-          <div className="mt-5">
-            <PlayTicketsCta href={playUrl.href} label={playUrl.label} />
-          </div>
-        </section>
+        <LatestDrawCard
+          as="section"
+          draw={latest}
+          playHref={playUrl.href}
+          playLabel={playUrl.label}
+          className="mb-8"
+        />
       ) : null}
 
       <ResultsTable rows={resultRows} />

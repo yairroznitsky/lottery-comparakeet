@@ -7,6 +7,9 @@ interface ResultsTableProps {
   showGame?: boolean;
 }
 
+const fieldLabelClass =
+  "text-xs font-semibold uppercase tracking-wide text-brand-600";
+
 const ResultsTable = ({ rows, showGame = false }: ResultsTableProps) => {
   if (rows.length === 0) {
     return (
@@ -18,8 +21,39 @@ const ResultsTable = ({ rows, showGame = false }: ResultsTableProps) => {
 
   return (
     <div className="overflow-hidden rounded-2xl border border-brand-200 bg-white shadow-sm">
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+      <ul className="divide-y divide-brand-200 md:hidden">
+        {rows.map((row) => (
+          <li key={row.id} className="space-y-3 px-4 py-4">
+            <div>
+              <p className={fieldLabelClass}>Draw date</p>
+              <p className="mt-0.5 text-sm font-medium text-brand-950">
+                {formatDrawDate(row.drawDate)}
+              </p>
+            </div>
+            {showGame ? (
+              <div>
+                <p className={fieldLabelClass}>Game</p>
+                <p className="mt-0.5 text-sm font-medium capitalize text-brand-950">
+                  {row.gameName.replace(/-/g, " ")}
+                </p>
+              </div>
+            ) : null}
+            <div>
+              <p className={`${fieldLabelClass} mb-2`}>Winning numbers</p>
+              <BallRow balls={row.balls} size="responsive" />
+            </div>
+            <div>
+              <p className={fieldLabelClass}>Jackpot</p>
+              <p className="mt-0.5 text-sm font-medium text-brand-900">
+                {row.jackpot ?? "—"}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div className="hidden overflow-x-auto md:block">
+        <table className="w-full border-collapse text-left text-sm">
           <thead>
             <tr className="border-b border-brand-200 bg-brand-50/90">
               <th scope="col" className="px-4 py-3 font-semibold text-brand-900">

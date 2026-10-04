@@ -100,9 +100,78 @@ const TopJackpotsPage = () => {
         ))}
       </div>
 
+      <div className="mb-3 flex flex-wrap gap-2 md:hidden">
+        <button
+          type="button"
+          onClick={() => toggleSort("jackpotUsd")}
+          className={`rounded-full px-3 py-1 text-xs font-medium ${
+            sortKey === "jackpotUsd"
+              ? "bg-brand-600 text-white"
+              : "bg-brand-100 text-brand-800"
+          }`}
+        >
+          Sort by jackpot
+        </button>
+        <button
+          type="button"
+          onClick={() => toggleSort("brand")}
+          className={`rounded-full px-3 py-1 text-xs font-medium ${
+            sortKey === "brand"
+              ? "bg-brand-600 text-white"
+              : "bg-brand-100 text-brand-800"
+          }`}
+        >
+          Sort by lottery
+        </button>
+      </div>
+
       <div className="overflow-hidden rounded-2xl border border-brand-200 bg-white shadow-sm">
-        <div className="overflow-x-auto">
-          <table className="lottery-comparison-table w-full min-w-[720px] border-collapse text-left text-sm">
+        <ul className="divide-y divide-brand-200 md:hidden">
+          {rows.map((row, index) => (
+            <li key={row.id} className="space-y-3 px-4 py-4">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-800 ring-1 ring-brand-200">
+                  {index + 1}
+                </span>
+                <LotteryLogo src={row.logoUrl} brand={row.brand} />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+                  Lottery
+                </p>
+                <p className="mt-0.5 font-medium text-brand-950">{row.brand}</p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+                  Jackpot
+                </p>
+                <p className="font-display mt-0.5 text-xl font-semibold text-brand-900">
+                  {row.jackpotDisplay}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+                  Next close
+                </p>
+                <p className="mt-0.5 text-sm text-brand-800">
+                  {row.nextDrawClose
+                    ? new Date(row.nextDrawClose).toLocaleString()
+                    : "—"}
+                </p>
+              </div>
+              {row.playLink ? (
+                <PlayTicketsCta
+                  href={withTheLotterAffiliate(row.playLink)}
+                  label="Buy tickets"
+                  className="w-full"
+                />
+              ) : null}
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden overflow-x-auto md:block">
+          <table className="lottery-comparison-table w-full border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-brand-200 bg-brand-50/90">
                 <th className="px-4 py-3 font-semibold">#</th>

@@ -2,7 +2,7 @@ import type { ParsedBalls } from "@/types/lottery";
 
 interface BallRowProps {
   balls: ParsedBalls;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "responsive";
   className?: string;
 }
 
@@ -10,6 +10,7 @@ const sizeClasses = {
   sm: "h-7 min-w-7 px-0.5 text-xs",
   md: "h-9 min-w-9 px-0.5 text-sm",
   lg: "h-11 min-w-11 px-1 text-base",
+  responsive: "h-9 min-w-9 px-0.5 text-sm sm:h-11 sm:min-w-11 sm:px-1 sm:text-base",
 };
 
 const BallRow = ({ balls, size = "md", className = "" }: BallRowProps) => {
