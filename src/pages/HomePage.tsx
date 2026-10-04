@@ -10,22 +10,20 @@ import {
 } from "@/hooks/useLotteryData";
 import { parseBestOnlineLotterySitesHtml } from "@/lib/parseBestOnlineLotterySites";
 import { formatStateTitle } from "@/lib/parseDrawResults";
-import {
-  getRecentPosts,
-  getWordPressOptional,
-} from "@/lib/wordpressContent";
+import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
+import { getRecentPostSummaries } from "@/lib/wordpressContent";
 
 const HomePage = () => {
   const jackpotsQuery = useTopJackpots(12);
   const statesQuery = useUsaStates();
   const countriesQuery = useInternationalCountries();
 
-  const bestSitesPage = getWordPressOptional("best-online-lottery-sites");
-  const recentPosts = getRecentPosts(6);
+  const bestSitesQuery = useWordPressSlug("best-online-lottery-sites");
+  const recentPosts = getRecentPostSummaries(6);
 
   const parsedBest =
-    bestSitesPage &&
-    parseBestOnlineLotterySitesHtml(bestSitesPage.contentHtml);
+    bestSitesQuery.data &&
+    parseBestOnlineLotterySitesHtml(bestSitesQuery.data.contentHtml);
   const topSites = parsedBest?.comparison.slice(0, 3) ?? [];
 
   const jackpotCards = (jackpotsQuery.data ?? []).slice(0, 6);
@@ -180,6 +178,8 @@ const HomePage = () => {
               ))}
             </div>
           </section>
+        ) : bestSitesQuery.isPending ? (
+          <SectionSkeleton lines={2} />
         ) : null}
 
         <section className="grid gap-10 lg:grid-cols-2">
@@ -270,12 +270,14 @@ const HomePage = () => {
             </h2>
             <ul className="divide-y divide-brand-200 rounded-2xl border border-brand-200 bg-white">
               {recentPosts.map((post) => (
-                <li key={post.id}>
+                <li key={post.slug}>
                   <Link
                     to={`/${post.slug}`}
                     className="flex flex-col gap-1 px-4 py-4 hover:bg-brand-25 sm:flex-row sm:items-center sm:justify-between"
                   >
-                    <span className="font-medium text-brand-950">{post.title}</span>
+                    <span className="font-medium text-brand-950">
+                      {post.title}
+                    </span>
                     <span className="text-sm text-brand-600">
                       {new Date(post.date).toLocaleDateString()}
                     </span>

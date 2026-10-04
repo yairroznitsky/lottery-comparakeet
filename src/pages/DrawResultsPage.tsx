@@ -36,9 +36,9 @@ import {
   gameResultsSeoDescription,
 } from "@/lib/stateSeoCopy";
 import {
-  getWordPressIntlGameOptional,
-  getWordPressOptional,
-} from "@/lib/wordpressContent";
+  useWordPressIntlGame,
+  useWordPressSlug,
+} from "@/hooks/useLocalWordPressContent";
 import type { DrawResultView, ResultsPeriod } from "@/types/lottery";
 import {
   fetchInternationalResults,
@@ -57,7 +57,7 @@ export function getDrawResultsStaticPaths() {
 }
 
 export function getDrawResultsLastYearStaticPaths() {
-  return getAllGamePrerenderPaths();
+  return [];
 }
 
 export async function drawResultsLoader({
@@ -124,12 +124,14 @@ const DrawResultsPage = () => {
 
   const activeQuery = isUsa ? usaQuery : intlQuery;
 
-  const wpContent =
-    region && game && !statesPending
-      ? isUsa
-        ? getWordPressOptional(game)
-        : getWordPressIntlGameOptional(region, game)
-      : null;
+  const wpEnabled = Boolean(region && game && !statesPending);
+  const usaWpQuery = useWordPressSlug(game, wpEnabled && isUsa);
+  const intlWpQuery = useWordPressIntlGame(
+    region,
+    game,
+    wpEnabled && !isUsa,
+  );
+  const wpContent = isUsa ? usaWpQuery.data : intlWpQuery.data;
 
   const intlFeaturedPaths = useMemo(() => {
     if (!region || !game) {

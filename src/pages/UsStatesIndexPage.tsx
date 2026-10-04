@@ -5,11 +5,12 @@ import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import WordPressContent from "@/components/wordpress/WordPressContent";
 import { useUsaStates } from "@/hooks/useLotteryData";
 import { formatStateTitle } from "@/lib/parseDrawResults";
-import { getWordPressOptional } from "@/lib/wordpressContent";
+import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 
 const UsStatesIndexPage = () => {
   const statesQuery = useUsaStates();
-  const usaLotteryContent = getWordPressOptional("usa-lottery");
+  const usaLotteryQuery = useWordPressSlug("usa-lottery");
+  const usaLotteryContent = usaLotteryQuery.data;
 
   if (statesQuery.isPending) {
     return <PageLoadingState />;

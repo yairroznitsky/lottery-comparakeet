@@ -62,6 +62,25 @@ export function getManifestGeneratedAt() {
   );
 }
 
+function isLegacyMirrorWordPressSlug(slug) {
+  if (slug.startsWith("https-lottery-comparakeet-com-")) {
+    return true;
+  }
+  if (/results-winning-numbers/i.test(slug)) {
+    return true;
+  }
+  if (/winning-numbers-for/i.test(slug)) {
+    return true;
+  }
+  if (/last-year-results/i.test(slug)) {
+    return true;
+  }
+  if (/-latest-results/i.test(slug)) {
+    return true;
+  }
+  return false;
+}
+
 export function getWordPressSlugsFromDisk() {
   const wp = readJson("content/wordpress/manifest.json");
   if (!wp) {
@@ -72,5 +91,9 @@ export function getWordPressSlugsFromDisk() {
     ...(wp.pages ?? []).map((p) => p.slug),
     ...(wp.posts ?? []).map((p) => p.slug),
   ]);
-  return [...slugs].filter((s) => s && !stateSlugs.has(s)).sort();
+  return [...slugs]
+    .filter(
+      (s) => s && !stateSlugs.has(s) && !isLegacyMirrorWordPressSlug(s),
+    )
+    .sort();
 }

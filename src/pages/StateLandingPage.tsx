@@ -24,7 +24,7 @@ import {
 } from "@/lib/stateSeoCopy";
 import { absoluteUrl } from "@/config/site";
 import { listPopularUsaStatesExcept } from "@/constants/navPopular";
-import { getWordPressOptional } from "@/lib/wordpressContent";
+import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 import type { DrawResultView } from "@/types/lottery";
 
 interface StateLandingPageProps {
@@ -52,7 +52,8 @@ const StateLandingPage = ({
   const gamesQuery = useStateGames(stateSlug);
   const resultsQuery = useUsaResults(stateSlug, undefined, "lastTen");
   const statesQuery = useUsaStates(true);
-  const aboutContent = getWordPressOptional(stateSlug);
+  const aboutQuery = useWordPressSlug(stateSlug);
+  const aboutContent = aboutQuery.data;
 
   const games =
     gamesQuery.data ?? initialGames ?? manifestGames ?? [];

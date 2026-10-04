@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
+import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import PageSeo from "@/components/wordpress/PageSeo";
 import WordPressContent from "@/components/wordpress/WordPressContent";
-import { getWordPressByPath } from "@/lib/wordpressContent";
+import { useWordPressPath } from "@/hooks/useLocalWordPressContent";
 import NotFound from "@/pages/NotFound";
 
 export function getWordPressCatchAllStaticPaths() {
@@ -10,7 +11,11 @@ export function getWordPressCatchAllStaticPaths() {
 
 const WordPressPage = () => {
   const { pathname } = useLocation();
-  const data = getWordPressByPath(pathname);
+  const { data, isPending } = useWordPressPath(pathname);
+
+  if (isPending) {
+    return <PageLoadingState />;
+  }
 
   if (!data) {
     return <NotFound />;

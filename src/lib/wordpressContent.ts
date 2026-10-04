@@ -1,35 +1,60 @@
+import { RESERVED_SLUGS } from "@/constants/reservedSlugs";
 import { intlGameWordPressSlugCandidates } from "@/lib/intlWpSlugs";
 import { getUsaStatePrerenderSlugs } from "@/lib/prerenderRoutes";
 import type { WordPressContentView } from "@/types/wordpress";
+import wpManifest from "../../content/wordpress/manifest.json";
 
-const pageFiles = import.meta.glob("../../content/wordpress/pages/*.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, WordPressContentView>;
+type JsonModule = { default: WordPressContentView };
 
-const postFiles = import.meta.glob("../../content/wordpress/posts/*.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, WordPressContentView>;
+const pageLoaders = import.meta.glob("../../content/wordpress/pages/*.json");
+const postLoaders = import.meta.glob("../../content/wordpress/posts/*.json");
 
-const pagesBySlug = new Map<string, WordPressContentView>();
-const postsBySlug = new Map<string, WordPressContentView>();
+const contentCache = new Map<string, WordPressContentView>();
 
-for (const payload of Object.values(pageFiles)) {
-  if (payload?.slug) {
-    pagesBySlug.set(payload.slug, payload);
-  }
+const DEDICATED_APP_SLUGS = new Set([
+  "best-online-lottery-sites",
+  "top-jackpots",
+  "usa-lottery",
+  "international-results",
+]);
+
+/** Marketing / legal pages worth pre-rendering (not legacy game mirror URLs). */
+const STATIC_WORDPRESS_PAGE_SLUGS = new Set([
+  "about-us",
+  "articles",
+  "cookies-policy",
+  "faqs",
+  "jackpots",
+  "lottery-results",
+  "play-responsibly",
+  "buy-lottery-tickets",
+  "lottery-win-claim-forms",
+  "kerala-lottery-results",
+  "india-kerala-lottery-results",
+]);
+
+function slugFromModulePath(modulePath: string): string {
+  return modulePath.split("/").pop()?.replace(/\.json$/, "") ?? "";
 }
 
-for (const payload of Object.values(postFiles)) {
-  if (payload?.slug) {
-    postsBySlug.set(payload.slug, payload);
+function buildSlugLoaderMap(
+  loaders: Record<string, () => Promise<unknown>>,
+): Map<string, () => Promise<JsonModule>> {
+  const map = new Map<string, () => Promise<JsonModule>>();
+  for (const [modulePath, loader] of Object.entries(loaders)) {
+    map.set(slugFromModulePath(modulePath), loader as () => Promise<JsonModule>);
   }
+  return map;
 }
 
-const postsByDateDesc = [...postsBySlug.values()].sort(
-  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-);
+const pageBySlug = buildSlugLoaderMap(pageLoaders);
+const postBySlug = buildSlugLoaderMap(postLoaders);
+
+export interface WordPressPostSummary {
+  slug: string;
+  title: string;
+  date: string;
+}
 
 export function slugFromPathname(pathname: string): string | null {
   const normalized = pathname.replace(/\/+$/, "") || "/";
@@ -41,35 +66,58 @@ export function slugFromPathname(pathname: string): string | null {
   return slug ? decodeURIComponent(slug) : null;
 }
 
-export function getWordPressBySlug(slug: string): WordPressContentView {
-  const page = pagesBySlug.get(slug);
-  if (page) {
-    return page;
-  }
-  const post = postsBySlug.get(slug);
-  if (post) {
-    return post;
-  }
-  throw new Error(`No local content found for slug "${slug}".`);
+export function hasWordPressSlug(slug: string): boolean {
+  return pageBySlug.has(slug) || postBySlug.has(slug);
 }
 
-export function getWordPressOptional(slug: string): WordPressContentView | null {
-  try {
-    return getWordPressBySlug(slug);
-  } catch {
+/** Legacy WP URLs duplicated by React game/state routes — skip SSG. */
+export function isLegacyMirrorWordPressSlug(slug: string): boolean {
+  if (slug.startsWith("https-lottery-comparakeet-com-")) {
+    return true;
+  }
+  if (/results-winning-numbers/i.test(slug)) {
+    return true;
+  }
+  if (/winning-numbers-for/i.test(slug)) {
+    return true;
+  }
+  if (/last-year-results/i.test(slug)) {
+    return true;
+  }
+  if (/-latest-results/i.test(slug)) {
+    return true;
+  }
+  return false;
+}
+
+export async function loadWordPressOptional(
+  slug: string,
+): Promise<WordPressContentView | null> {
+  const cached = contentCache.get(slug);
+  if (cached) {
+    return cached;
+  }
+
+  const loader = pageBySlug.get(slug) ?? postBySlug.get(slug);
+  if (!loader) {
     return null;
   }
+
+  const mod = await loader();
+  const view = mod.default;
+  contentCache.set(slug, view);
+  return view;
 }
 
-export function getWordPressIntlGameOptional(
+export async function loadWordPressIntlGameOptional(
   regionSlug: string,
   gameSlug: string,
-): WordPressContentView | null {
+): Promise<WordPressContentView | null> {
   for (const candidate of intlGameWordPressSlugCandidates(
     regionSlug,
     gameSlug,
   )) {
-    const content = getWordPressOptional(candidate);
+    const content = await loadWordPressOptional(candidate);
     if (content) {
       return content;
     }
@@ -77,25 +125,54 @@ export function getWordPressIntlGameOptional(
   return null;
 }
 
-export function getWordPressByPath(pathname: string): WordPressContentView | null {
+export async function loadWordPressByPath(
+  pathname: string,
+): Promise<WordPressContentView | null> {
   const slug = slugFromPathname(pathname);
   if (!slug) {
     return null;
   }
-  return getWordPressOptional(slug);
+  return loadWordPressOptional(slug);
 }
 
-export function getRecentPosts(perPage = 6): WordPressContentView[] {
-  return postsByDateDesc.slice(0, perPage);
+export function getRecentPostSummaries(perPage = 6): WordPressPostSummary[] {
+  const posts = [...(wpManifest.posts ?? [])] as WordPressPostSummary[];
+  return posts
+    .sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    )
+    .slice(0, perPage);
 }
 
 export function getAllWordPressSlugs(): string[] {
-  const slugs = new Set([...pagesBySlug.keys(), ...postsBySlug.keys()]);
-  return [...slugs].sort();
+  return [...new Set([...pageBySlug.keys(), ...postBySlug.keys()])].sort();
 }
 
-/** Single-segment routes to pre-render as WordPress pages (excludes US state landings). */
+/** Single-segment routes to pre-render (posts + marketing/reserved only). */
 export function getWordPressSingleSegmentStaticSlugs(): string[] {
   const stateSlugs = new Set(getUsaStatePrerenderSlugs());
-  return getAllWordPressSlugs().filter((slug) => !stateSlugs.has(slug));
+  const slugs = new Set<string>();
+
+  for (const slug of postBySlug.keys()) {
+    if (!stateSlugs.has(slug)) {
+      slugs.add(slug);
+    }
+  }
+
+  for (const slug of RESERVED_SLUGS) {
+    if (stateSlugs.has(slug) || DEDICATED_APP_SLUGS.has(slug)) {
+      continue;
+    }
+    if (hasWordPressSlug(slug)) {
+      slugs.add(slug);
+    }
+  }
+
+  for (const slug of STATIC_WORDPRESS_PAGE_SLUGS) {
+    if (!stateSlugs.has(slug) && hasWordPressSlug(slug)) {
+      slugs.add(slug);
+    }
+  }
+
+  return [...slugs].sort();
 }
