@@ -1,0 +1,23 @@
+{
+  "regionSlug": "south-africa",
+  "gameSlug": "lotto",
+  "lotteryName": "South Africa - Lotto",
+  "wpSlug": "south-africa-lotto-latest-results-winning-numbers",
+  "pageTitle": "South Africa Lotto",
+  "wpModified": "2021-08-31T11:40:31",
+  "itemCount": 3,
+  "items": [
+    {
+      "question": "Where can I buy tickets?",
+      "answer": "You can play the Lotto at any affiliated retailer or online. If you prefer to use your mobile, that’s fine too. There’s an app available, but you can’t purchase tickets through it."
+    },
+    {
+      "question": "When can I purchase a Lotto ticket?",
+      "answer": "You can buy tickets every day before 8:30 pm."
+    },
+    {
+      "question": "How do I cash in my win?",
+      "answer": "You can cash in your win at any affiliated retailer for wins between R50 and R5,000. Remember that with amounts over R50, it’s at the retailer’s discretion to provide payment. You can cash in wins between R2,000 and R49,999 at National Lottery Payment Centers with an EFT or check. Wins of R50,000 or more are available at National Lottery Regional Offices."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": 636,
+  "title": "Lottery Parakeet FAQ",
+  "contentHtml": "",
+  "excerptHtml": "",
+  "slug": "lottery-parakeet-faq",
+  "date": "2020-07-08T13:41:36",
+  "modified": "2020-07-08T15:07:08",
+  "link": "/lottery-parakeet-faq",
+  "featuredImage": null,
+  "seo": {
+    "title": "Lottery FAQs and Help",
+    "description": "Various questions answered about playing lotteries in the USA.",
+    "canonical": "/faqs",
+    "ogTitle": "Lottery FAQs and Help",
+    "ogDescription": "Various questions answered about playing lotteries in the USA.",
+    "ogUrl": "https://lottery.comparakeet.com/faqs",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

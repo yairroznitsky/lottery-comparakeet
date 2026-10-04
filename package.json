@@ -1,0 +1,37 @@
+{
+  "name": "lottery-comparakeet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-sitemap.mjs && tsc && vite-react-ssg build",
+    "sync:state-faqs": "node scripts/sync-state-faqs.mjs",
+    "sync:state-games": "node scripts/sync-state-games.mjs",
+    "sync:state-content": "node scripts/sync-state-faqs.mjs && node scripts/sync-state-games.mjs",
+    "sync:intl-faqs": "node scripts/sync-intl-faqs.mjs",
+    "sync:intl-games": "node scripts/sync-intl-games.mjs",
+    "sync:intl-content": "node scripts/sync-intl-games.mjs && node scripts/sync-intl-faqs.mjs",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.104.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^6.30.6",
+    "vite-react-ssg": "^0.9.2"
+  }
+}

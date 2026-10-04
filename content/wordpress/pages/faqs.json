@@ -1,0 +1,22 @@
+{
+  "id": 41,
+  "title": "FAQs",
+  "contentHtml": "<p>FAQs</p>\n",
+  "excerptHtml": "<p>FAQs</p>\n",
+  "slug": "faqs",
+  "date": "2020-06-28T16:42:34",
+  "modified": "2020-06-28T16:42:34",
+  "link": "/faqs",
+  "featuredImage": null,
+  "seo": {
+    "title": "Lottery FAQs and Help",
+    "description": "Various questions answered about playing lotteries in the USA.",
+    "canonical": "/faqs",
+    "ogTitle": "Lottery FAQs and Help",
+    "ogDescription": "Various questions answered about playing lotteries in the USA.",
+    "ogUrl": "https://lottery.comparakeet.com/faqs",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

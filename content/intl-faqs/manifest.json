@@ -1,0 +1,699 @@
+{
+  "generatedAt": "2026-10-04T11:19:35.035Z",
+  "sources": {
+    "lotteryApi": "http://34.222.9.46/api",
+    "wordpressApi": "https://lottery.comparakeet.com/wp-json/wp/v2"
+  },
+  "lotteries": {
+    "austria__lotto": {
+      "path": "austria/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "hong-kong__mark-six": {
+      "path": "hong-kong/mark-six",
+      "itemCount": 7,
+      "wpSlug": "hong-kong-mark-six",
+      "wpModified": "2021-08-31T11:33:01"
+    },
+    "estonia__vikinglotto": {
+      "path": "estonia/vikinglotto",
+      "itemCount": 5,
+      "wpSlug": "vikinglotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:54:46"
+    },
+    "spain__la-primitiva": {
+      "path": "spain/la-primitiva",
+      "itemCount": 12,
+      "wpSlug": "la-primitiva",
+      "wpModified": "2021-06-21T12:54:51"
+    },
+    "australia__powerball-lotto": {
+      "path": "australia/powerball-lotto",
+      "itemCount": 7,
+      "wpSlug": "australia-powerball-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:54:55"
+    },
+    "australia__saturday-lotto": {
+      "path": "australia/saturday-lotto",
+      "itemCount": 10,
+      "wpSlug": "australia-saturday-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:55:00"
+    },
+    "finland__lotto": {
+      "path": "finland/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "belgium__lotto": {
+      "path": "belgium/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "canada__lotto-649": {
+      "path": "canada/lotto-649",
+      "itemCount": 8,
+      "wpSlug": "canada-lotto-649-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:53:08"
+    },
+    "canada__quebec-49": {
+      "path": "canada/quebec-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "germany__lotto": {
+      "path": "germany/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ireland__lotto": {
+      "path": "ireland/lotto",
+      "itemCount": 7,
+      "wpSlug": "ireland-lotto-latest-results-winning-numbers",
+      "wpModified": "2023-05-15T09:33:14"
+    },
+    "italy__superenalotto": {
+      "path": "italy/superenalotto",
+      "itemCount": 9,
+      "wpSlug": "italy-superenalotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:57:59"
+    },
+    "switzerland__lotto": {
+      "path": "switzerland/lotto",
+      "itemCount": 6,
+      "wpSlug": "switzerland-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T12:59:59"
+    },
+    "u-k__lotto": {
+      "path": "u-k/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-s__powerball": {
+      "path": "u-s/powerball",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-s__mega-millions": {
+      "path": "u-s/mega-millions",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "sweden__lotto": {
+      "path": "sweden/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "south-africa__lotto": {
+      "path": "south-africa/lotto",
+      "itemCount": 3,
+      "wpSlug": "south-africa-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-08-31T11:40:31"
+    },
+    "israel__lotto": {
+      "path": "israel/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "spain__euromillions": {
+      "path": "spain/euromillions",
+      "itemCount": 23,
+      "wpSlug": "euromillions-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:04:26"
+    },
+    "canada__bc-49": {
+      "path": "canada/bc-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__oz-lotto": {
+      "path": "australia/oz-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "spain__el-gordo": {
+      "path": "spain/el-gordo",
+      "itemCount": 9,
+      "wpSlug": "spain-el-gordo-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:05:31"
+    },
+    "new-zealand__powerball": {
+      "path": "new-zealand/powerball",
+      "itemCount": 4,
+      "wpSlug": "new-zealand-powerball-latest-results-winning-numbers",
+      "wpModified": "2021-08-31T11:40:01"
+    },
+    "romania__loto-6-49": {
+      "path": "romania/loto-6-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "france__loto": {
+      "path": "france/loto",
+      "itemCount": 8,
+      "wpSlug": "france-loto-latest-results-winning-numbers",
+      "wpModified": "2023-05-15T09:33:54"
+    },
+    "greece__lotto": {
+      "path": "greece/lotto",
+      "itemCount": 6,
+      "wpSlug": "greece-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-08-31T11:31:30"
+    },
+    "poland__lotto": {
+      "path": "poland/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-k__thunderball": {
+      "path": "u-k/thunderball",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__wednesday-lotto": {
+      "path": "australia/wednesday-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "turkey__sayisal-loto": {
+      "path": "turkey/sayisal-loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "turkey__super-loto": {
+      "path": "turkey/super-loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "japan__loto-6": {
+      "path": "japan/loto-6",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "canada__lotto-max": {
+      "path": "canada/lotto-max",
+      "itemCount": 8,
+      "wpSlug": "canada-lotto-max-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:09:59"
+    },
+    "south-africa__powerball": {
+      "path": "south-africa/powerball",
+      "itemCount": 4,
+      "wpSlug": "south-africa-powerball-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:10:24"
+    },
+    "spain__bonoloto": {
+      "path": "spain/bonoloto",
+      "itemCount": 7,
+      "wpSlug": "spain-bonoloto-latest-results-winning-numbers",
+      "wpModified": "2021-08-31T11:40:51"
+    },
+    "israel__double-lotto": {
+      "path": "israel/double-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "italy__superstar": {
+      "path": "italy/superstar",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "brazil__dupla-sena": {
+      "path": "brazil/dupla-sena",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "europe__eurojackpot": {
+      "path": "europe/eurojackpot",
+      "itemCount": 20,
+      "wpSlug": "eurojackpot-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:10:56"
+    },
+    "u-k__euromillions-and-uk-millionaire-maker": {
+      "path": "u-k/euromillions-and-uk-millionaire-maker",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "russia__gosloto-6-45": {
+      "path": "russia/gosloto-6-45",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ontario__lottario": {
+      "path": "ontario/lottario",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ontario__ontario-49": {
+      "path": "ontario/ontario-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "hungary__hatoslotto": {
+      "path": "hungary/hatoslotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "hungary__otoslotto": {
+      "path": "hungary/otoslotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__melate": {
+      "path": "mexico/melate",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__melate-retro": {
+      "path": "mexico/melate-retro",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ukraine__megalot": {
+      "path": "ukraine/megalot",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ukraine__super-loto": {
+      "path": "ukraine/super-loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__monday-lotto": {
+      "path": "australia/monday-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "canada__western-6-49": {
+      "path": "canada/western-6-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "france__euromillions-and-my-million-raffle": {
+      "path": "france/euromillions-and-my-million-raffle",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-s__cash4life": {
+      "path": "u-s/cash4life",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "greece__joker": {
+      "path": "greece/joker",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "colombia__baloto": {
+      "path": "colombia/baloto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-k__lotto-hotpicks": {
+      "path": "u-k/lotto-hotpicks",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "austria__euromillions": {
+      "path": "austria/euromillions",
+      "itemCount": 23,
+      "wpSlug": "euromillions-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:04:26"
+    },
+    "italy__lotto": {
+      "path": "italy/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "chile__clasico-loto": {
+      "path": "chile/clasico-loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "japan__loto-7": {
+      "path": "japan/loto-7",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "italy__millionday": {
+      "path": "italy/millionday",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "latvia__latloto-535": {
+      "path": "latvia/latloto-535",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "brazil__lotofacil": {
+      "path": "brazil/lotofacil",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "brazil__dia-de-sorte": {
+      "path": "brazil/dia-de-sorte",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "spain__euromillions-superdraw": {
+      "path": "spain/euromillions-superdraw",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "poland__mini-lotto": {
+      "path": "poland/mini-lotto",
+      "itemCount": 5,
+      "wpSlug": "poland-mini-lotto-latest-results-winning-numbers",
+      "wpModified": "2021-06-21T13:17:14"
+    },
+    "peru__tinka": {
+      "path": "peru/tinka",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__superdraw-saturday-lotto": {
+      "path": "australia/superdraw-saturday-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "japan__mini-loto": {
+      "path": "japan/mini-loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "south-africa__daily-lotto": {
+      "path": "south-africa/daily-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__chispazo": {
+      "path": "mexico/chispazo",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "france__loto-special-draw": {
+      "path": "france/loto-special-draw",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "portugal__totoloto": {
+      "path": "portugal/totoloto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ukraine__loto-maxima": {
+      "path": "ukraine/loto-maxima",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-s__lotto-america": {
+      "path": "u-s/lotto-america",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "ireland__daily-million": {
+      "path": "ireland/daily-million",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "new-zealand__lotto": {
+      "path": "new-zealand/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "slovakia__loto-5-z-35": {
+      "path": "slovakia/loto-5-z-35",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "slovakia__loto": {
+      "path": "slovakia/loto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "romania__joker": {
+      "path": "romania/joker",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "slovakia__euromiliony": {
+      "path": "slovakia/euromiliony",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "peru__kabala": {
+      "path": "peru/kabala",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "philippines__mega-lotto": {
+      "path": "philippines/mega-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "philippines__lotto": {
+      "path": "philippines/lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "philippines__super-lotto": {
+      "path": "philippines/super-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "philippines__grand-lotto": {
+      "path": "philippines/grand-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "philippines__ultra-lotto": {
+      "path": "philippines/ultra-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "kazakhstan__loto-6-49": {
+      "path": "kazakhstan/loto-6-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "kazakhstan__5-36": {
+      "path": "kazakhstan/5-36",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "italy__millionday-extra": {
+      "path": "italy/millionday-extra",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "canada__ontario-49": {
+      "path": "canada/ontario-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "europe__eurodreams": {
+      "path": "europe/eurodreams",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__tris-clasico": {
+      "path": "mexico/tris-clasico",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__weekday-windfall": {
+      "path": "australia/weekday-windfall",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "europe__eurojackpot-go": {
+      "path": "europe/eurojackpot-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__mexlotto-vintage": {
+      "path": "mexico/mexlotto-vintage",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__mexlotto": {
+      "path": "mexico/mexlotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__chispa-lotto": {
+      "path": "mexico/chispa-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__triple-chance-clasico": {
+      "path": "mexico/triple-chance-clasico",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "mexico__chispa-boom": {
+      "path": "mexico/chispa-boom",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "new-zealand__lottoluck": {
+      "path": "new-zealand/lottoluck",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "new-zealand__powerluck": {
+      "path": "new-zealand/powerluck",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "u-s__hot-lotto": {
+      "path": "u-s/hot-lotto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "italy__sivincetutto": {
+      "path": "italy/sivincetutto",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "brazil__mega-da-virada": {
+      "path": "brazil/mega-da-virada",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "russia__gosloto-7-49": {
+      "path": "russia/gosloto-7-49",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "europe__euromillions-go": {
+      "path": "europe/euromillions-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "germany__lotto-go": {
+      "path": "germany/lotto-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "usa__mega-go": {
+      "path": "usa/mega-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "usa__power-go": {
+      "path": "usa/power-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "australia__powerball-lotto-go": {
+      "path": "australia/powerball-lotto-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    },
+    "spain__el-gordo-go": {
+      "path": "spain/el-gordo-go",
+      "itemCount": 0,
+      "wpSlug": null,
+      "wpModified": null
+    }
+  },
+  "summary": {
+    "total": 227,
+    "withFaq": 49,
+    "missing": 178,
+    "errors": 0
+  }
+}

@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-10-04T10:56:39.815Z",
+  "source": "http://34.222.9.46/api",
+  "states": {
+    "arizona": {
+      "games": [
+        "fantasy-5",
+        "mega-millions",
+        "pick-3",
+        "powerball",
+        "the-pick",
+        "triple-twist"
+      ]
+    },
+    "arkansas": {
+      "games": [
+        "cash-3",
+        "cash-4",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-cash-3",
+        "midday-cash-4",
+        "natural-state-jackpot",
+        "powerball"
+      ]
+    },
+    "california": {
+      "games": [
+        "daily-3",
+        "daily-4",
+        "daily-derby",
+        "fantasy-5",
+        "mega-millions",
+        "midday-3",
+        "powerball",
+        "super-lotto-plus"
+      ]
+    },
+    "colorado": {
+      "games": [
+        "cash-5",
+        "lotto",
+        "lucky-4-life",
+        "mega-millions",
+        "pick-3-midday",
+        "pick-3",
+        "powerball"
+      ]
+    },
+    "connecticut": {
+      "games": [
+        "cash-5",
+        "classic-lotto",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "play-3",
+        "play-4",
+        "powerball"
+      ]
+    },
+    "delaware": {
+      "games": [
+        "lotto-america",
+        "lotto",
+        "lucky-4-life",
+        "mega-millions",
+        "play-3-midday",
+        "play-3",
+        "play-4-midday",
+        "play-4",
+        "powerball"
+      ]
+    },
+    "district-of-columbia": {
+      "games": [
+        "dc-2-midday",
+        "dc-2",
+        "dc-4-midday",
+        "dc-4",
+        "dc-5",
+        "dc-lucky-midday",
+        "dc-lucky-numbers",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-dc5",
+        "powerball"
+      ]
+    },
+    "florida": {
+      "games": [
+        "cash4life",
+        "fantasy-5",
+        "jackpot-triple-play",
+        "lotto",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "pick-2-midday",
+        "pick-2",
+        "pick-3",
+        "pick-4",
+        "pick-5-midday",
+        "pick-5",
+        "powerball"
+      ]
+    },
+    "georgia": {
+      "games": [
+        "cash-3-evening",
+        "cash-3",
+        "cash-4-evening",
+        "cash-4",
+        "cash-pop-drive-time",
+        "cash-pop-early-bird",
+        "cash-pop-matinee",
+        "cash-pop-night-owl",
+        "cash-pop-primetime",
+        "cash4life",
+        "fantasy-5",
+        "georgia-five",
+        "jumbo-bucks-lotto",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "midday-georgia-five",
+        "powerball"
+      ]
+    },
+    "idaho": {
+      "games": [
+        "5-star-draw",
+        "idaho-cash",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "pick-3",
+        "powerball",
+        "weekly-grand"
+      ]
+    },
+    "illinois": {
+      "games": [
+        "daily-3",
+        "daily-4",
+        "lotto",
+        "lucky-day-lotto-evening",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "midday-lucky-day-lotto",
+        "powerball"
+      ]
+    },
+    "indiana": {
+      "games": [
+        "cash-5",
+        "cash4life",
+        "daily-3",
+        "daily-4",
+        "lotto",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "midday-quick-draw",
+        "powerball",
+        "quick-draw"
+      ]
+    },
+    "iowa": {
+      "games": [
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "kansas": {
+      "games": [
+        "2by2",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "pick-3",
+        "powerball",
+        "super-kansas-cash"
+      ]
+    },
+    "kentucky": {
+      "games": [
+        "5-card-cash",
+        "cashball",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "louisiana": {
+      "games": [
+        "easy-5",
+        "lotto",
+        "mega-millions",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "maine": {
+      "games": [
+        "gimme-5",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "megabucks",
+        "midday-3",
+        "midday-4",
+        "pick-3",
+        "pick-4",
+        "powerball",
+        "world-poker-tour"
+      ]
+    },
+    "maryland": {
+      "games": [
+        "5-card-cash",
+        "bonus-match-5",
+        "cash4life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "multi-match",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "massachusetts": {
+      "games": [
+        "lucky-4-life",
+        "mass-cash",
+        "mega-millions",
+        "megabucks",
+        "midday-numbers",
+        "numbers",
+        "powerball"
+      ]
+    },
+    "michigan": {
+      "games": [
+        "classic-lotto-47",
+        "daily-3",
+        "daily-4",
+        "fantasy-5",
+        "keno",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "poker-lotto",
+        "powerball"
+      ]
+    },
+    "minnesota": {
+      "games": [
+        "daily-3",
+        "gopher-5",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "northstar-cash",
+        "powerball",
+        "north-5",
+        "pick-3"
+      ]
+    },
+    "mississippi": {
+      "games": [
+        "cash-3",
+        "mega-millions",
+        "powerball"
+      ]
+    },
+    "missouri": {
+      "games": [
+        "lotto",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "pick-3",
+        "pick-4",
+        "powerball",
+        "show-me-cash"
+      ]
+    },
+    "montana": {
+      "games": [
+        "big-sky-bonus",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "montana-cash",
+        "powerball"
+      ]
+    },
+    "nebraska": {
+      "games": [
+        "2by2",
+        "lucky-4-life",
+        "mega-millions",
+        "myday",
+        "pick-3",
+        "pick-5",
+        "powerball"
+      ]
+    },
+    "new-hampshire": {
+      "games": [
+        "gimme-5",
+        "lucky-4-life",
+        "mega-millions",
+        "megabucks",
+        "midday-3",
+        "midday-4",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "new-jersey": {
+      "games": [
+        "5-card-cash",
+        "cash-5",
+        "cash4life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "pick-3",
+        "pick-4",
+        "pick-6",
+        "powerball"
+      ]
+    },
+    "new-mexico": {
+      "games": [
+        "lotto-america",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "pick-3",
+        "pick-4",
+        "powerball",
+        "road-runner-cash",
+        "midday-pick-3-plus",
+        "pick-3-plus",
+        "midday-pick-4-plus",
+        "pick-4-plus"
+      ]
+    },
+    "new-york": {
+      "games": [
+        "cash4life",
+        "lotto",
+        "mega-millions",
+        "midday-numbers",
+        "midday-win-4",
+        "numbers",
+        "pick-10",
+        "powerball",
+        "take-5",
+        "win-4"
+      ]
+    },
+    "north-carolina": {
+      "games": [
+        "cash-5",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-3",
+        "midday-pick-4",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "north-dakota": {
+      "games": [
+        "2by2",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "powerball"
+      ]
+    },
+    "ohio": {
+      "games": [
+        "classic-lotto",
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "midday-pick-5",
+        "pick-3",
+        "pick-4",
+        "pick-5",
+        "powerball",
+        "rolling-cash-5"
+      ]
+    },
+    "oklahoma": {
+      "games": [
+        "cash-5",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "pick-3",
+        "powerball"
+      ]
+    },
+    "oregon": {
+      "games": [
+        "lucky-lines",
+        "mega-millions",
+        "megabucks",
+        "pick-4-10pm",
+        "pick-4-1pm",
+        "pick-4-4pm",
+        "pick-4-7pm",
+        "powerball",
+        "win-for-life"
+      ]
+    },
+    "pennsylvania": {
+      "games": [
+        "cash-5",
+        "cash4life",
+        "match-6",
+        "mega-millions",
+        "midday-pick-2",
+        "midday-pick-3",
+        "midday-pick-4",
+        "midday-pick-5",
+        "pick-2",
+        "pick-3",
+        "pick-4",
+        "pick-5",
+        "powerball",
+        "treasure-hunt"
+      ]
+    },
+    "puerto-rico": {
+      "games": [
+        "lotto",
+        "midday-pega-2",
+        "midday-pega-3",
+        "midday-pega-4",
+        "pega-4",
+        "powerball",
+        "revancha"
+      ]
+    },
+    "rhode-island": {
+      "games": [
+        "lucky-4-life",
+        "mega-millions",
+        "midday-numbers",
+        "numbers",
+        "powerball",
+        "wild-money"
+      ]
+    },
+    "south-carolina": {
+      "games": [
+        "lucky-4-life",
+        "mega-millions",
+        "midday-pick-3",
+        "midday-pick-4",
+        "palmetto-cash-5",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "south-dakota": {
+      "games": [
+        "dakota-cash",
+        "lotto-america",
+        "lucky-4-life",
+        "mega-millions",
+        "powerball"
+      ]
+    },
+    "tennessee": {
+      "games": [
+        "cash-3",
+        "cash-4",
+        "cash4life",
+        "lotto-america",
+        "mega-millions",
+        "midday-cash-3",
+        "midday-cash-4",
+        "morning-cash-3",
+        "morning-cash-4",
+        "powerball",
+        "tennessee-cash"
+      ]
+    },
+    "texas": {
+      "games": [
+        "cash-5",
+        "daily-4",
+        "day-all-or-nothing",
+        "evening-all-or-nothing",
+        "evening-pick-3",
+        "evening-pick-4",
+        "lotto-texas",
+        "mega-millions",
+        "midday-4",
+        "midday-pick-3",
+        "morning-all-or-nothing",
+        "morning-pick-3",
+        "morning-pick-4",
+        "night-all-or-nothing",
+        "pick-3",
+        "powerball",
+        "texas-two-step"
+      ]
+    },
+    "vermont": {
+      "games": [
+        "gimme-5",
+        "lucky-4-life",
+        "mega-millions",
+        "megabucks",
+        "midday-3",
+        "midday-4",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "virginia": {
+      "games": [
+        "bank-a-million",
+        "cash-5",
+        "cash4life",
+        "mega-millions",
+        "midday-3",
+        "midday-4",
+        "midday-cash-5",
+        "pick-3",
+        "pick-4",
+        "powerball"
+      ]
+    },
+    "washington": {
+      "games": [
+        "daily",
+        "hit-5",
+        "keno",
+        "lotto",
+        "match-4",
+        "mega-millions",
+        "powerball"
+      ]
+    },
+    "west-virginia": {
+      "games": [
+        "cash-25",
+        "daily-3",
+        "daily-4",
+        "lotto-america",
+        "mega-millions",
+        "powerball"
+      ]
+    },
+    "wisconsin": {
+      "games": [
+        "all-or-nothing-evening",
+        "all-or-nothing",
+        "badger-5",
+        "daily-pick-3-evening",
+        "daily-pick-3",
+        "daily-pick-4-evening",
+        "daily-pick-4",
+        "mega-millions",
+        "powerball",
+        "super-cash",
+        "very-own-megabucks"
+      ]
+    },
+    "wyoming": {
+      "games": [
+        "cowboy-draw",
+        "lucky-4-life",
+        "mega-millions",
+        "powerball"
+      ]
+    }
+  }
+}

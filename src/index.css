@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+
+  --color-brand-25: #f5f8fc;
+  --color-brand-50: #eef4fb;
+  --color-brand-100: #d7e6f7;
+  --color-brand-200: #b0cdee;
+  --color-brand-300: #7faede;
+  --color-brand-400: #4a8bcf;
+  --color-brand-500: #1573c7;
+  --color-brand-600: #0b5aa6;
+  --color-brand-700: #0c4683;
+  --color-brand-800: #0b3463;
+  --color-brand-900: #0b2145;
+  --color-brand-950: #081a38;
+
+  --color-accent-400: #3f97e0;
+  --color-accent-500: #0875ce;
+  --color-accent-600: #0a63b0;
+
+  --color-brand-green: #56c51c;
+  --color-brand-yellow: #ffcf20;
+  --color-brand-teal: #00b8bc;
+  --color-brand-red: #ff4b6b;
+  --color-brand-purple: #8245d2;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-white font-sans text-neutral-800;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .site-header-gradient {
+    background: linear-gradient(
+      90deg,
+      #0b2145 0%,
+      #0c4683 45%,
+      #0875ce 100%
+    );
+  }
+
+  .hero-lottery-banner {
+    background-color: #3d4a5c;
+    background-image: linear-gradient(
+        rgba(11, 33, 69, 0.45),
+        rgba(8, 117, 206, 0.35)
+      ),
+      radial-gradient(
+        circle at 15% 55%,
+        rgba(255, 255, 255, 0.85) 0,
+        rgba(255, 255, 255, 0.35) 8%,
+        transparent 14%
+      ),
+      radial-gradient(
+        circle at 35% 40%,
+        rgba(255, 255, 255, 0.9) 0,
+        rgba(255, 255, 255, 0.4) 7%,
+        transparent 13%
+      ),
+      radial-gradient(
+        circle at 55% 60%,
+        rgba(255, 255, 255, 0.88) 0,
+        rgba(255, 255, 255, 0.38) 9%,
+        transparent 15%
+      ),
+      radial-gradient(
+        circle at 72% 45%,
+        rgba(255, 255, 255, 0.85) 0,
+        rgba(255, 255, 255, 0.35) 8%,
+        transparent 14%
+      ),
+      radial-gradient(
+        circle at 88% 58%,
+        rgba(255, 255, 255, 0.8) 0,
+        rgba(255, 255, 255, 0.3) 7%,
+        transparent 12%
+      ),
+      linear-gradient(135deg, #0b2145 0%, #0c4683 50%, #0875ce 100%);
+    background-size: cover;
+  }
+}
+
+/* WordPress / Elementor markup often ships without Tailwind utilities. */
+.wp-content :where(img, video) {
+  @apply h-auto max-w-full;
+}
+
+.wp-content :where(a) {
+  @apply text-brand-700 underline decoration-brand-300 underline-offset-2 hover:text-accent-600;
+}
+
+.prose-brand {
+  --tw-prose-body: #333333;
+  --tw-prose-headings: #333333;
+  --tw-prose-links: var(--color-brand-700);
+  --tw-prose-bold: #333333;
+}
+
+.lottery-comparison-table tbody tr:nth-child(even) {
+  @apply bg-brand-25/50;
+}

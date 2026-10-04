@@ -1,0 +1,22 @@
+{
+  "id": 93,
+  "title": "Jackpots",
+  "contentHtml": "<p>Jackpots</p>\n",
+  "excerptHtml": "<p>Jackpots</p>\n",
+  "slug": "jackpots",
+  "date": "2020-06-28T16:42:41",
+  "modified": "2020-06-28T16:42:41",
+  "link": "/jackpots",
+  "featuredImage": null,
+  "seo": {
+    "title": "Top Lottery Jackpots - Biggest US Lottery Jackpots",
+    "description": "Top Lottery Jackpots ordered by size, including the big multi-state lotteries POWERBALL and MEGA MILLIONS.",
+    "canonical": "/jackpots",
+    "ogTitle": "Top Lottery Jackpots - Biggest US Lottery Jackpots",
+    "ogDescription": "Top Lottery Jackpots ordered by size, including the big multi-state lotteries POWERBALL and MEGA MILLIONS.",
+    "ogUrl": "https://lottery.comparakeet.com/jackpots",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

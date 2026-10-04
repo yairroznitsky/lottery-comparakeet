@@ -1,0 +1,22 @@
+# Lottery Parakeet
+
+> Worldwide lottery results, top jackpots, winning numbers, and expert reviews of online lottery sites.
+
+Lottery Parakeet helps players check official-style draw results, compare upcoming jackpots, and read guides about playing lottery games online and in the US.
+
+## Primary pages
+
+- [Home](https://lottery.comparakeet.com/): Jackpots, latest numbers, US and international lottery links, and articles.
+- [Top Jackpots](https://lottery.comparakeet.com/top-jackpots): Largest upcoming prizes worldwide.
+- [USA Lottery](https://lottery.comparakeet.com/usa-lottery): US state lottery hub.
+- [International Lottery Results](https://lottery.comparakeet.com/international-results): Lotteries by country.
+- [Best Online Lottery Sites](https://lottery.comparakeet.com/best-online-lottery-sites): Comparison and reviews of lottery ticket services.
+
+## Content
+
+Editorial pages and guides are loaded from the WordPress CMS at lottery.comparakeet.com. Live draw numbers and jackpot amounts come from a lottery results API and update throughout the day.
+
+## Contact / brand
+
+Site name: Lottery Parakeet  
+Canonical URL: https://lottery.comparakeet.com/

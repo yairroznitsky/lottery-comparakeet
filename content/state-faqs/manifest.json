@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-10-04T10:48:40.078Z",
+  "sources": {
+    "lotteryApi": "http://34.222.9.46/api",
+    "wordpressApi": "https://lottery.comparakeet.com/wp-json/wp/v2"
+  },
+  "states": {
+    "arizona": {
+      "itemCount": 15,
+      "wpModified": "2025-01-17T21:14:55",
+      "pageTitle": "Arizona Lottery Results and Winning Numbers"
+    },
+    "arkansas": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T08:49:35",
+      "pageTitle": "Arkansas Lottery Results and Winning Numbers"
+    },
+    "california": {
+      "itemCount": 12,
+      "wpModified": "2021-07-15T08:51:18",
+      "pageTitle": "California Lottery Results and Winning Numbers"
+    },
+    "colorado": {
+      "itemCount": 13,
+      "wpModified": "2023-05-15T09:30:45",
+      "pageTitle": "Colorado Lottery Results and Winning Numbers"
+    },
+    "connecticut": {
+      "itemCount": 6,
+      "wpModified": "2021-07-15T08:52:40",
+      "pageTitle": "Connecticut Lottery Results and Winning Numbers"
+    },
+    "delaware": {
+      "itemCount": 10,
+      "wpModified": "2021-07-15T08:53:16",
+      "pageTitle": "Delaware Lottery Results and Winning Numbers"
+    },
+    "district-of-columbia": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T08:59:47",
+      "pageTitle": "District of Columbia Lottery Results and Winning Numbers"
+    },
+    "florida": {
+      "itemCount": 9,
+      "wpModified": "2024-08-29T11:50:24",
+      "pageTitle": "Florida Lottery Results and Winning Numbers"
+    },
+    "georgia": {
+      "itemCount": 3,
+      "wpModified": "2021-07-15T08:58:39",
+      "pageTitle": "Georgia Lottery Results and Winning Numbers"
+    },
+    "idaho": {
+      "itemCount": 3,
+      "wpModified": "2021-07-15T08:58:46",
+      "pageTitle": "Idaho Lottery Results and Winning Numbers"
+    },
+    "illinois": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T08:58:57",
+      "pageTitle": "Illinois Lottery Results and Winning Numbers"
+    },
+    "indiana": {
+      "itemCount": 5,
+      "wpModified": "2021-07-15T09:08:45",
+      "pageTitle": "Indiana Lottery Results and Winning Numbers"
+    },
+    "iowa": {
+      "itemCount": 5,
+      "wpModified": "2021-07-15T08:59:05",
+      "pageTitle": "Iowa Lottery Results and Winning Numbers"
+    },
+    "kansas": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T08:59:09",
+      "pageTitle": "Kansas Lottery Results and Winning Numbers"
+    },
+    "kentucky": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T08:59:16",
+      "pageTitle": "Kentucky Lottery Results and Winning Numbers"
+    },
+    "louisiana": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T08:59:22",
+      "pageTitle": "Louisiana Lottery Results and Winning Numbers"
+    },
+    "maine": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T08:59:26",
+      "pageTitle": "Maine Lottery Results and Winning Numbers"
+    },
+    "maryland": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T08:59:33",
+      "pageTitle": "Maryland Lottery Results and Winning Numbers"
+    },
+    "massachusetts": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T08:47:43",
+      "pageTitle": "Massachusetts Lottery Results and Winning Numbers"
+    },
+    "michigan": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T08:59:38",
+      "pageTitle": "Michigan Lottery Results and Winning Numbers"
+    },
+    "minnesota": {
+      "itemCount": 6,
+      "wpModified": "2021-07-15T09:04:27",
+      "pageTitle": "Minnesota Lottery Results and Winning Numbers"
+    },
+    "mississippi": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T08:59:43",
+      "pageTitle": "Mississippi Lottery Results and Winning Numbers"
+    },
+    "missouri": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:06:03",
+      "pageTitle": "Missouri Lottery Results and Winning Numbers"
+    },
+    "montana": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:06:38",
+      "pageTitle": "Montana Lottery Results and Winning Numbers"
+    },
+    "nebraska": {
+      "itemCount": 5,
+      "wpModified": "2021-07-15T09:06:42",
+      "pageTitle": "Nebraska Lottery Results and Winning Numbers"
+    },
+    "new-hampshire": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:06:46",
+      "pageTitle": "New Hampshire Lottery Results and Winning Numbers"
+    },
+    "new-jersey": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T09:06:49",
+      "pageTitle": "New Jersey Lottery Results and Winning Numbers"
+    },
+    "new-mexico": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:06:51",
+      "pageTitle": "New Mexico Lottery Results and Winning Numbers"
+    },
+    "new-york": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:06:56",
+      "pageTitle": "New York Lottery Results and Winning Numbers"
+    },
+    "north-carolina": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:07:00",
+      "pageTitle": "North Carolina Lottery Results and Winning Numbers"
+    },
+    "north-dakota": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:07:03",
+      "pageTitle": "North Dakota Lottery Results and Winning Numbers"
+    },
+    "ohio": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:07:06",
+      "pageTitle": "Ohio Lottery Results and Winning Numbers"
+    },
+    "oklahoma": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:07:10",
+      "pageTitle": "Oklahoma Lottery Results and Winning Numbers"
+    },
+    "oregon": {
+      "itemCount": 9,
+      "wpModified": "2021-07-15T09:07:13",
+      "pageTitle": "Oregon Lottery Results and Winning Numbers"
+    },
+    "pennsylvania": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:07:16",
+      "pageTitle": "Pennsylvania Lottery Results and Winning Numbers"
+    },
+    "puerto-rico": {
+      "itemCount": 0,
+      "wpModified": null,
+      "pageTitle": null
+    },
+    "rhode-island": {
+      "itemCount": 15,
+      "wpModified": "2021-07-15T09:07:18",
+      "pageTitle": "Rhode Island Lottery Results and Winning Numbers"
+    },
+    "south-carolina": {
+      "itemCount": 12,
+      "wpModified": "2021-07-15T09:07:23",
+      "pageTitle": "South Carolina Lottery Results and Winning Numbers"
+    },
+    "south-dakota": {
+      "itemCount": 11,
+      "wpModified": "2021-07-15T09:07:26",
+      "pageTitle": "South Dakota Lottery Results and Winning Numbers"
+    },
+    "tennessee": {
+      "itemCount": 11,
+      "wpModified": "2021-07-15T09:05:34",
+      "pageTitle": "Tennessee Lottery Results and Winning Numbers"
+    },
+    "texas": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:07:37",
+      "pageTitle": "Texas Lottery Results and Winning Numbers"
+    },
+    "vermont": {
+      "itemCount": 12,
+      "wpModified": "2021-07-15T09:07:39",
+      "pageTitle": "Vermont Lottery Results and Winning Numbers"
+    },
+    "virginia": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T09:05:42",
+      "pageTitle": "Virginia Lottery Results and Winning Numbers"
+    },
+    "washington": {
+      "itemCount": 8,
+      "wpModified": "2021-07-15T09:07:45",
+      "pageTitle": "Washington Lottery Results and Winning Numbers"
+    },
+    "west-virginia": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T09:07:47",
+      "pageTitle": "West Virginia Lottery Results and Winning Numbers"
+    },
+    "wisconsin": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T09:07:51",
+      "pageTitle": "Wisconsin Lottery Results and Winning Numbers"
+    },
+    "wyoming": {
+      "itemCount": 7,
+      "wpModified": "2021-07-15T09:05:56",
+      "pageTitle": "Wyoming Lottery Results and Winning Numbers"
+    }
+  },
+  "summary": {
+    "total": 47,
+    "withFaq": 46,
+    "missing": 1,
+    "errors": 0
+  }
+}
