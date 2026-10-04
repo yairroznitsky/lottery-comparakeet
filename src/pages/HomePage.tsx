@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteSeo, { DEFAULT_DESCRIPTION } from "@/components/seo/SiteSeo";
 import JackpotCard from "@/components/lottery/JackpotCard";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import SectionSkeleton from "@/components/lottery/SectionSkeleton";
 import BallRow from "@/components/lottery/BallRow";
 import {
@@ -9,6 +10,7 @@ import {
   useUsaStates,
 } from "@/hooks/useLotteryData";
 import { parseBestOnlineLotterySitesHtml } from "@/lib/parseBestOnlineLotterySites";
+import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
 import { formatStateTitle } from "@/lib/parseDrawResults";
 import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 import { getRecentPostSummaries } from "@/lib/wordpressContent";
@@ -134,10 +136,19 @@ const HomePage = () => {
               {recentDraws.map((row) => (
                 <li
                   key={row.id}
-                  className="flex flex-col gap-2 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <span className="font-medium text-brand-950">{row.brand}</span>
-                  <BallRow balls={row.lastDrawResults!} size="sm" />
+                  <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-4">
+                    <BallRow balls={row.lastDrawResults!} size="sm" />
+                    {row.playLink ? (
+                      <PlayTicketsCta
+                        href={withTheLotterAffiliate(row.playLink)}
+                        label="Buy tickets"
+                        variant="compact"
+                      />
+                    ) : null}
+                  </div>
                 </li>
               ))}
             </ul>

@@ -25,6 +25,7 @@ import {
 import { absoluteUrl } from "@/config/site";
 import { listPopularUsaStatesExcept } from "@/constants/navPopular";
 import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
+import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import type { DrawResultView } from "@/types/lottery";
 
 interface StateLandingPageProps {
@@ -61,6 +62,14 @@ const StateLandingPage = ({
     resultsQuery.data ?? initialResults ?? [];
   const gamesLoading = gamesQuery.isPending && games.length === 0;
   const resultsLoading = resultsQuery.isPending && results.length === 0;
+  const popularGamesPreview = pickPopularGames(games);
+  const primaryGamePreview = popularGamesPreview[0] ?? games[0];
+  const playUrl = useTheLotterPlayUrl({
+    playLink: results.find((r) => r.playLink)?.playLink ?? null,
+    region: stateSlug,
+    game: primaryGamePreview,
+    enabled: Boolean(stateSlug && primaryGamePreview),
+  });
 
   if (gamesQuery.isError && resultsQuery.isError) {
     return (
@@ -100,8 +109,9 @@ const StateLandingPage = ({
     statesQuery.data,
   );
 
-  const popularGames = pickPopularGames(games);
+  const popularGames = popularGamesPreview;
   const hasAbout = Boolean(aboutContent);
+  const primaryGame = primaryGamePreview;
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
@@ -203,6 +213,12 @@ const StateLandingPage = ({
           popularGames={popularGames}
           relatedStates={siblingStates}
           showAboutLink={hasAbout}
+          playHref={playUrl.href}
+          playLabel={
+            primaryGame
+              ? playUrl.label
+              : "Play at theLotter"
+          }
         />
       </div>
     </article>

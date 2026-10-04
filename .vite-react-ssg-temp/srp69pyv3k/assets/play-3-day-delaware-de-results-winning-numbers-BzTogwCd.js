@@ -1,0 +1,36 @@
+//#region content/wordpress/pages/play-3-day-delaware-de-results-winning-numbers.json
+var id = 592;
+var title = "Play 3 Day – Delaware (DE) – Results &#038; Winning Numbers";
+var contentHtml = "";
+var excerptHtml = "";
+var slug = "play-3-day-delaware-de-results-winning-numbers";
+var date = "2020-07-08T13:41:31";
+var modified = "2020-11-17T14:16:31";
+var link = "/delaware/play-3-midday";
+var featuredImage = null;
+var seo = {
+	"title": "Play 3 Day - Delaware (DE) - Results & Winning Numbers",
+	"description": "The last 10 results for the Delaware (DE) Play 3 Day, with winning numbers and jackpots.",
+	"canonical": "/delaware/play-3-midday",
+	"ogTitle": "Play 3 Day - Delaware (DE) - Results & Winning Numbers",
+	"ogDescription": "The last 10 results for the Delaware (DE) Play 3 Day, with winning numbers and jackpots.",
+	"ogUrl": "https://lottery.comparakeet.com/delaware/play-3-midday",
+	"robotsIndex": true,
+	"robotsFollow": true
+};
+var contentType = "page";
+var play_3_day_delaware_de_results_winning_numbers_default = {
+	id: 592,
+	title,
+	contentHtml: "",
+	excerptHtml: "",
+	slug,
+	date,
+	modified,
+	link,
+	featuredImage: null,
+	seo,
+	contentType
+};
+//#endregion
+export { contentHtml, contentType, date, play_3_day_delaware_de_results_winning_numbers_default as default, excerptHtml, featuredImage, id, link, modified, seo, slug, title };

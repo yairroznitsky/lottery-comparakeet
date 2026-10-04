@@ -1,4 +1,5 @@
 import { getSiteUrl } from "@/config/site";
+import { isTheLotterBrandName, theLotterHomeUrl } from "@/lib/theLotterLinks";
 
 export interface LotterySiteRow {
   rank: number;
@@ -85,14 +86,17 @@ function parseComparisonRows(html: string): LotterySiteRow[] {
     let highlight = promoMatch ? stripTags(promoMatch[1]) : "";
     highlight = highlight.replace(/Read Full Review/i, "").trim();
 
+    const name = visitMatch[2].trim();
     rows.push({
       rank: Number(rankMatch[1]),
-      name: visitMatch[2].trim(),
+      name,
       logoUrl: imgMatch[1],
-      logoAlt: imgMatch[2] || visitMatch[2].trim(),
+      logoAlt: imgMatch[2] || name,
       rating: Number(ratingMatch[1]),
       highlight,
-      visitUrl: toClientPath(visitMatch[1]),
+      visitUrl: isTheLotterBrandName(name)
+        ? theLotterHomeUrl()
+        : toClientPath(visitMatch[1]),
       reviewUrl: reviewMatch ? toClientPath(reviewMatch[1]) : null,
     });
   }
@@ -175,9 +179,11 @@ function parseReviewSections(
       logoAlt: imgMatch?.[2] ?? matchedRow?.logoAlt ?? name,
       rating: ratingMatch ? Number(ratingMatch[1]) : (matchedRow?.rating ?? 0),
       highlight: matchedRow?.highlight ?? "",
-      visitUrl: visitMatch
-        ? toClientPath(visitMatch[1])
-        : (matchedRow?.visitUrl ?? "#"),
+      visitUrl: isTheLotterBrandName(name)
+        ? theLotterHomeUrl()
+        : visitMatch
+          ? toClientPath(visitMatch[1])
+          : (matchedRow?.visitUrl ?? "#"),
       reviewUrl: reviewMatch
         ? toClientPath(reviewMatch[1])
         : (matchedRow?.reviewUrl ?? null),

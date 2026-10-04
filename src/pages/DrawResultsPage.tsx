@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
 import BallRow from "@/components/lottery/BallRow";
 import IntlGameSidebar from "@/components/lottery/IntlGameSidebar";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import StateFaqSection from "@/components/lottery/StateFaqSection";
 import StateQuickFacts from "@/components/lottery/StateQuickFacts";
 import ResultsTable from "@/components/lottery/ResultsTable";
@@ -13,6 +14,7 @@ import {
   useUsaResults,
   useUsaStates,
 } from "@/hooks/useLotteryData";
+import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import SiteSeo from "@/components/seo/SiteSeo";
 import {
   formatDrawDate,
@@ -145,13 +147,21 @@ const DrawResultsPage = () => {
     return getIntlGamePaths().filter((p) => p !== current).slice(0, 5);
   }, [region, game]);
 
+  const rowsPreview =
+    activeQuery.data ??
+    (loaderData?.rows?.length ? loaderData.rows : undefined);
+  const playUrl = useTheLotterPlayUrl({
+    playLink: rowsPreview?.[0]?.playLink,
+    region,
+    game,
+    enabled: Boolean(region && game),
+  });
+
   if (!region || !game) {
     return null;
   }
 
-  const rows =
-    activeQuery.data ??
-    (loaderData?.rows?.length ? loaderData.rows : undefined);
+  const rows = rowsPreview;
   const loading =
     (statesPending || activeQuery.isPending) &&
     (!rows || rows.length === 0);
@@ -272,6 +282,12 @@ const DrawResultsPage = () => {
                       Next draw: {new Date(latest.nextDraw).toLocaleString()}
                     </p>
                   ) : null}
+                  <div className="mt-5">
+                    <PlayTicketsCta
+                      href={playUrl.href}
+                      label={playUrl.label}
+                    />
+                  </div>
                 </div>
               ) : null}
               <ResultsTable rows={resultRows} />
@@ -302,6 +318,8 @@ const DrawResultsPage = () => {
             siblingGames={regionGames}
             featuredPaths={intlFeaturedPaths}
             showAboutLink={hasAbout}
+            playHref={playUrl.href}
+            playLabel={playUrl.label}
           />
         </div>
       </article>
@@ -382,6 +400,9 @@ const DrawResultsPage = () => {
               Next draw: {new Date(latest.nextDraw).toLocaleString()}
             </p>
           ) : null}
+          <div className="mt-5">
+            <PlayTicketsCta href={playUrl.href} label={playUrl.label} />
+          </div>
         </section>
       ) : null}
 

@@ -137,6 +137,10 @@ export function mapUsaDraw(
       ("estjackpot" in record ? record.estjackpot : undefined) ??
       intl.next_draw_jackpot ??
       null,
+    playLink:
+      ("play_link" in record ? record.play_link : undefined) ??
+      intl.play_link ??
+      null,
   };
 }
 

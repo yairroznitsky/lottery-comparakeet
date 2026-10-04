@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import BallRow from "@/components/lottery/BallRow";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
+import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
 import type { TopJackpotView } from "@/types/lottery";
 
 interface JackpotCardProps {
@@ -62,14 +64,11 @@ const JackpotCard = ({ jackpot, rank }: JackpotCardProps) => {
       ) : null}
       <div className="mt-auto pt-4">
         {jackpot.playLink ? (
-          <a
-            href={jackpot.playLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full justify-center rounded-lg bg-brand-700 px-3 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-800"
-          >
-            Buy tickets
-          </a>
+          <PlayTicketsCta
+            href={withTheLotterAffiliate(jackpot.playLink)}
+            label="Buy tickets"
+            className="w-full"
+          />
         ) : (
           <Link
             to="/top-jackpots"

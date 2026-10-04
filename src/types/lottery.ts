@@ -22,6 +22,7 @@ export interface UsaDrawApiRecord {
   s3_url?: string | null;
   logoURL?: string | null;
   url?: string | null;
+  play_link?: string | null;
   lastscraped?: string | null;
   retired?: number;
 }
@@ -80,6 +81,7 @@ export interface DrawResultView {
   logoUrl: string | null;
   nextDraw: string | null;
   estimatedJackpot: string | null;
+  playLink: string | null;
 }
 
 export interface TopJackpotView {

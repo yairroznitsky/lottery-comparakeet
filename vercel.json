@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/visit-thelotter",
+      "destination": "https://lnk.to/TLHP?tl_affid=11798&ft=5",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",

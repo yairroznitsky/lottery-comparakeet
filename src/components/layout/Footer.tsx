@@ -80,6 +80,10 @@ const Footer = () => {
             <p className="mt-3 text-sm font-semibold text-amber-200/95">
               18+ · Play responsibly
             </p>
+            <p className="mt-3 text-sm leading-relaxed text-brand-200/90">
+              Some links to play lottery tickets online are affiliate partnerships.
+              We may earn a commission when you use them, at no extra cost to you.
+            </p>
           </div>
         </div>
 

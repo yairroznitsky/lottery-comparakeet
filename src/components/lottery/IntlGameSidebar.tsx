@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import { formatGameTitle, formatStateTitle } from "@/lib/parseDrawResults";
 
 const JUMP_LINKS = [
@@ -13,6 +14,8 @@ interface IntlGameSidebarProps {
   siblingGames: string[];
   featuredPaths: string[];
   showAboutLink: boolean;
+  playHref: string;
+  playLabel: string;
 }
 
 const sidebarLinkClass =
@@ -24,6 +27,8 @@ const IntlGameSidebar = ({
   siblingGames,
   featuredPaths,
   showAboutLink,
+  playHref,
+  playLabel,
 }: IntlGameSidebarProps) => {
   const regionTitle = formatStateTitle(regionSlug);
   const jumpLinks = showAboutLink
@@ -34,6 +39,13 @@ const IntlGameSidebar = ({
 
   return (
     <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+      <div className="rounded-xl border border-brand-200 bg-white p-4 shadow-sm">
+        <PlayTicketsCta
+          href={playHref}
+          label={playLabel}
+          className="w-full"
+        />
+      </div>
       <nav
         className="rounded-xl border border-brand-200 bg-white p-4 shadow-sm"
         aria-label="On this page"

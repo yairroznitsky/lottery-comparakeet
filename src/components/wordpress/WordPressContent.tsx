@@ -1,4 +1,5 @@
 import BestOnlineLotterySitesView from "@/components/lottery/BestOnlineLotterySitesView";
+import { rewriteWordPressTheLotterLinks } from "@/lib/theLotterLinks";
 import type { WordPressContentView } from "@/types/wordpress";
 
 const LOTTERY_COMPARISON_SLUG = "best-online-lottery-sites";
@@ -26,7 +27,9 @@ const WordPressContent = ({
 }: WordPressContentProps) => {
   const isLotteryComparison = content.slug === LOTTERY_COMPARISON_SLUG;
 
-  const html = sanitizeSnapshotHtml(content.contentHtml);
+  const html = rewriteWordPressTheLotterLinks(
+    sanitizeSnapshotHtml(content.contentHtml),
+  );
 
   if (variant === "embedded") {
     return (

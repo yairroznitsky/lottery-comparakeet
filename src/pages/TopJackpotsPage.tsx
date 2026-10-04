@@ -4,7 +4,9 @@ import SiteSeo from "@/components/seo/SiteSeo";
 import PageErrorState from "@/components/wordpress/PageErrorState";
 import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import { useTopJackpots } from "@/hooks/useLotteryData";
+import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
 type SortKey = "jackpotUsd" | "brand";
 
 const TopJackpotsPage = () => {
@@ -141,14 +143,11 @@ const TopJackpotsPage = () => {
                   </td>
                   <td className="px-4 py-3">
                     {row.playLink ? (
-                      <a
-                        href={row.playLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-brand-700"
-                      >
-                        Buy tickets
-                      </a>
+                      <PlayTicketsCta
+                        href={withTheLotterAffiliate(row.playLink)}
+                        label="Buy tickets"
+                        variant="compact"
+                      />
                     ) : (
                       "—"
                     )}
