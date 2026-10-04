@@ -6,7 +6,10 @@ import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import { useTopJackpots } from "@/hooks/useLotteryData";
-import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
+import {
+  regionGameFromResultsPath,
+  resolveTheLotterPlayUrl,
+} from "@/lib/theLotterLinks";
 type SortKey = "jackpotUsd" | "brand";
 
 const TopJackpotsPage = () => {
@@ -161,7 +164,11 @@ const TopJackpotsPage = () => {
               </div>
               {row.playLink ? (
                 <PlayTicketsCta
-                  href={withTheLotterAffiliate(row.playLink)}
+                  href={resolveTheLotterPlayUrl({
+                    playLink: row.playLink,
+                    ...regionGameFromResultsPath(row.resultsPath),
+                    jackpots: data,
+                  })}
                   label="Buy tickets"
                   className="w-full"
                 />
@@ -213,7 +220,11 @@ const TopJackpotsPage = () => {
                   <td className="px-4 py-3">
                     {row.playLink ? (
                       <PlayTicketsCta
-                        href={withTheLotterAffiliate(row.playLink)}
+                        href={resolveTheLotterPlayUrl({
+                          playLink: row.playLink,
+                          ...regionGameFromResultsPath(row.resultsPath),
+                          jackpots: data,
+                        })}
                         label="Buy tickets"
                         variant="compact"
                       />

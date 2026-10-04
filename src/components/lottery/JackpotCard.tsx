@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import BallRow from "@/components/lottery/BallRow";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
-import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
+import {
+  regionGameFromResultsPath,
+  resolveTheLotterPlayUrl,
+} from "@/lib/theLotterLinks";
 import type { TopJackpotView } from "@/types/lottery";
 
 interface JackpotCardProps {
   jackpot: TopJackpotView;
   rank?: number;
+  jackpots?: TopJackpotView[] | null;
 }
 
 const formatCloseDate = (iso: string) => {
@@ -21,7 +25,15 @@ const formatCloseDate = (iso: string) => {
   }
 };
 
-const JackpotCard = ({ jackpot, rank }: JackpotCardProps) => {
+const JackpotCard = ({ jackpot, rank, jackpots }: JackpotCardProps) => {
+  const { region, game } = regionGameFromResultsPath(jackpot.resultsPath);
+  const playHref = resolveTheLotterPlayUrl({
+    playLink: jackpot.playLink,
+    region,
+    game,
+    jackpots,
+  });
+
   return (
     <article className="flex h-full flex-col rounded-2xl border border-brand-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
       <div className="flex items-start gap-3">
@@ -65,7 +77,7 @@ const JackpotCard = ({ jackpot, rank }: JackpotCardProps) => {
       <div className="mt-auto pt-4">
         {jackpot.playLink ? (
           <PlayTicketsCta
-            href={withTheLotterAffiliate(jackpot.playLink)}
+            href={playHref}
             label="Buy tickets"
             className="w-full"
           />

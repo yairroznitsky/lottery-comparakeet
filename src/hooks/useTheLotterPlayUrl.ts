@@ -1,7 +1,10 @@
 import { useMemo } from "react";
 import { useTopJackpots } from "@/hooks/useLotteryData";
 import { formatGameTitle } from "@/lib/parseDrawResults";
-import { resolveTheLotterPlayUrl } from "@/lib/theLotterLinks";
+import {
+  isUsableTheLotterPlayLink,
+  resolveTheLotterPlayUrl,
+} from "@/lib/theLotterLinks";
 
 interface UseTheLotterPlayUrlInput {
   playLink?: string | null;
@@ -34,5 +37,11 @@ export function useTheLotterPlayUrl({
     ? `Play ${formatGameTitle(game)} at theLotter`
     : "Play at theLotter";
 
-  return { href, label, isLoading: jackpotsQuery.isPending && !playLink };
+  const hasUsablePlayLink = isUsableTheLotterPlayLink(playLink);
+
+  return {
+    href,
+    label,
+    isLoading: jackpotsQuery.isPending && !hasUsablePlayLink,
+  };
 }

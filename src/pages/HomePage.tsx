@@ -10,7 +10,10 @@ import {
   useUsaStates,
 } from "@/hooks/useLotteryData";
 import { parseBestOnlineLotterySitesHtml } from "@/lib/parseBestOnlineLotterySites";
-import { withTheLotterAffiliate } from "@/lib/theLotterLinks";
+import {
+  regionGameFromResultsPath,
+  resolveTheLotterPlayUrl,
+} from "@/lib/theLotterLinks";
 import { formatStateTitle } from "@/lib/parseDrawResults";
 import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 import { getRecentPostSummaries } from "@/lib/wordpressContent";
@@ -116,7 +119,12 @@ const HomePage = () => {
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {jackpotCards.map((j, i) => (
-                <JackpotCard key={j.id} jackpot={j} rank={i + 1} />
+                <JackpotCard
+                  key={j.id}
+                  jackpot={j}
+                  rank={i + 1}
+                  jackpots={jackpotsQuery.data}
+                />
               ))}
             </div>
           )}
@@ -143,7 +151,11 @@ const HomePage = () => {
                     <BallRow balls={row.lastDrawResults!} size="sm" />
                     {row.playLink ? (
                       <PlayTicketsCta
-                        href={withTheLotterAffiliate(row.playLink)}
+                        href={resolveTheLotterPlayUrl({
+                          playLink: row.playLink,
+                          ...regionGameFromResultsPath(row.resultsPath),
+                          jackpots: jackpotsQuery.data,
+                        })}
                         label="Buy tickets"
                         variant="compact"
                       />

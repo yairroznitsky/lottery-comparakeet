@@ -39,6 +39,45 @@ function hasAffiliateParam(url: URL): boolean {
   return url.searchParams.has("tl_affid");
 }
 
+/** Legacy API play_link paths like /lottery-tickets/351/ 404 on theLotter. */
+function isNumericLotteryTicketsProductUrl(url: URL): boolean {
+  return /\/lottery-tickets\/\d+\/?$/.test(url.pathname);
+}
+
+/** Whether a play_link can be used as-is (not a dead numeric product URL). */
+export function isUsableTheLotterPlayLink(
+  rawUrl: string | null | undefined,
+): boolean {
+  const trimmed = rawUrl?.trim();
+  if (!trimmed) {
+    return false;
+  }
+  try {
+    const url = new URL(trimmed);
+    if (!isTheLotterHost(url.hostname)) {
+      return true;
+    }
+    return !isNumericLotteryTicketsProductUrl(url);
+  } catch {
+    return false;
+  }
+}
+
+/** Parse in-app results path into region/game slugs for play URL resolution. */
+export function regionGameFromResultsPath(resultsPath: string): {
+  region?: string;
+  game?: string;
+} {
+  if (resultsPath === "/top-jackpots") {
+    return {};
+  }
+  const parts = resultsPath.split("/").filter(Boolean);
+  if (parts.length >= 2) {
+    return { region: parts[0], game: parts[1] };
+  }
+  return {};
+}
+
 /** Geo-targeted homepage with affiliate tracking. */
 export function theLotterHomeUrl(): string {
   const url = new URL(THELOTTER_GEO_HOME_BASE);
@@ -58,6 +97,9 @@ export function withTheLotterAffiliate(rawUrl: string | null | undefined): strin
   try {
     const url = new URL(trimmed);
     if (!isTheLotterHost(url.hostname)) {
+      return theLotterHomeUrl();
+    }
+    if (isNumericLotteryTicketsProductUrl(url)) {
       return theLotterHomeUrl();
     }
     if (!hasAffiliateParam(url)) {
@@ -93,13 +135,18 @@ export function resolveTheLotterPlayUrl(
 ): string {
   const { playLink, region, game, jackpots } = input;
 
-  if (playLink?.trim()) {
+  if (playLink?.trim() && isUsableTheLotterPlayLink(playLink)) {
     return withTheLotterAffiliate(playLink);
   }
 
   if (region && game && jackpots?.length) {
     const path = `/${normalizeSlug(region)}/${normalizeSlug(game)}`;
-    const match = jackpots.find((j) => j.resultsPath === path && j.playLink);
+    const match = jackpots.find(
+      (j) =>
+        j.resultsPath === path &&
+        j.playLink &&
+        isUsableTheLotterPlayLink(j.playLink),
+    );
     if (match?.playLink) {
       return withTheLotterAffiliate(match.playLink);
     }
@@ -137,9 +184,14 @@ export function rewriteWordPressTheLotterLinks(html: string): string {
       }
       try {
         const url = new URL(trimmed, "https://lottery.comparakeet.com");
-        if (isTheLotterHost(url.hostname) && !hasAffiliateParam(url)) {
-          url.searchParams.set("tl_affid", THELOTTER_AFF_ID);
-          return `href=${quote}${url.toString()}${quote}`;
+        if (isTheLotterHost(url.hostname)) {
+          if (isNumericLotteryTicketsProductUrl(url)) {
+            return `href=${quote}${theLotterHomeUrl()}${quote}`;
+          }
+          if (!hasAffiliateParam(url)) {
+            url.searchParams.set("tl_affid", THELOTTER_AFF_ID);
+            return `href=${quote}${url.toString()}${quote}`;
+          }
         }
       } catch {
         /* keep original */
