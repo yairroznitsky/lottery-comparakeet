@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteSeo, { DEFAULT_DESCRIPTION } from "@/components/seo/SiteSeo";
 import JackpotCard from "@/components/lottery/JackpotCard";
+import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import SectionSkeleton from "@/components/lottery/SectionSkeleton";
 import BallRow from "@/components/lottery/BallRow";
@@ -264,13 +265,13 @@ const HomePage = () => {
                       to={`/${c.regionSlug}/${c.gameSlug}`}
                       className="flex items-center gap-2 rounded-lg bg-white px-2 py-2 text-sm ring-1 ring-brand-200 hover:bg-brand-50"
                     >
-                      {c.logo ? (
-                        <img
-                          src={c.logo}
-                          alt=""
-                          className="h-6 w-6 object-contain"
-                        />
-                      ) : null}
+                      <LotteryLogo
+                        src={c.logo}
+                        brand={c.name}
+                        regionSlug={c.regionSlug}
+                        gameSlug={c.gameSlug}
+                        className="h-6 w-6 shrink-0 object-contain"
+                      />
                       <span className="line-clamp-2 text-brand-800">{c.name}</span>
                     </Link>
                   ))}

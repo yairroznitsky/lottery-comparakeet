@@ -6,6 +6,7 @@ import {
   regionGameFromResultsPath,
   resolveTheLotterPlayUrl,
 } from "@/lib/theLotterLinks";
+import { formatDateTimeDisplay } from "@/lib/formatDateTime";
 import type { TopJackpotView } from "@/types/lottery";
 
 interface JackpotCardProps {
@@ -13,17 +14,6 @@ interface JackpotCardProps {
   rank?: number;
   jackpots?: TopJackpotView[] | null;
 }
-
-const formatCloseDate = (iso: string) => {
-  try {
-    return new Intl.DateTimeFormat(undefined, {
-      dateStyle: "medium",
-      timeStyle: "short",
-    }).format(new Date(iso));
-  } catch {
-    return iso;
-  }
-};
 
 const JackpotCard = ({ jackpot, rank, jackpots }: JackpotCardProps) => {
   const { region, game } = regionGameFromResultsPath(jackpot.resultsPath);
@@ -60,7 +50,7 @@ const JackpotCard = ({ jackpot, rank, jackpots }: JackpotCardProps) => {
             <p className="mt-2 text-xs text-brand-600">
               Ticket sales close{" "}
               <time dateTime={jackpot.nextDrawClose}>
-                {formatCloseDate(jackpot.nextDrawClose)}
+                {formatDateTimeDisplay(jackpot.nextDrawClose)}
               </time>
             </p>
           ) : null}

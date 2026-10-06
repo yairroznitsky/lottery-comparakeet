@@ -6,6 +6,7 @@ import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import { useTopJackpots } from "@/hooks/useLotteryData";
+import { formatDateTimeDisplay } from "@/lib/formatDateTime";
 import {
   regionGameFromResultsPath,
   resolveTheLotterPlayUrl,
@@ -158,7 +159,7 @@ const TopJackpotsPage = () => {
                 </p>
                 <p className="mt-0.5 text-sm text-brand-800">
                   {row.nextDrawClose
-                    ? new Date(row.nextDrawClose).toLocaleString()
+                    ? formatDateTimeDisplay(row.nextDrawClose)
                     : "—"}
                 </p>
               </div>
@@ -214,7 +215,7 @@ const TopJackpotsPage = () => {
                   </td>
                   <td className="px-4 py-3 text-brand-700">
                     {row.nextDrawClose
-                      ? new Date(row.nextDrawClose).toLocaleString()
+                      ? formatDateTimeDisplay(row.nextDrawClose)
                       : "—"}
                   </td>
                   <td className="px-4 py-3">

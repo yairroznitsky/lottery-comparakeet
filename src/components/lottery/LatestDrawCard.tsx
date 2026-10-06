@@ -1,6 +1,6 @@
 import BallRow from "@/components/lottery/BallRow";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
-import { formatDrawDate } from "@/lib/parseDrawResults";
+import { formatDateTimeDisplay, formatDrawDate } from "@/lib/formatDateTime";
 import type { DrawResultView } from "@/types/lottery";
 
 interface LatestDrawCardProps {
@@ -52,7 +52,7 @@ const LatestDrawCard = ({
         <p className="mt-3 text-xs text-brand-700 sm:text-sm">
           Next draw:{" "}
           <time dateTime={draw.nextDraw}>
-            {new Date(draw.nextDraw).toLocaleString()}
+            {formatDateTimeDisplay(draw.nextDraw)}
           </time>
         </p>
       ) : null}

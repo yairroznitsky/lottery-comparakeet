@@ -1,0 +1,42 @@
+//#region content/wordpress/posts/can-one-play-the-american-powerball-lottery-from-india.json
+var id = 5948;
+var title = "Can one play the American Powerball lottery from India?";
+var contentHtml = "<h2>An Overview</h2>\n<p>It is hard to believe that Powerball is more than 30 years old. Powerball’s original name was Lotto America back in 1988, but both the name and format of the game changed in 1992 making it what it is today. The format change involved the use of two containers from which numbers could be pulled and was the first to adopt this method. Both the name and format change aligned well with the explosion of the internet although the opportunity to play internationally came much later.</p>\n<p>Other international lotteries offer similar play, such as MegaMillions and EuroMillions in Europe, but Powerball was the first and continues to be the most well-known.</p>\n<p>The same is largely true of the Kerala State Lottery. It was the first of its kind for gambling in India and the other states that allow the lottery largely followed suit after Kerala. Kerala and several other states allow the lottery, but not all do. However, playing the Powerball online lottery and others like it online is allowed because individual state laws don’t apply.</p>\n<p>&nbsp;</p>\n<h2>How To Play Powerball</h2>\n<p>Powerball includes the main draw, which includes numbers 1 through 69, as well as a Powerball number between 1 and 26. The two sets of numbers with the Powerball number is what creates the opportunity for the enormous payouts. Of course, the more tickets you buy the better your chances are of winning.</p>\n<p>You can choose your own numbers as long as they fall within the range. People choose numbers that mean something to them, such as the birthdates of significant people in their lives, or their lucky numbers. You can also simply randomly select numbers or even use an app that will select random numbers for you. Some lotteries require that the order of the numbers correspond with one another, but that is not the case with Powerball. Then you wait for the draws, which occur twice a week on Wednesdays and Saturdays to see if you’re a winner.</p>\n<p>&nbsp;</p>\n<h2>What You Can Win Playing Powerball</h2>\n<p>The smallest jackpot possible is $40 million. Each week if there is no winner, $10 million rolls over to the following week’s jackpot. This continues to grow until a winner is announced. It is no coincidence that the Powerball online lottery has the largest jackpot of the world’s lotteries.</p>\n<p>Amazingly, on January 13th, 2016, three winners split the Powerball jackpot for the enormous amount of $1.586 billion, which equates to more than Rs. 11229 crore. Can you even imagine what you would do with all that money? It is almost unimaginable. And as the international lottery continues to expand without a cap on the maximum jackpot, the biggest payout is sure to increase!</p>\n<p>Did you know an Indian has won the jackpot already? In 2018, a Guyanese-Indian carpenter by the name of\xA0<a href=\"https://www.indiawest.com/news/global_indian/guyanese-indian-carpenter-nandlall-mangal-wins-million-jackpot-in-new/article_7a36810a-c73a-11e8-b07f-9fde4653d9c9.html\" target=\"_blank\" rel=\"noopener noreferrer\">Nandlall Mangal</a>\xA0won $245.6 million US dollars! Not a bad return on the six-dollar ticket he bought!</p>\n<p>&nbsp;</p>\n<h2>How You Collect Your Online Lottery Winnings</h2>\n<p>There are two options for payouts of Powerball lottery winnings, in general.</p>\n<ol>\n<li>You can take one lump sum, or</li>\n<li>You can accept an annual payout over 30 years.</li>\n</ol>\n<p>When playing while living in India, you would have an online account connected to you in which the funds would be deposited.</p>\n<p>Okay, you still have questions. That’s understandable. Below is a list of common questions and answers to help increase your comfort level with playing the Powerball online lottery.</p>\n<p>&nbsp;</p>\n<h2>Can I Purchase Powerball Tickets in India?</h2>\n<p>Yes! To do this, you would use a website or a\xA0lottery agent\xA0to represent you on your behalf. You look online for reputable companies that cater to Indian players and set up an account for Powerball (and any others you would like to play). Some websites have specials for new accounts and first-time players including free tickets so be sure to look for these specials!</p>\n<p>As long as you have a credit or debit card, are over the age of 18, and are able to create an online account with internet access, you can play Powerball! You create your account, purchase your tickets, and select your numbers. The lottery websites usually have offices set up around the world where agents work out of, and they go purchase tickets on your behalf. They should ideally scan a copy of your ticket and show it to you as proof and to confirm the purchase was made with the proper number selections.</p>\n<p>The drawings occur twice a week and you will be notified if you are a winner at which point the money would be disbursed to your online account once you claim the winnings and the payout method.</p>\n<p>&nbsp;</p>\n<h2>How Can I Increase My Odds of Winning?</h2>\n<p>There are generally three ways to increase your odds of winning Powerball.</p>\n<ol>\n<li>Buy more tickets. Each ticket you buy is an additional opportunity to win.</li>\n<li>Gather a lottery syndicate. You can join a pool of multiple players who commit to splitting the jackpot evenly if there is a winner in the group. These lottery syndicates can be created through your own network with people you know or through some online lotteries who offer this as an option. In fact, fifty-five players from around the world teamed won playing a syndicate in November of 2017.</li>\n<li>Find a lottery app that provides data on lottery past such as the most frequently pulled numbers and other data that is gathered through algorithms.</li>\n</ol>\n<p>Now that we have reviewed some of the rules, risks, and opportunities for you to play the US Powerball online lottery internationally from India, you should have increased comfort in giving it a try.</p>\n<p>&nbsp;</p>\n<p>Check out some of our\xA0online lottery reviews\xA0here for more information!</p>\n<p>&nbsp;</p>\n";
+var excerptHtml = "<p>State and country restrictions prohibit the lottery in some places in India. In others, the payout isn’t as high as it is with the American Powerball or MegaMillions. Fortunately, with the advent of the internet lotteries have been able to go international making them accessible to anyone with an internet connection. In India and worldwide, people everywhere now have the opportunity to win big in an online lottery; Winning the lottery is a dream that many people have, but you can’t win if you don’t play. </p>\n<p>Here is what you need to know.</p>\n";
+var slug = "can-one-play-the-american-powerball-lottery-from-india";
+var date = "2020-12-07T13:15:24";
+var modified = "2021-03-25T10:30:59";
+var link = "/can-one-play-the-american-powerball-lottery-from-india";
+var featuredImage = {
+	"url": "/wp-media/wp-content/uploads/2020/12/pexels-sora-shimazaki-5935741-scaled-e1607347890163.jpg",
+	"alt": "play PowerBall from India",
+	"width": 1200,
+	"height": 1800
+};
+var seo = {
+	"title": "Can one play the American Powerball lottery from India? - Lottery Parakeet",
+	"description": "You look online for reputable companies that cater to Indian players and set up an account for Powerball ?read more and get these specials!",
+	"canonical": "/can-one-play-the-american-powerball-lottery-from-india",
+	"ogTitle": "Can one play the American Powerball lottery from India? - Lottery Parakeet",
+	"ogDescription": "You look online for reputable companies that cater to Indian players and set up an account for Powerball ?read more and get these specials!",
+	"ogImage": "/wp-media/wp-content/uploads/2020/12/pexels-sora-shimazaki-5935741-scaled-e1607347890163.jpg",
+	"ogUrl": "https://lottery.comparakeet.com/can-one-play-the-american-powerball-lottery-from-india",
+	"robotsIndex": true,
+	"robotsFollow": true
+};
+var contentType = "post";
+var can_one_play_the_american_powerball_lottery_from_india_default = {
+	id,
+	title,
+	contentHtml,
+	excerptHtml,
+	slug,
+	date,
+	modified,
+	link,
+	featuredImage,
+	seo,
+	contentType
+};
+//#endregion
+export { contentHtml, contentType, date, can_one_play_the_american_powerball_lottery_from_india_default as default, excerptHtml, featuredImage, id, link, modified, seo, slug, title };

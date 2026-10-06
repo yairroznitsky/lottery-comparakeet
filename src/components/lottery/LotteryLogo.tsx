@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { getLocalLotteryIconUrl } from "@/lib/lotteryLocalIcons";
 import {
   deriveS3LogoUrlFromBrand,
   isPlaceholderLotteryLogo,
@@ -7,12 +8,26 @@ import {
 interface LotteryLogoProps {
   src: string | null | undefined;
   brand: string;
+  regionSlug?: string;
+  gameSlug?: string;
   className?: string;
 }
 
-const LotteryLogo = ({ src, brand, className = "h-8 max-w-[80px] object-contain" }: LotteryLogoProps) => {
+const LotteryLogo = ({
+  src,
+  brand,
+  regionSlug,
+  gameSlug,
+  className = "h-8 max-w-[80px] object-contain",
+}: LotteryLogoProps) => {
   const fallbacks = useMemo(() => {
     const list: string[] = [];
+    if (regionSlug && gameSlug) {
+      const local = getLocalLotteryIconUrl(regionSlug, gameSlug);
+      if (local && !list.includes(local)) {
+        list.push(local);
+      }
+    }
     if (src && !isPlaceholderLotteryLogo(src)) {
       list.push(src);
     }
@@ -30,7 +45,7 @@ const LotteryLogo = ({ src, brand, className = "h-8 max-w-[80px] object-contain"
       if (!list.includes(u)) list.push(u);
     }
     return list;
-  }, [src, brand]);
+  }, [src, brand, regionSlug, gameSlug]);
 
   const [index, setIndex] = useState(0);
 

@@ -16,6 +16,7 @@
     "sync:intl-faqs": "node scripts/sync-intl-faqs.mjs",
     "sync:intl-games": "node scripts/sync-intl-games.mjs",
     "sync:intl-content": "node scripts/sync-intl-games.mjs && node scripts/sync-intl-faqs.mjs",
+    "sync:lottery-icons": "node scripts/sync-lottery-icons.mjs",
     "sync:brand-reviews": "node scripts/sync-brand-reviews.mjs",
     "preview": "vite preview"
   },

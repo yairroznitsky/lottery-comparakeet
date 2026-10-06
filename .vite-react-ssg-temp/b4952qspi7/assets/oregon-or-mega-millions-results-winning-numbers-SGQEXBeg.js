@@ -1,0 +1,36 @@
+//#region content/wordpress/pages/oregon-or-mega-millions-results-winning-numbers.json
+var id = 1325;
+var title = "Oregon (OR) Mega Millions – Results &#038; Winning Numbers";
+var contentHtml = "";
+var excerptHtml = "";
+var slug = "oregon-or-mega-millions-results-winning-numbers";
+var date = "2020-07-08T13:43:08";
+var modified = "2020-11-17T15:10:24";
+var link = "/oregon/mega-millions";
+var featuredImage = null;
+var seo = {
+	"title": "Oregon (OR) Mega Millions - Results & Winning Numbers",
+	"description": "Lottery results for the Oregon (OR) Mega Millions and winning numbers for the last 10 draws.",
+	"canonical": "/oregon/mega-millions",
+	"ogTitle": "Oregon (OR) Mega Millions - Results & Winning Numbers",
+	"ogDescription": "Lottery results for the Oregon (OR) Mega Millions and winning numbers for the last 10 draws.",
+	"ogUrl": "https://lottery.comparakeet.com/oregon/mega-millions",
+	"robotsIndex": true,
+	"robotsFollow": true
+};
+var contentType = "page";
+var oregon_or_mega_millions_results_winning_numbers_default = {
+	id,
+	title,
+	contentHtml: "",
+	excerptHtml: "",
+	slug,
+	date,
+	modified,
+	link,
+	featuredImage: null,
+	seo,
+	contentType
+};
+//#endregion
+export { contentHtml, contentType, date, oregon_or_mega_millions_results_winning_numbers_default as default, excerptHtml, featuredImage, id, link, modified, seo, slug, title };

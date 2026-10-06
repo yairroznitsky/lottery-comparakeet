@@ -1,0 +1,12 @@
+:root {
+  --brand-navy: #0b2145;
+  --brand-blue: #0875ce;
+  --brand-green: #56c51c;
+  --brand-yellow: #ffcf20;
+  --brand-teal: #00b8bc;
+  --brand-red: #ff4b6b;
+  --brand-purple: #8245d2;
+  --brand-background: #ffffff;
+}
+/* Approximate interface palette derived from the raster logo.
+   Use navy on white for body text; yellow and green as accents. */

@@ -15,6 +15,35 @@ export function normalizeLotteryBrandKey(name: string): string {
   return name.trim().replace(/\s+/g, " ").toLowerCase();
 }
 
+function logoUrlQuality(url: string | null | undefined): number {
+  if (!url?.trim()) {
+    return 0;
+  }
+  if (isPlaceholderLotteryLogo(url)) {
+    return 1;
+  }
+  if (url.includes("thelotter.com")) {
+    return 2;
+  }
+  return 3;
+}
+
+/** Prefer real S3 logos over placeholders, empty strings, and hotlinked URLs. */
+export function pickBetterLotteryLogoUrl(
+  a: string | null | undefined,
+  b: string | null | undefined,
+): string {
+  const qa = logoUrlQuality(a);
+  const qb = logoUrlQuality(b);
+  if (qa > qb) {
+    return a?.trim() ?? "";
+  }
+  if (qb > qa) {
+    return b?.trim() ?? "";
+  }
+  return a?.trim() || b?.trim() || "";
+}
+
 /** Build lookup of lottery display name -> logo URL (non-placeholder entries only). */
 export function buildLotteryLogoLookup(
   countries: InternationalCountryRecord[],

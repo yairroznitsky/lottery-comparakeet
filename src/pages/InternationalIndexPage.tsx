@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteSeo from "@/components/seo/SiteSeo";
 import JackpotCard from "@/components/lottery/JackpotCard";
+import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PageErrorState from "@/components/wordpress/PageErrorState";
 import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import {
@@ -75,11 +76,12 @@ const InternationalIndexPage = () => {
               to={`/${country.regionSlug}/${country.gameSlug}`}
               className="flex items-center gap-3 rounded-xl border border-brand-200 bg-white p-3 shadow-sm hover:bg-brand-25"
             >
-              <img
+              <LotteryLogo
                 src={country.logo}
-                alt=""
+                brand={country.name}
+                regionSlug={country.regionSlug}
+                gameSlug={country.gameSlug}
                 className="h-10 w-10 shrink-0 object-contain"
-                loading="lazy"
               />
               <span className="text-sm font-medium text-brand-900">{country.name}</span>
             </Link>

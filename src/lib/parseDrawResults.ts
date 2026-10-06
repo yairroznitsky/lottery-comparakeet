@@ -1,3 +1,4 @@
+import { getLocalLotteryIconUrl } from "@/lib/lotteryLocalIcons";
 import { resolveJackpotLogoUrl } from "@/lib/lotteryLogos";
 import type {
   DrawResultView,
@@ -92,13 +93,7 @@ export function parseResultsString(raw: string | null | undefined): ParsedBalls 
   return { main, bonus };
 }
 
-export function formatDrawDate(isoOrDate: string): string {
-  const d = new Date(isoOrDate.includes("T") ? isoOrDate : `${isoOrDate}T12:00:00`);
-  if (Number.isNaN(d.getTime())) {
-    return isoOrDate;
-  }
-  return new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(d);
-}
+export { formatDrawDate } from "@/lib/formatDateTime";
 
 function regionGameFromDisplayName(name: string | undefined): {
   region: string;
@@ -205,9 +200,15 @@ export function mapTopJackpot(
 ): TopJackpotView {
   const jackpotDisplay = record.next_draw_jackpot ?? "";
   const brand = (record.Game_Brand ?? record.title ?? record.name ?? "").trim();
-  const logoUrl = logoLookup
-    ? resolveJackpotLogoUrl(record, logoLookup)
-    : (record.logo ?? null);
+  const split = splitBrandRegionGame(brand);
+  const localLogo =
+    split &&
+    getLocalLotteryIconUrl(normalizeSlug(split.region), normalizeSlug(split.game));
+  const logoUrl =
+    localLogo ??
+    (logoLookup
+      ? resolveJackpotLogoUrl(record, logoLookup)
+      : (record.logo ?? null));
   return {
     id: record.id,
     brand,

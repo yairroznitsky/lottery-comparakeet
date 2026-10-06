@@ -1,5 +1,6 @@
 import { getLotteryApiBaseUrl } from "@/config/lotteryApi";
-import { buildLotteryLogoLookup } from "@/lib/lotteryLogos";
+import { resolveListingLogo } from "@/lib/lotteryLocalIcons";
+import { buildLotteryLogoLookup, pickBetterLotteryLogoUrl } from "@/lib/lotteryLogos";
 import {
   shouldOmitCountryFromListings,
   shouldOmitJackpotFromListings,
@@ -87,13 +88,39 @@ export async function fetchUsaResults(
   return rows.map(mapUsaDraw);
 }
 
+function mergeInternationalCountryRows(
+  rows: InternationalCountryRecord[],
+): InternationalCountryRecord[] {
+  const bySlug = new Map<string, InternationalCountryRecord>();
+  for (const row of rows) {
+    const view = parseCountryRecord(row);
+    const key = `${view.regionSlug}/${view.gameSlug}`;
+    const existing = bySlug.get(key);
+    if (!existing) {
+      bySlug.set(key, row);
+      continue;
+    }
+    bySlug.set(key, {
+      name: existing.name || row.name,
+      logo: pickBetterLotteryLogoUrl(existing.logo, row.logo),
+    });
+  }
+  return [...bySlug.values()];
+}
+
 export async function fetchInternationalCountries(): Promise<CountryView[]> {
   const rows = await lotteryGet<InternationalCountryRecord[]>(
     "/international/lottery/countries",
   );
-  return rows
-    .filter((row) => !shouldOmitCountryFromListings(row))
-    .map(parseCountryRecord);
+  return mergeInternationalCountryRows(
+    rows.filter((row) => !shouldOmitCountryFromListings(row)),
+  )
+    .map(parseCountryRecord)
+    .map((country) => ({
+      ...country,
+      logo: resolveListingLogo(country),
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export async function fetchInternationalResults(
