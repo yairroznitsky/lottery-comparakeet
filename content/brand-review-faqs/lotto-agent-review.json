@@ -1,0 +1,36 @@
+{
+  "slug": "lotto-agent-review",
+  "brandName": "Lotto Agent",
+  "autocompleteSeeds": [
+    "what is lotto agent",
+    "lotto agent app",
+    "lotto agent login",
+    "lotto agent commission"
+  ],
+  "items": [
+    {
+      "question": "What is Lotto Agent?",
+      "answer": "Lotto Agent is an online lottery courier founded in 2012. It purchases official tickets from retailers, scans them, and uploads images to your account—similar to other ticket agents, with a focus on straightforward courier service rather than casino extras."
+    },
+    {
+      "question": "Is Lotto Agent legit?",
+      "answer": "Lotto Agent has operated publicly for many years with scanned-ticket proof for orders. As with any courier, verify game availability for your country, read fee disclosures at checkout, and complete KYC before requesting withdrawals."
+    },
+    {
+      "question": "How does the Lotto Agent app work?",
+      "answer": "The mobile app mirrors the website: fund your wallet, choose draws, and view scans on your phone. Download from official sources only. Push notifications can alert you to results if enabled in settings."
+    },
+    {
+      "question": "What is the Lotto Agent commission or fee?",
+      "answer": "Lotto Agent charges service fees on top of face-value ticket prices to cover retail purchase, scanning, and support. There is no separate hidden commission on winnings, but currency conversion may add cost—review the checkout total in your currency."
+    },
+    {
+      "question": "How do Lotto Agent login and results work?",
+      "answer": "Log in with your registered email and password. Open order history to see scans and matched results after draws. If a scan is missing near cutoff, contact support with your order number instead of buying duplicate tickets."
+    },
+    {
+      "question": "Is Lotto Agent the same as a retail lotto agent near me?",
+      "answer": "No. Search suggestions about “lotto agent near me” usually refer to physical convenience-store clerks. Lotto Agent the website is an international courier service—you do not visit a local shop; staff abroad buy tickets on your behalf."
+    }
+  ]
+}

@@ -6,9 +6,10 @@ interface PageSeoProps {
   fallbackTitle: string;
   seo: WordPressSeoMetadata;
   path: string;
+  jsonLd?: object | object[];
 }
 
-const PageSeo = ({ fallbackTitle, seo, path }: PageSeoProps) => {
+const PageSeo = ({ fallbackTitle, seo, path, jsonLd }: PageSeoProps) => {
   const description =
     seo.description ??
     `Read ${fallbackTitle} on Lottery Parakeet — lottery results, jackpots, and guides.`;
@@ -26,6 +27,7 @@ const PageSeo = ({ fallbackTitle, seo, path }: PageSeoProps) => {
       ogType="article"
       noIndex={noIndex}
       titleTemplate={!seo.title}
+      jsonLd={jsonLd}
     />
   );
 };

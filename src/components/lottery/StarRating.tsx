@@ -5,14 +5,19 @@ interface StarRatingProps {
 }
 
 const StarRating = ({ rating, max = 5, className = "" }: StarRatingProps) => {
-  const fullStars = Math.floor(rating);
-  const hasHalf = rating - fullStars >= 0.25 && rating - fullStars < 0.85;
+  const clamped = Math.min(max, Math.max(0, rating));
+  const wholeStars = Math.floor(clamped);
+  const remainder = clamped - wholeStars;
+  const roundUpToFull = remainder >= 0.85 ? 1 : 0;
+  const fullStars = Math.min(max, wholeStars + roundUpToFull);
+  const hasHalf =
+    roundUpToFull === 0 && remainder >= 0.25 && remainder < 0.85;
   const emptyStars = max - fullStars - (hasHalf ? 1 : 0);
 
   return (
     <div
       className={`inline-flex items-center gap-2 ${className}`}
-      aria-label={`Rated ${rating} out of ${max}`}
+      aria-label={`Rated ${clamped} out of ${max}`}
     >
       <span className="inline-flex text-amber-500" aria-hidden>
         {Array.from({ length: fullStars }, (_, i) => (
@@ -26,7 +31,7 @@ const StarRating = ({ rating, max = 5, className = "" }: StarRatingProps) => {
         ))}
       </span>
       <span className="text-sm font-semibold tabular-nums text-brand-900">
-        {rating.toFixed(1)}
+        {clamped.toFixed(1)}
       </span>
     </div>
   );

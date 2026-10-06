@@ -10,6 +10,11 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { applyBrandReviewContent } from "./lib/applyBrandReviewContent.mjs";
+import {
+  BRAND_REVIEW_SLUGS,
+  WP_FETCH_SLUG_BY_CANONICAL,
+} from "./lib/brandReviewCatalog.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -305,39 +310,36 @@ function safeFilename(slug) {
   return slug.replace(/[^a-zA-Z0-9._-]/g, "_");
 }
 
-function isBrandReviewSlug(slug) {
-  return /-review$/i.test(slug) || slug === "thelotter-2021-review";
-}
-
 async function loadReviewSlugsFromManifest() {
-  const raw = await fs.readFile(MANIFEST_PATH, "utf8");
-  const manifest = JSON.parse(raw);
-  const fromManifest = (manifest.posts ?? [])
-    .map((p) => p.slug)
-    .filter((slug) => isBrandReviewSlug(slug));
-  if (fromManifest.length > 0) {
-    return [...new Set(fromManifest)].sort();
-  }
-  const files = await fs.readdir(OUT_POSTS);
-  return files
-    .filter((f) => f.endsWith(".json") && isBrandReviewSlug(f.replace(/\.json$/, "")))
+  const onDisk = await fs.readdir(OUT_POSTS).catch(() => []);
+  const fromFiles = onDisk
+    .filter((f) => f.endsWith(".json"))
     .map((f) => f.replace(/\.json$/, ""))
-    .sort();
+    .filter((slug) => BRAND_REVIEW_SLUGS.includes(slug));
+  if (fromFiles.length > 0) {
+    return [...new Set(fromFiles)].sort();
+  }
+  return [...BRAND_REVIEW_SLUGS];
 }
 
-async function writeLocalized(resource, slug, contentType, outDir) {
+async function writeLocalized(resource, slug, contentType, outDir, fileSlug = slug) {
   const item = await fetchBySlug(resource, slug);
   if (!item) {
     console.warn(`  missing on WordPress: ${resource}/${slug}`);
     return null;
   }
-  const view = mapWordPressContent(item, contentType);
+  let view = mapWordPressContent(item, contentType);
   const localized = await localizeView(view);
-  const file = path.join(outDir, `${safeFilename(slug)}.json`);
-  await fs.writeFile(file, `${JSON.stringify(localized, null, 2)}\n`, "utf8");
+  if (BRAND_REVIEW_SLUGS.includes(fileSlug)) {
+    view = applyBrandReviewContent(localized, fileSlug, localized.modified);
+  } else {
+    view = localized;
+  }
+  const file = path.join(outDir, `${safeFilename(fileSlug)}.json`);
+  await fs.writeFile(file, `${JSON.stringify(view, null, 2)}\n`, "utf8");
   console.log(`  wrote ${path.relative(ROOT, file)} (${view.modified})`);
   return {
-    slug: view.slug,
+    slug: fileSlug,
     id: view.id,
     modified: view.modified,
     title: view.title,
@@ -386,7 +388,10 @@ async function main() {
 
   const entries = [];
   for (const slug of reviewSlugs) {
-    entries.push(await writeLocalized("posts", slug, "post", OUT_POSTS));
+    const wpSlug = WP_FETCH_SLUG_BY_CANONICAL[slug] ?? slug;
+    entries.push(
+      await writeLocalized("posts", wpSlug, "post", OUT_POSTS, slug),
+    );
     if (DELAY_MS > 0) {
       await sleep(DELAY_MS);
     }

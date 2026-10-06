@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import StarRating from "@/components/lottery/StarRating";
+import { resolveBrandVisitHref } from "@/lib/brandVisitLinks";
 import type { LotterySiteReviewDetail } from "@/lib/parseBestOnlineLotterySites";
 
 interface LotteryBrandReviewSectionProps {
@@ -44,12 +46,10 @@ const LotteryBrandReviewSection = ({ review }: LotteryBrandReviewSectionProps) =
       ) : null}
 
       <div className="mt-6 flex flex-wrap gap-2">
-        <a
-          href={review.visitUrl}
-          className="inline-flex rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700"
-        >
-          Visit {review.name}
-        </a>
+        <PlayTicketsCta
+          href={resolveBrandVisitHref(review.visitUrl)}
+          label={`Visit ${review.name}`}
+        />
         {review.reviewUrl ? (
           <Link
             to={review.reviewUrl}

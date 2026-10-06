@@ -1,0 +1,38 @@
+{
+  "slug": "thelotter-review",
+  "brandName": "TheLotter",
+  "autocompleteSeeds": [
+    "is thelotter legit",
+    "is thelotter safe",
+    "is thelotter legal",
+    "is thelotter real",
+    "thelotter app",
+    "how does thelotter work"
+  ],
+  "items": [
+    {
+      "question": "Is TheLotter legit and safe?",
+      "answer": "TheLotter is a long-running lottery courier that buys official tickets from authorized retailers and uploads scanned copies to your account. It uses standard payment encryption and has a long public operating history. As with any online service, use strong passwords, verify your identity when asked, and read the terms for your country before depositing."
+    },
+    {
+      "question": "Is TheLotter legal in the United States?",
+      "answer": "Lottery rules differ by US state. TheLotter accepts players from many regions but blocks or limits some states. Before signing up, check TheLotter’s current restricted locations list and your local laws on online lottery courier services. Playing when prohibited can void purchases or complicate prize claims."
+    },
+    {
+      "question": "Does TheLotter sell real lottery tickets?",
+      "answer": "Yes. TheLotter operates as a ticket agent: staff purchase physical entries on your behalf, scan them, and store the images in your account. This is different from lottery betting sites that pay insurance-based prizes. Always confirm the product type at checkout if you switch between games."
+    },
+    {
+      "question": "How does TheLotter work?",
+      "answer": "You fund a wallet, choose a draw, pick numbers or use quick pick, and pay the ticket price plus a service fee. After purchase, a scan appears in your account. When results publish, smaller wins are usually credited automatically; large jackpots may require in-person claiming according to the official lottery’s rules."
+    },
+    {
+      "question": "How do TheLotter payouts and withdrawals work?",
+      "answer": "Secondary and mid-tier prizes typically credit to your TheLotter balance, which you can withdraw using supported methods after verification. Jackpot wins often must be claimed in person at the lottery that sold the ticket, which can mean travel. Read TheLotter’s winner guide before playing huge rollovers from abroad."
+    },
+    {
+      "question": "Is there a TheLotter app?",
+      "answer": "TheLotter offers mobile apps for major platforms that mirror core website features: browsing jackpots, buying tickets, viewing scans, and checking results. Download only from official app stores or TheLotter’s site, and enable device security if you store payment methods."
+    }
+  ]
+}

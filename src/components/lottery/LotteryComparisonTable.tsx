@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import StarRating from "@/components/lottery/StarRating";
+import { resolveBrandVisitHref } from "@/lib/brandVisitLinks";
 import type { LotterySiteRow } from "@/lib/parseBestOnlineLotterySites";
 
 interface LotteryComparisonTableProps {
@@ -48,21 +49,13 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
                 {row.highlight || "—"}
               </p>
             </div>
-            <div className="flex flex-col gap-2 pt-1">
-              <a
-                href={row.visitUrl}
-                className="inline-flex justify-center rounded-lg bg-brand-600 px-3 py-2.5 text-sm font-semibold text-white hover:bg-brand-700"
-              >
-                Visit {row.name}
-              </a>
-              {row.reviewUrl ? (
-                <Link
-                  to={row.reviewUrl}
-                  className="inline-flex justify-center rounded-lg border border-brand-300 px-3 py-2.5 text-sm font-semibold text-brand-800 hover:bg-brand-50"
-                >
-                  Full review
-                </Link>
-              ) : null}
+            <div className="pt-1">
+              <PlayTicketsCta
+                href={resolveBrandVisitHref(row.visitUrl)}
+                label={`Visit ${row.name}`}
+                variant="primary"
+                className="w-full"
+              />
             </div>
           </li>
         ))}
@@ -128,22 +121,11 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
                   {row.highlight || "—"}
                 </td>
                 <td className="px-4 py-4 align-middle">
-                  <div className="flex flex-wrap gap-2">
-                    <a
-                      href={row.visitUrl}
-                      className="inline-flex rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-brand-700"
-                    >
-                      Visit {row.name}
-                    </a>
-                    {row.reviewUrl ? (
-                      <Link
-                        to={row.reviewUrl}
-                        className="inline-flex rounded-lg border border-brand-300 px-3 py-1.5 text-xs font-semibold text-brand-800 hover:bg-brand-50"
-                      >
-                        Full review
-                      </Link>
-                    ) : null}
-                  </div>
+                  <PlayTicketsCta
+                    href={resolveBrandVisitHref(row.visitUrl)}
+                    label={`Visit ${row.name}`}
+                    variant="compact"
+                  />
                 </td>
               </tr>
             ))}

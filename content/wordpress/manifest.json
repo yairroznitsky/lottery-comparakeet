@@ -6786,49 +6786,49 @@
     {
       "slug": "multilotto-review",
       "id": 6356,
-      "modified": "2025-07-28T18:02:37",
+      "modified": "2026-10-06T14:00:00",
       "title": "MultiLotto Review",
       "date": "2020-12-16T20:01:35"
     },
     {
       "slug": "wintrillions-review",
       "id": 6346,
-      "modified": "2025-07-28T18:00:45",
+      "modified": "2026-10-06T14:00:00",
       "title": "WinTrillions Review",
       "date": "2020-12-16T19:23:59"
     },
     {
       "slug": "playhugelottos-review",
       "id": 6342,
-      "modified": "2025-07-28T18:02:08",
+      "modified": "2026-10-06T14:00:00",
       "title": "PlayHugeLottos Review",
       "date": "2020-12-16T19:14:33"
     },
     {
       "slug": "lottokings-review",
       "id": 6172,
-      "modified": "2025-07-28T18:01:06",
+      "modified": "2026-10-06T14:00:00",
       "title": "LottoKings Review",
       "date": "2020-12-14T12:59:00"
     },
     {
       "slug": "lotto247-review",
       "id": 6096,
-      "modified": "2025-07-28T18:01:44",
+      "modified": "2026-10-06T14:00:00",
       "title": "Lotto247 Review",
       "date": "2020-12-14T12:52:10"
     },
     {
       "slug": "jackpot-com-review",
       "id": 6089,
-      "modified": "2025-07-28T17:59:52",
+      "modified": "2026-10-06T14:00:00",
       "title": "Jackpot.com Review",
       "date": "2020-12-13T15:18:45"
     },
     {
       "slug": "lotto-agent-review",
       "id": 6085,
-      "modified": "2025-07-28T18:03:21",
+      "modified": "2026-10-06T14:00:00",
       "title": "Lotto Agent Review",
       "date": "2020-12-13T15:01:06"
     },
@@ -6875,9 +6875,9 @@
       "date": "2020-12-07T13:15:24"
     },
     {
-      "slug": "thelotter-2021-review",
+      "slug": "thelotter-review",
       "id": 5203,
-      "modified": "2025-07-28T17:59:14",
+      "modified": "2026-10-06T14:00:00",
       "title": "TheLotter Review",
       "date": "2020-11-30T18:51:52"
     }
@@ -6887,5 +6887,7 @@
     "posts": 16,
     "mediaFiles": 514
   },
-  "brandReviewsRefreshedAt": "2026-10-04T12:04:31.318Z"
+  "brandReviewsRefreshedAt": "2026-10-04T12:04:31.318Z",
+  "brandReviewUrlsRefreshedAt": "2026-10-06T11:52:51.282Z",
+  "brandReviewContentRewrittenAt": "2026-10-06T11:54:58.519Z"
 }

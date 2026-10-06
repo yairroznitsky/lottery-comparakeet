@@ -6,6 +6,336 @@
       "source": "/visit-thelotter",
       "destination": "https://lnk.to/TLHP?tl_affid=11798&ft=5",
       "permanent": true
+    },
+    {
+      "source": "/visit-win-trillions",
+      "destination": "https://www.wintrillions.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-win-trillions/",
+      "destination": "https://www.wintrillions.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lottokings",
+      "destination": "https://www.lottokings.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lottokings/",
+      "destination": "https://www.lottokings.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-jackpot",
+      "destination": "https://www.jackpot.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-jackpot/",
+      "destination": "https://www.jackpot.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lotto247",
+      "destination": "https://www.lotto247.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lotto247/",
+      "destination": "https://www.lotto247.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-playhugelottos",
+      "destination": "https://www.playhugelottos.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-playhugelottos/",
+      "destination": "https://www.playhugelottos.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-multilotto",
+      "destination": "https://www.multilotto.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-multilotto/",
+      "destination": "https://www.multilotto.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lotto-agent",
+      "destination": "https://www.lottoagent.com/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-lotto-agent/",
+      "destination": "https://www.lottoagent.com/",
+      "permanent": true
+    },
+    {
+      "source": "/Visit-MultiLotto",
+      "destination": "https://www.multilotto.com/",
+      "permanent": true
+    },
+    {
+      "source": "/Visit-MultiLotto/",
+      "destination": "https://www.multilotto.com/",
+      "permanent": true
+    },
+    {
+      "source": "/thelotter-2021-review",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/thelotter-2021-review/",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/thelotter-review",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/thelotter-review/",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/thelotter-review",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/thelotter-review/",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/thelotter-review",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/thelotter-review/",
+      "destination": "/thelotter-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/wintrillions-review",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/wintrillions-review/",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/wintrillions-review",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/wintrillions-review/",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/wintrillions-review",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/wintrillions-review/",
+      "destination": "/wintrillions-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lottokings-review",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lottokings-review/",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lottokings-review",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lottokings-review/",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lottokings-review",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lottokings-review/",
+      "destination": "/lottokings-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/jackpot-com-review",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/jackpot-com-review/",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/jackpot-com-review",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/jackpot-com-review/",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/jackpot-com-review",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/jackpot-com-review/",
+      "destination": "/jackpot-com-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lotto247-review",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lotto247-review/",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lotto247-review",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lotto247-review/",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lotto247-review",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lotto247-review/",
+      "destination": "/lotto247-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/playhugelottos-review",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/playhugelottos-review/",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/playhugelottos-review",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/playhugelottos-review/",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/playhugelottos-review",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/playhugelottos-review/",
+      "destination": "/playhugelottos-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/multilotto-review",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/multilotto-review/",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/multilotto-review",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/multilotto-review/",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/multilotto-review",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/multilotto-review/",
+      "destination": "/multilotto-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lotto-agent-review",
+      "destination": "/lotto-agent-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites/lotto-agent-review/",
+      "destination": "/lotto-agent-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lotto-agent-review",
+      "destination": "/lotto-agent-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2021/lotto-agent-review/",
+      "destination": "/lotto-agent-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lotto-agent-review",
+      "destination": "/lotto-agent-review",
+      "permanent": true
+    },
+    {
+      "source": "/best-online-lottery-sites-2024/lotto-agent-review/",
+      "destination": "/lotto-agent-review",
+      "permanent": true
     }
   ],
   "rewrites": [

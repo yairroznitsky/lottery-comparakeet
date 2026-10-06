@@ -1,4 +1,11 @@
 import BestOnlineLotterySitesView from "@/components/lottery/BestOnlineLotterySitesView";
+import BrandReviewFaqSection from "@/components/lottery/BrandReviewFaqSection";
+import {
+  getBrandReviewDisplayName,
+  getBrandReviewFaqItems,
+} from "@/lib/brandReviewFaqs";
+import { rewriteBrandVisitLinksInHtml } from "@/lib/brandVisitLinks";
+import { isBrandReviewSlug } from "@/lib/brandReviewSlugs";
 import { rewriteWordPressTheLotterLinks } from "@/lib/theLotterLinks";
 import type { WordPressContentView } from "@/types/wordpress";
 
@@ -26,9 +33,15 @@ const WordPressContent = ({
   variant = "full",
 }: WordPressContentProps) => {
   const isLotteryComparison = content.slug === LOTTERY_COMPARISON_SLUG;
+  const brandReviewFaqs = isBrandReviewSlug(content.slug)
+    ? getBrandReviewFaqItems(content.slug)
+    : [];
+  const brandReviewName = isBrandReviewSlug(content.slug)
+    ? getBrandReviewDisplayName(content.slug)
+    : "";
 
-  const html = rewriteWordPressTheLotterLinks(
-    sanitizeSnapshotHtml(content.contentHtml),
+  const html = rewriteBrandVisitLinksInHtml(
+    rewriteWordPressTheLotterLinks(sanitizeSnapshotHtml(content.contentHtml)),
   );
 
   if (variant === "embedded") {
@@ -78,10 +91,18 @@ const WordPressContent = ({
       {isLotteryComparison ? (
         <BestOnlineLotterySitesView content={content} />
       ) : (
-        <div
-          className="wp-content prose prose-brand max-w-none"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <>
+          <div
+            className="wp-content prose prose-brand max-w-none"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          {brandReviewFaqs.length > 0 ? (
+            <BrandReviewFaqSection
+              brandName={brandReviewName}
+              items={brandReviewFaqs}
+            />
+          ) : null}
+        </>
       )}
     </article>
   );

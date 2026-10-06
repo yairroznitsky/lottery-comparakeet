@@ -1,3 +1,4 @@
+import { resolveBrandVisitHref } from "@/lib/brandVisitLinks";
 import { getSiteUrl } from "@/config/site";
 import { isTheLotterBrandName, theLotterHomeUrl } from "@/lib/theLotterLinks";
 
@@ -38,6 +39,23 @@ function toClientPath(url: string): string {
   return url;
 }
 
+function toReviewClientPath(url: string): string {
+  const path = toClientPath(url).replace(/\/+$/, "");
+  const leaf = path.split("/").filter(Boolean).pop() ?? "";
+  return leaf ? `/${leaf}` : path;
+}
+
+function findReadFullReviewHref(html: string): string | null {
+  const anchorRe = /<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = anchorRe.exec(html)) !== null) {
+    if (/Read Full Review/i.test(match[2])) {
+      return match[1];
+    }
+  }
+  return null;
+}
+
 function stripTags(html: string): string {
   return html
     .replace(/<br\s*\/?>/gi, " ")
@@ -72,9 +90,7 @@ function parseComparisonRows(html: string): LotterySiteRow[] {
     const visitMatch = section.match(
       /<a[^>]+href="([^"]+)"[^>]*>\s*<span class="elementor-button-content-wrapper">[\s\S]*?Visit\s+([^<]+)/i,
     );
-    const reviewMatch = section.match(
-      /<a[^>]+href="([^"]+)"[^>]*>[\s\S]*?Read Full Review/i,
-    );
+    const reviewHref = findReadFullReviewHref(section);
     const promoMatch = section.match(
       /elementor-widget-text-editor[\s\S]*?<p>([\s\S]*?)<\/p>/i,
     );
@@ -94,10 +110,12 @@ function parseComparisonRows(html: string): LotterySiteRow[] {
       logoAlt: imgMatch[2] || name,
       rating: Number(ratingMatch[1]),
       highlight,
-      visitUrl: isTheLotterBrandName(name)
-        ? theLotterHomeUrl()
-        : toClientPath(visitMatch[1]),
-      reviewUrl: reviewMatch ? toClientPath(reviewMatch[1]) : null,
+      visitUrl: resolveBrandVisitHref(
+        isTheLotterBrandName(name)
+          ? theLotterHomeUrl()
+          : toClientPath(visitMatch[1]),
+      ),
+      reviewUrl: reviewHref ? toReviewClientPath(reviewHref) : null,
     });
   }
 
@@ -150,9 +168,7 @@ function parseReviewSections(
     const imgMatch = block.match(
       /<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"/i,
     );
-    const reviewMatch = block.match(
-      /<a[^>]+href="([^"]+)"[^>]*>[\s\S]*?Read Full Review/i,
-    );
+    const reviewHref = findReadFullReviewHref(block);
 
     const summaryMatch = block.match(
       /<p>([^<]*(?:<(?!\/p>)[^<]*)*)<\/p>/i,
@@ -179,13 +195,15 @@ function parseReviewSections(
       logoAlt: imgMatch?.[2] ?? matchedRow?.logoAlt ?? name,
       rating: ratingMatch ? Number(ratingMatch[1]) : (matchedRow?.rating ?? 0),
       highlight: matchedRow?.highlight ?? "",
-      visitUrl: isTheLotterBrandName(name)
-        ? theLotterHomeUrl()
-        : visitMatch
-          ? toClientPath(visitMatch[1])
-          : (matchedRow?.visitUrl ?? "#"),
-      reviewUrl: reviewMatch
-        ? toClientPath(reviewMatch[1])
+      visitUrl: resolveBrandVisitHref(
+        isTheLotterBrandName(name)
+          ? theLotterHomeUrl()
+          : visitMatch
+            ? toClientPath(visitMatch[1])
+            : (matchedRow?.visitUrl ?? "#"),
+      ),
+      reviewUrl: reviewHref
+        ? toReviewClientPath(reviewHref)
         : (matchedRow?.reviewUrl ?? null),
       summary: summaryMatch ? stripTags(summaryMatch[1]) : "",
       pros: listItemsAfterHeading(block, "What we like"),
