@@ -1,0 +1,36 @@
+//#region content/wordpress/pages/cash-pop-primetime-georgia-ga-results-winning-numbers.json
+var id = 692;
+var title = "Cash Pop Primetime – Georgia (GA) – Results &#038; Winning Numbers";
+var contentHtml = "";
+var excerptHtml = "";
+var slug = "cash-pop-primetime-georgia-ga-results-winning-numbers";
+var date = "2020-07-08T13:41:43";
+var modified = "2020-11-17T14:20:21";
+var link = "/georgia/cash-pop-primetime";
+var featuredImage = null;
+var seo = {
+	"title": "Cash Pop Primetime - Georgia (GA) - Results & Winning Numbers",
+	"description": "The last 10 results for the Georgia (GA) Cash Pop Primetime, with winning numbers and jackpots.",
+	"canonical": "/georgia/cash-pop-primetime",
+	"ogTitle": "Cash Pop Primetime - Georgia (GA) - Results & Winning Numbers",
+	"ogDescription": "The last 10 results for the Georgia (GA) Cash Pop Primetime, with winning numbers and jackpots.",
+	"ogUrl": "https://lottery.comparakeet.com/georgia/cash-pop-primetime",
+	"robotsIndex": true,
+	"robotsFollow": true
+};
+var contentType = "page";
+var cash_pop_primetime_georgia_ga_results_winning_numbers_default = {
+	id: 692,
+	title,
+	contentHtml: "",
+	excerptHtml: "",
+	slug,
+	date,
+	modified,
+	link,
+	featuredImage: null,
+	seo,
+	contentType
+};
+//#endregion
+export { contentHtml, contentType, date, cash_pop_primetime_georgia_ga_results_winning_numbers_default as default, excerptHtml, featuredImage, id, link, modified, seo, slug, title };
