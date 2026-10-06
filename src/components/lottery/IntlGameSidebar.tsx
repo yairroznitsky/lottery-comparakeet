@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
+import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
+import {
+  getIntlGameDisplayName,
+  type IntlRegionGameEntry,
+} from "@/lib/intlGames";
 import { formatGameTitle, formatStateTitle } from "@/lib/parseDrawResults";
 
 const JUMP_LINKS = [
@@ -11,7 +16,7 @@ const JUMP_LINKS = [
 interface IntlGameSidebarProps {
   regionSlug: string;
   gameSlug: string;
-  siblingGames: string[];
+  siblingGames: IntlRegionGameEntry[];
   featuredPaths: string[];
   showAboutLink: boolean;
   playHref: string;
@@ -20,6 +25,9 @@ interface IntlGameSidebarProps {
 
 const sidebarLinkClass =
   "block rounded-md px-2 py-1.5 text-sm text-brand-800 hover:bg-brand-50 hover:text-brand-950";
+
+const sidebarGameLinkClass =
+  "flex items-center gap-2.5 rounded-lg px-2 py-2 text-sm font-medium text-brand-900 hover:bg-brand-50";
 
 const IntlGameSidebar = ({
   regionSlug,
@@ -35,7 +43,9 @@ const IntlGameSidebar = ({
     ? JUMP_LINKS
     : JUMP_LINKS.filter((l) => l.id !== "about");
 
-  const otherInRegion = siblingGames.filter((g) => g !== gameSlug).slice(0, 5);
+  const otherInRegion = siblingGames
+    .filter((g) => g.gameSlug !== gameSlug)
+    .slice(0, 5);
 
   return (
     <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
@@ -70,13 +80,20 @@ const IntlGameSidebar = ({
             More in {regionTitle}
           </h2>
           <ul className="mt-2 space-y-0.5">
-            {otherInRegion.map((game) => (
-              <li key={game}>
+            {otherInRegion.map((entry) => (
+              <li key={entry.gameSlug}>
                 <Link
-                  to={`/${regionSlug}/${game}`}
-                  className={sidebarLinkClass}
+                  to={`/${regionSlug}/${entry.gameSlug}`}
+                  className={sidebarGameLinkClass}
                 >
-                  {formatGameTitle(game)}
+                  <LotteryLogo
+                    src={undefined}
+                    brand={`${regionTitle} - ${entry.displayName}`}
+                    regionSlug={regionSlug}
+                    gameSlug={entry.gameSlug}
+                    className="h-7 w-7 shrink-0 object-contain"
+                  />
+                  <span className="min-w-0 leading-snug">{entry.displayName}</span>
                 </Link>
               </li>
             ))}
@@ -95,10 +112,24 @@ const IntlGameSidebar = ({
               if (!region || !game) {
                 return null;
               }
+              const regionLabel = formatStateTitle(region);
+              const gameLabel =
+                getIntlGameDisplayName(region, game) ?? formatGameTitle(game);
+              const brand = `${regionLabel} - ${gameLabel}`;
               return (
                 <li key={path}>
-                  <Link to={`/${path}`} className={sidebarLinkClass}>
-                    {formatStateTitle(region)} {formatGameTitle(game)}
+                  <Link to={`/${path}`} className={sidebarGameLinkClass}>
+                    <LotteryLogo
+                      src={undefined}
+                      brand={brand}
+                      regionSlug={region}
+                      gameSlug={game}
+                      className="h-7 w-7 shrink-0 object-contain"
+                    />
+                    <span className="min-w-0 leading-snug">
+                      <span className="text-brand-600">{regionLabel}</span>{" "}
+                      {gameLabel}
+                    </span>
                   </Link>
                 </li>
               );
@@ -106,7 +137,7 @@ const IntlGameSidebar = ({
             <li>
               <Link
                 to="/international-results"
-                className={`${sidebarLinkClass} font-semibold`}
+                className={`${sidebarGameLinkClass} font-semibold text-brand-800`}
               >
                 All international lotteries
               </Link>

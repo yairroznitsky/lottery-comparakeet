@@ -58,7 +58,7 @@ async function main() {
   );
 
   const byRegion = {};
-  const paths = [];
+  const pathSet = new Set();
 
   for (const row of countryRows) {
     const { name, regionSlug, gameSlug } = parseCountryRecord(row);
@@ -66,14 +66,17 @@ async function main() {
       continue;
     }
     const pathKey = `${regionSlug}/${gameSlug}`;
-    paths.push(pathKey);
+    pathSet.add(pathKey);
     if (!byRegion[regionSlug]) {
       byRegion[regionSlug] = [];
     }
-    byRegion[regionSlug].push({ gameSlug, name });
+    const regionGames = byRegion[regionSlug];
+    if (!regionGames.some((g) => g.gameSlug === gameSlug)) {
+      regionGames.push({ gameSlug, name });
+    }
   }
 
-  paths.sort();
+  const paths = [...pathSet].sort();
   for (const region of Object.keys(byRegion)) {
     byRegion[region].sort((a, b) => a.gameSlug.localeCompare(b.gameSlug));
   }

@@ -17,7 +17,7 @@ import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import SiteSeo from "@/components/seo/SiteSeo";
 import { formatGameTitle, formatStateTitle } from "@/lib/parseDrawResults";
 import { getIntlFaqItems, intlFaqPathsWithContent } from "@/lib/intlFaqs";
-import { getIntlGamePaths, getIntlRegionGames } from "@/lib/intlGames";
+import { getIntlGamePaths, getIntlRegionGameEntries } from "@/lib/intlGames";
 import {
   intlGameIntroShort,
   intlGameSeoDescription,
@@ -195,7 +195,7 @@ const DrawResultsPage = () => {
   const intlFaqItems = isUsa ? [] : getIntlFaqItems(region, game);
   const faqJsonLd = buildFaqPageJsonLd(intlFaqItems);
   const hasAbout = Boolean(wpContent);
-  const regionGames = isUsa ? [] : getIntlRegionGames(region);
+  const regionGameEntries = isUsa ? [] : getIntlRegionGameEntries(region);
 
   if (!isUsa) {
     return (
@@ -292,7 +292,7 @@ const DrawResultsPage = () => {
           <IntlGameSidebar
             regionSlug={region}
             gameSlug={game}
-            siblingGames={regionGames}
+            siblingGames={regionGameEntries}
             featuredPaths={intlFeaturedPaths}
             showAboutLink={hasAbout}
             playHref={playUrl.href}

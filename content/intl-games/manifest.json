@@ -1,229 +1,116 @@
 {
-  "generatedAt": "2026-10-04T11:19:26.729Z",
+  "generatedAt": "2026-10-06T11:00:58.421Z",
   "lotteryApi": "http://34.222.9.46/api",
-  "pathCount": 227,
+  "pathCount": 114,
   "paths": [
     "australia/monday-lotto",
     "australia/oz-lotto",
-    "australia/oz-lotto",
-    "australia/oz-lotto",
-    "australia/powerball-lotto",
     "australia/powerball-lotto",
     "australia/powerball-lotto-go",
     "australia/saturday-lotto",
-    "australia/saturday-lotto",
-    "australia/superdraw-saturday-lotto",
     "australia/superdraw-saturday-lotto",
     "australia/wednesday-lotto",
     "australia/weekday-windfall",
-    "australia/weekday-windfall",
-    "australia/weekday-windfall",
-    "austria/euromillions",
-    "austria/euromillions",
     "austria/euromillions",
     "austria/lotto",
-    "austria/lotto",
-    "belgium/lotto",
     "belgium/lotto",
     "brazil/dia-de-sorte",
-    "brazil/dia-de-sorte",
     "brazil/dupla-sena",
-    "brazil/dupla-sena",
-    "brazil/lotofacil",
     "brazil/lotofacil",
     "brazil/mega-da-virada",
     "canada/bc-49",
-    "canada/bc-49",
-    "canada/lotto-649",
     "canada/lotto-649",
     "canada/lotto-max",
-    "canada/lotto-max",
-    "canada/ontario-49",
     "canada/ontario-49",
     "canada/quebec-49",
-    "canada/quebec-49",
-    "canada/western-6-49",
     "canada/western-6-49",
     "chile/clasico-loto",
     "colombia/baloto",
     "estonia/vikinglotto",
-    "estonia/vikinglotto",
-    "europe/eurodreams",
-    "europe/eurodreams",
     "europe/eurodreams",
     "europe/eurojackpot",
-    "europe/eurojackpot",
-    "europe/eurojackpot",
-    "europe/eurojackpot-go",
     "europe/eurojackpot-go",
     "europe/euromillions-go",
     "finland/lotto",
-    "finland/lotto",
-    "france/euromillions-and-my-million-raffle",
     "france/euromillions-and-my-million-raffle",
     "france/loto",
-    "france/loto",
-    "france/loto",
-    "france/loto-special-draw",
-    "france/loto-special-draw",
     "france/loto-special-draw",
     "germany/lotto",
     "germany/lotto-go",
     "greece/joker",
-    "greece/joker",
-    "greece/lotto",
     "greece/lotto",
     "hong-kong/mark-six",
     "hungary/hatoslotto",
-    "hungary/hatoslotto",
-    "hungary/otoslotto",
     "hungary/otoslotto",
     "ireland/daily-million",
     "ireland/lotto",
     "israel/double-lotto",
-    "israel/double-lotto",
-    "israel/lotto",
     "israel/lotto",
     "italy/lotto",
-    "italy/lotto",
-    "italy/lotto",
     "italy/millionday",
-    "italy/millionday",
-    "italy/millionday",
-    "italy/millionday-extra",
-    "italy/millionday-extra",
     "italy/millionday-extra",
     "italy/sivincetutto",
     "italy/superenalotto",
-    "italy/superenalotto",
-    "italy/superenalotto",
-    "italy/superenalotto",
-    "italy/superstar",
-    "italy/superstar",
     "italy/superstar",
     "japan/loto-6",
-    "japan/loto-6",
     "japan/loto-7",
-    "japan/loto-7",
-    "japan/mini-loto",
-    "japan/mini-loto",
     "japan/mini-loto",
     "kazakhstan/5-36",
     "kazakhstan/loto-6-49",
     "latvia/latloto-535",
-    "latvia/latloto-535",
-    "mexico/chispa-boom",
-    "mexico/chispa-boom",
     "mexico/chispa-boom",
     "mexico/chispa-lotto",
     "mexico/chispazo",
     "mexico/melate",
     "mexico/melate-retro",
     "mexico/mexlotto",
-    "mexico/mexlotto",
     "mexico/mexlotto-vintage",
-    "mexico/mexlotto-vintage",
-    "mexico/mexlotto-vintage",
-    "mexico/triple-chance-clasico",
-    "mexico/triple-chance-clasico",
     "mexico/triple-chance-clasico",
     "mexico/tris-clasico",
     "new-zealand/lotto",
     "new-zealand/lottoluck",
-    "new-zealand/lottoluck",
-    "new-zealand/lottoluck",
     "new-zealand/powerball",
     "new-zealand/powerluck",
-    "new-zealand/powerluck",
-    "new-zealand/powerluck",
-    "ontario/lottario",
     "ontario/lottario",
     "ontario/ontario-49",
     "peru/kabala",
-    "peru/kabala",
-    "peru/kabala",
-    "peru/tinka",
     "peru/tinka",
     "philippines/grand-lotto",
-    "philippines/grand-lotto",
-    "philippines/grand-lotto",
-    "philippines/lotto",
     "philippines/lotto",
     "philippines/mega-lotto",
-    "philippines/mega-lotto",
-    "philippines/mega-lotto",
-    "philippines/super-lotto",
     "philippines/super-lotto",
     "philippines/ultra-lotto",
-    "philippines/ultra-lotto",
-    "poland/lotto",
-    "poland/lotto",
     "poland/lotto",
     "poland/mini-lotto",
-    "poland/mini-lotto",
-    "poland/mini-lotto",
-    "portugal/totoloto",
-    "portugal/totoloto",
     "portugal/totoloto",
     "romania/joker",
-    "romania/joker",
     "romania/loto-6-49",
-    "romania/loto-6-49",
-    "russia/gosloto-6-45",
     "russia/gosloto-6-45",
     "russia/gosloto-7-49",
     "slovakia/euromiliony",
-    "slovakia/euromiliony",
-    "slovakia/loto",
     "slovakia/loto",
     "slovakia/loto-5-z-35",
-    "slovakia/loto-5-z-35",
-    "south-africa/daily-lotto",
-    "south-africa/daily-lotto",
     "south-africa/daily-lotto",
     "south-africa/lotto",
-    "south-africa/lotto",
-    "south-africa/lotto",
-    "south-africa/powerball",
-    "south-africa/powerball",
     "south-africa/powerball",
     "spain/bonoloto",
-    "spain/bonoloto",
-    "spain/bonoloto",
-    "spain/el-gordo",
     "spain/el-gordo",
     "spain/el-gordo-go",
     "spain/euromillions",
-    "spain/euromillions",
-    "spain/euromillions",
     "spain/euromillions-superdraw",
-    "spain/euromillions-superdraw",
-    "spain/la-primitiva",
-    "spain/la-primitiva",
     "spain/la-primitiva",
     "sweden/lotto",
     "switzerland/lotto",
     "turkey/sayisal-loto",
-    "turkey/sayisal-loto",
-    "turkey/super-loto",
     "turkey/super-loto",
     "u-k/euromillions-and-uk-millionaire-maker",
-    "u-k/euromillions-and-uk-millionaire-maker",
-    "u-k/lotto",
     "u-k/lotto",
     "u-k/lotto-hotpicks",
-    "u-k/lotto-hotpicks",
-    "u-k/thunderball",
     "u-k/thunderball",
     "u-s/cash4life",
     "u-s/hot-lotto",
     "u-s/lotto-america",
-    "u-s/lotto-america",
     "u-s/mega-millions",
-    "u-s/mega-millions",
-    "u-s/mega-millions",
-    "u-s/powerball",
-    "u-s/powerball",
     "u-s/powerball",
     "ukraine/loto-maxima",
     "ukraine/megalot",
@@ -236,18 +123,6 @@
       {
         "gameSlug": "euromillions",
         "name": "Austria - EuroMillions"
-      },
-      {
-        "gameSlug": "euromillions",
-        "name": "Austria - EuroMillions"
-      },
-      {
-        "gameSlug": "euromillions",
-        "name": "Austria - EuroMillions"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Austria - Lotto"
       },
       {
         "gameSlug": "lotto",
@@ -264,28 +139,12 @@
       {
         "gameSlug": "vikinglotto",
         "name": "Estonia - Vikinglotto"
-      },
-      {
-        "gameSlug": "vikinglotto",
-        "name": "Estonia - Vikinglotto"
       }
     ],
     "spain": [
       {
         "gameSlug": "bonoloto",
         "name": "Spain - BonoLoto"
-      },
-      {
-        "gameSlug": "bonoloto",
-        "name": "Spain - BonoLoto"
-      },
-      {
-        "gameSlug": "bonoloto",
-        "name": "Spain - BonoLoto"
-      },
-      {
-        "gameSlug": "el-gordo",
-        "name": "Spain - El Gordo"
       },
       {
         "gameSlug": "el-gordo",
@@ -300,28 +159,8 @@
         "name": "Spain - EuroMillions"
       },
       {
-        "gameSlug": "euromillions",
-        "name": "Spain - EuroMillions"
-      },
-      {
-        "gameSlug": "euromillions",
-        "name": "Spain - EuroMillions"
-      },
-      {
         "gameSlug": "euromillions-superdraw",
         "name": "Spain - EuroMillions Superdraw"
-      },
-      {
-        "gameSlug": "euromillions-superdraw",
-        "name": "Spain - EuroMillions Superdraw"
-      },
-      {
-        "gameSlug": "la-primitiva",
-        "name": "Spain - La Primitiva"
-      },
-      {
-        "gameSlug": "la-primitiva",
-        "name": "Spain - La Primitiva"
       },
       {
         "gameSlug": "la-primitiva",
@@ -338,18 +177,6 @@
         "name": "Australia - Oz Lotto"
       },
       {
-        "gameSlug": "oz-lotto",
-        "name": "Australia - Oz Lotto"
-      },
-      {
-        "gameSlug": "oz-lotto",
-        "name": "Australia - Oz Lotto"
-      },
-      {
-        "gameSlug": "powerball-lotto",
-        "name": "Australia - Powerball Lotto"
-      },
-      {
         "gameSlug": "powerball-lotto",
         "name": "Australia - Powerball Lotto"
       },
@@ -362,14 +189,6 @@
         "name": "Australia - Saturday Lotto"
       },
       {
-        "gameSlug": "saturday-lotto",
-        "name": "Australia - Saturday Lotto"
-      },
-      {
-        "gameSlug": "superdraw-saturday-lotto",
-        "name": "Australia - Superdraw Saturday Lotto"
-      },
-      {
         "gameSlug": "superdraw-saturday-lotto",
         "name": "Australia - Superdraw Saturday Lotto"
       },
@@ -380,31 +199,15 @@
       {
         "gameSlug": "weekday-windfall",
         "name": "Australia - Weekday Windfall"
-      },
-      {
-        "gameSlug": "weekday-windfall",
-        "name": "Australia - Weekday Windfall"
-      },
-      {
-        "gameSlug": "weekday-windfall",
-        "name": "Australia - Weekday Windfall"
       }
     ],
     "finland": [
       {
         "gameSlug": "lotto",
         "name": "Finland - Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Finland - Lotto"
       }
     ],
     "belgium": [
-      {
-        "gameSlug": "lotto",
-        "name": "Belgium - Lotto"
-      },
       {
         "gameSlug": "lotto",
         "name": "Belgium - Lotto"
@@ -416,20 +219,8 @@
         "name": "Canada - BC 49"
       },
       {
-        "gameSlug": "bc-49",
-        "name": "Canada - BC 49"
-      },
-      {
         "gameSlug": "lotto-649",
         "name": "Canada - Lotto 649"
-      },
-      {
-        "gameSlug": "lotto-649",
-        "name": "Canada - Lotto 649"
-      },
-      {
-        "gameSlug": "lotto-max",
-        "name": "Canada - Lotto Max"
       },
       {
         "gameSlug": "lotto-max",
@@ -440,20 +231,8 @@
         "name": "Canada - Ontario 49"
       },
       {
-        "gameSlug": "ontario-49",
-        "name": "Canada - Ontario 49"
-      },
-      {
         "gameSlug": "quebec-49",
         "name": "Canada - Quebec 49"
-      },
-      {
-        "gameSlug": "quebec-49",
-        "name": "Canada - Quebec 49"
-      },
-      {
-        "gameSlug": "western-6-49",
-        "name": "Canada - Western 6/49"
       },
       {
         "gameSlug": "western-6-49",
@@ -486,32 +265,8 @@
         "name": "Italy - Lotto"
       },
       {
-        "gameSlug": "lotto",
-        "name": "Italy - Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Italy - Lotto"
-      },
-      {
         "gameSlug": "millionday",
         "name": "Italy - MillionDAY"
-      },
-      {
-        "gameSlug": "millionday",
-        "name": "Italy - MillionDAY"
-      },
-      {
-        "gameSlug": "millionday",
-        "name": "Italy - MillionDAY"
-      },
-      {
-        "gameSlug": "millionday-extra",
-        "name": "Italy - MillionDAY Extra"
-      },
-      {
-        "gameSlug": "millionday-extra",
-        "name": "Italy - MillionDAY Extra"
       },
       {
         "gameSlug": "millionday-extra",
@@ -524,26 +279,6 @@
       {
         "gameSlug": "superenalotto",
         "name": "Italy - SuperEnalotto"
-      },
-      {
-        "gameSlug": "superenalotto",
-        "name": "Italy - SuperEnalotto"
-      },
-      {
-        "gameSlug": "superenalotto",
-        "name": "Italy - SuperEnalotto"
-      },
-      {
-        "gameSlug": "superenalotto",
-        "name": "Italy - SuperEnalotto+"
-      },
-      {
-        "gameSlug": "superstar",
-        "name": "Italy - SuperStar"
-      },
-      {
-        "gameSlug": "superstar",
-        "name": "Italy - SuperStar"
       },
       {
         "gameSlug": "superstar",
@@ -562,28 +297,12 @@
         "name": "U.K. - EuroMillions and UK Millionaire Maker"
       },
       {
-        "gameSlug": "euromillions-and-uk-millionaire-maker",
-        "name": "U.K. - EuroMillions and UK Millionaire Maker"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "U.K. - Lotto"
-      },
-      {
         "gameSlug": "lotto",
         "name": "U.K. - Lotto"
       },
       {
         "gameSlug": "lotto-hotpicks",
         "name": "U.K. - Lotto HotPicks"
-      },
-      {
-        "gameSlug": "lotto-hotpicks",
-        "name": "U.K. - Lotto HotPicks"
-      },
-      {
-        "gameSlug": "thunderball",
-        "name": "U.K. - Thunderball"
       },
       {
         "gameSlug": "thunderball",
@@ -604,28 +323,8 @@
         "name": "U.S. - Lotto America"
       },
       {
-        "gameSlug": "lotto-america",
-        "name": "U.S. - Lotto America"
-      },
-      {
         "gameSlug": "mega-millions",
         "name": "U.S. - Mega Millions"
-      },
-      {
-        "gameSlug": "mega-millions",
-        "name": "U.S. - Mega Millions"
-      },
-      {
-        "gameSlug": "mega-millions",
-        "name": "U.S. - Mega Millions"
-      },
-      {
-        "gameSlug": "powerball",
-        "name": "U.S. - Powerball"
-      },
-      {
-        "gameSlug": "powerball",
-        "name": "U.S. - Powerball"
       },
       {
         "gameSlug": "powerball",
@@ -644,50 +343,18 @@
         "name": "South Africa - Daily Lotto"
       },
       {
-        "gameSlug": "daily-lotto",
-        "name": "South Africa - Daily Lotto"
-      },
-      {
-        "gameSlug": "daily-lotto",
-        "name": "South Africa - Daily Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "South Africa - Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "South Africa - Lotto"
-      },
-      {
         "gameSlug": "lotto",
         "name": "South Africa - Lotto"
       },
       {
         "gameSlug": "powerball",
         "name": "South Africa - Powerball"
-      },
-      {
-        "gameSlug": "powerball",
-        "name": "South Africa - PowerBall"
-      },
-      {
-        "gameSlug": "powerball",
-        "name": "South Africa - PowerBall"
       }
     ],
     "israel": [
       {
         "gameSlug": "double-lotto",
         "name": "Israel - Double Lotto"
-      },
-      {
-        "gameSlug": "double-lotto",
-        "name": "Israel - Double Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Israel - Lotto"
       },
       {
         "gameSlug": "lotto",
@@ -704,24 +371,8 @@
         "name": "New Zealand - LottoLuck"
       },
       {
-        "gameSlug": "lottoluck",
-        "name": "New Zealand - LottoLuck"
-      },
-      {
-        "gameSlug": "lottoluck",
-        "name": "New Zealand - LottoLuck"
-      },
-      {
         "gameSlug": "powerball",
         "name": "New Zealand - Powerball"
-      },
-      {
-        "gameSlug": "powerluck",
-        "name": "New Zealand - PowerLuck"
-      },
-      {
-        "gameSlug": "powerluck",
-        "name": "New Zealand - PowerLuck"
       },
       {
         "gameSlug": "powerluck",
@@ -734,16 +385,8 @@
         "name": "Romania - Joker"
       },
       {
-        "gameSlug": "joker",
-        "name": "Romania - Joker"
-      },
-      {
         "gameSlug": "loto-6-49",
         "name": "romania - Loto 6/49"
-      },
-      {
-        "gameSlug": "loto-6-49",
-        "name": "Romania - Loto 6/49"
       }
     ],
     "france": [
@@ -752,28 +395,8 @@
         "name": "France - EuroMillions and My Million Raffle"
       },
       {
-        "gameSlug": "euromillions-and-my-million-raffle",
-        "name": "France - EuroMillions and My Million Raffle"
-      },
-      {
         "gameSlug": "loto",
         "name": "France - Loto"
-      },
-      {
-        "gameSlug": "loto",
-        "name": "France - Loto"
-      },
-      {
-        "gameSlug": "loto",
-        "name": "France - Loto"
-      },
-      {
-        "gameSlug": "loto-special-draw",
-        "name": "France - Loto Special Draw"
-      },
-      {
-        "gameSlug": "loto-special-draw",
-        "name": "France - Loto Special Draw"
       },
       {
         "gameSlug": "loto-special-draw",
@@ -786,14 +409,6 @@
         "name": "Greece - Joker"
       },
       {
-        "gameSlug": "joker",
-        "name": "Greece - Joker"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Greece - Lotto"
-      },
-      {
         "gameSlug": "lotto",
         "name": "Greece - Lotto"
       }
@@ -802,22 +417,6 @@
       {
         "gameSlug": "lotto",
         "name": "Poland - Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Poland - Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Poland - Lotto"
-      },
-      {
-        "gameSlug": "mini-lotto",
-        "name": "Poland - Mini Lotto"
-      },
-      {
-        "gameSlug": "mini-lotto",
-        "name": "Poland - Mini Lotto"
       },
       {
         "gameSlug": "mini-lotto",
@@ -830,14 +429,6 @@
         "name": "Turkey - Sayisal Loto"
       },
       {
-        "gameSlug": "sayisal-loto",
-        "name": "Turkey - Sayisal Loto"
-      },
-      {
-        "gameSlug": "super-loto",
-        "name": "Turkey - Super Loto"
-      },
-      {
         "gameSlug": "super-loto",
         "name": "Turkey - Super Loto"
       }
@@ -848,24 +439,8 @@
         "name": "Japan - Loto 6"
       },
       {
-        "gameSlug": "loto-6",
-        "name": "Japan - Loto 6"
-      },
-      {
         "gameSlug": "loto-7",
         "name": "Japan - Loto 7"
-      },
-      {
-        "gameSlug": "loto-7",
-        "name": "Japan - Loto 7"
-      },
-      {
-        "gameSlug": "mini-loto",
-        "name": "Japan - Mini Loto"
-      },
-      {
-        "gameSlug": "mini-loto",
-        "name": "Japan - Mini Loto"
       },
       {
         "gameSlug": "mini-loto",
@@ -878,20 +453,8 @@
         "name": "Brazil - Dia de Sorte"
       },
       {
-        "gameSlug": "dia-de-sorte",
-        "name": "Brazil - Dia de Sorte"
-      },
-      {
         "gameSlug": "dupla-sena",
         "name": "Brazil - Dupla Sena"
-      },
-      {
-        "gameSlug": "dupla-sena",
-        "name": "Brazil - Dupla Sena"
-      },
-      {
-        "gameSlug": "lotofacil",
-        "name": "Brazil - Lotofacil"
       },
       {
         "gameSlug": "lotofacil",
@@ -908,28 +471,8 @@
         "name": "Europe - EuroDreams"
       },
       {
-        "gameSlug": "eurodreams",
-        "name": "Europe - EuroDreams"
-      },
-      {
-        "gameSlug": "eurodreams",
-        "name": "Europe - EuroDreams"
-      },
-      {
         "gameSlug": "eurojackpot",
         "name": "Europe - EuroJackpot"
-      },
-      {
-        "gameSlug": "eurojackpot",
-        "name": "Europe - EuroJackpot"
-      },
-      {
-        "gameSlug": "eurojackpot",
-        "name": "Europe - EuroJackpot"
-      },
-      {
-        "gameSlug": "eurojackpot-go",
-        "name": "Europe - EuroJackpot GO!"
       },
       {
         "gameSlug": "eurojackpot-go",
@@ -946,19 +489,11 @@
         "name": "Russia - Gosloto 6/45"
       },
       {
-        "gameSlug": "gosloto-6-45",
-        "name": "Russia - Gosloto 6/45"
-      },
-      {
         "gameSlug": "gosloto-7-49",
         "name": "Russia - Gosloto 7/49"
       }
     ],
     "ontario": [
-      {
-        "gameSlug": "lottario",
-        "name": "Ontario - Lottario"
-      },
       {
         "gameSlug": "lottario",
         "name": "Ontario - Lottario"
@@ -974,27 +509,11 @@
         "name": "Hungary - Hatoslotto"
       },
       {
-        "gameSlug": "hatoslotto",
-        "name": "Hungary - Hatoslotto"
-      },
-      {
-        "gameSlug": "otoslotto",
-        "name": "Hungary - Otoslotto"
-      },
-      {
         "gameSlug": "otoslotto",
         "name": "Hungary - Otoslotto"
       }
     ],
     "mexico": [
-      {
-        "gameSlug": "chispa-boom",
-        "name": "Mexico - Chispa Boom"
-      },
-      {
-        "gameSlug": "chispa-boom",
-        "name": "Mexico - Chispa Boom"
-      },
       {
         "gameSlug": "chispa-boom",
         "name": "Mexico - Chispa Boom"
@@ -1020,28 +539,8 @@
         "name": "Mexico - Mexlotto"
       },
       {
-        "gameSlug": "mexlotto",
-        "name": "Mexico - Mexlotto"
-      },
-      {
         "gameSlug": "mexlotto-vintage",
         "name": "Mexico - Mexlotto Vintage"
-      },
-      {
-        "gameSlug": "mexlotto-vintage",
-        "name": "Mexico - Mexlotto Vintage"
-      },
-      {
-        "gameSlug": "mexlotto-vintage",
-        "name": "Mexico - Mexlotto Vintage"
-      },
-      {
-        "gameSlug": "triple-chance-clasico",
-        "name": "Mexico - Triple Chance Clasico"
-      },
-      {
-        "gameSlug": "triple-chance-clasico",
-        "name": "Mexico - Triple Chance Clasico"
       },
       {
         "gameSlug": "triple-chance-clasico",
@@ -1082,10 +581,6 @@
       {
         "gameSlug": "latloto-535",
         "name": "Latvia - Latloto 535"
-      },
-      {
-        "gameSlug": "latloto-535",
-        "name": "Latvia - Latloto 535"
       }
     ],
     "peru": [
@@ -1094,31 +589,11 @@
         "name": "Peru - Kabala"
       },
       {
-        "gameSlug": "kabala",
-        "name": "Peru - Kabala"
-      },
-      {
-        "gameSlug": "kabala",
-        "name": "Peru - Kabala"
-      },
-      {
-        "gameSlug": "tinka",
-        "name": "Peru - Tinka"
-      },
-      {
         "gameSlug": "tinka",
         "name": "Peru - Tinka"
       }
     ],
     "portugal": [
-      {
-        "gameSlug": "totoloto",
-        "name": "Portugal - Totoloto"
-      },
-      {
-        "gameSlug": "totoloto",
-        "name": "Portugal - Totoloto"
-      },
       {
         "gameSlug": "totoloto",
         "name": "Portugal - Totoloto"
@@ -1130,20 +605,8 @@
         "name": "Slovakia - Euromiliony"
       },
       {
-        "gameSlug": "euromiliony",
-        "name": "Slovakia - Euromiliony"
-      },
-      {
         "gameSlug": "loto",
         "name": "Slovakia - Loto"
-      },
-      {
-        "gameSlug": "loto",
-        "name": "Slovakia - Loto"
-      },
-      {
-        "gameSlug": "loto-5-z-35",
-        "name": "Slovakia - Loto 5 z 35"
       },
       {
         "gameSlug": "loto-5-z-35",
@@ -1156,18 +619,6 @@
         "name": "Philippines - Grand Lotto"
       },
       {
-        "gameSlug": "grand-lotto",
-        "name": "Philippines - Grand Lotto"
-      },
-      {
-        "gameSlug": "grand-lotto",
-        "name": "Philippines - Grand Lotto"
-      },
-      {
-        "gameSlug": "lotto",
-        "name": "Philippines - Lotto"
-      },
-      {
         "gameSlug": "lotto",
         "name": "Philippines - Lotto"
       },
@@ -1176,24 +627,8 @@
         "name": "Philippines - Mega Lotto"
       },
       {
-        "gameSlug": "mega-lotto",
-        "name": "Philippines - Mega Lotto"
-      },
-      {
-        "gameSlug": "mega-lotto",
-        "name": "Philippines - Mega Lotto"
-      },
-      {
         "gameSlug": "super-lotto",
         "name": "Philippines - Super Lotto"
-      },
-      {
-        "gameSlug": "super-lotto",
-        "name": "Philippines - Super Lotto"
-      },
-      {
-        "gameSlug": "ultra-lotto",
-        "name": "Philippines - Ultra Lotto"
       },
       {
         "gameSlug": "ultra-lotto",
