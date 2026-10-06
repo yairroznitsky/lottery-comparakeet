@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 
 const popularLinks = [
   { to: "/top-jackpots", label: "Top jackpots" },
-  { to: "/california/powerball", label: "California Powerball" },
-  { to: "/new-york/mega-millions", label: "New York Mega Millions" },
-  { to: "/florida/powerball", label: "Florida Powerball" },
+  { to: "/u-s/powerball", label: "U.S. Powerball" },
+  { to: "/u-s/mega-millions", label: "U.S. Mega Millions" },
   { to: "/texas/lotto-texas", label: "Texas Lotto" },
 ];
 

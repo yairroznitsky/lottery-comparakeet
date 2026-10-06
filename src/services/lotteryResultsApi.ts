@@ -1,6 +1,10 @@
 import { getLotteryApiBaseUrl } from "@/config/lotteryApi";
 import { buildLotteryLogoLookup } from "@/lib/lotteryLogos";
 import {
+  shouldOmitCountryFromListings,
+  shouldOmitJackpotFromListings,
+} from "@/lib/nationalUsLotteryFilter";
+import {
   mapTopJackpot,
   mapUsaDraw,
   parseCountryRecord,
@@ -87,7 +91,9 @@ export async function fetchInternationalCountries(): Promise<CountryView[]> {
   const rows = await lotteryGet<InternationalCountryRecord[]>(
     "/international/lottery/countries",
   );
-  return rows.map(parseCountryRecord);
+  return rows
+    .filter((row) => !shouldOmitCountryFromListings(row))
+    .map(parseCountryRecord);
 }
 
 export async function fetchInternationalResults(
@@ -107,15 +113,21 @@ export async function fetchInternationalResults(
   return rows.map(mapUsaDraw);
 }
 
+const TOP_JACKPOTS_OVERFETCH = 200;
+
 export async function fetchTopJackpots(count: number): Promise<TopJackpotView[]> {
+  const apiLimit = count + TOP_JACKPOTS_OVERFETCH;
   const [rows, countryRows] = await Promise.all([
     lotteryGet<TopJackpotApiRecord[]>(
-      `/international/lottery/topUpcoming/${count}`,
+      `/international/lottery/topUpcoming/${apiLimit}`,
     ),
     lotteryGet<InternationalCountryRecord[]>(
       "/international/lottery/countries",
     ).catch(() => [] as InternationalCountryRecord[]),
   ]);
   const logoLookup = buildLotteryLogoLookup(countryRows);
-  return rows.map((row) => mapTopJackpot(row, logoLookup));
+  return rows
+    .filter((row) => !shouldOmitJackpotFromListings(row))
+    .slice(0, count)
+    .map((row) => mapTopJackpot(row, logoLookup));
 }

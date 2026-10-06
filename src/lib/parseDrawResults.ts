@@ -20,6 +20,25 @@ export function normalizeSlug(value: string): string {
     .replace(/^-|-$/g, "");
 }
 
+const BRAND_REGION_GAME_SPLIT = /^(.+?)\s[-–—]\s+(.+)$/;
+
+/** Region and game in API brand strings: "Arizona - Powerball", "Arizona – Mega Millions". */
+export function splitBrandRegionGame(
+  brand: string,
+): { region: string; game: string } | null {
+  const trimmed = brand.trim();
+  const match = trimmed.match(BRAND_REGION_GAME_SPLIT);
+  if (!match) {
+    return null;
+  }
+  const region = match[1]?.trim();
+  const game = match[2]?.trim();
+  if (!region || !game) {
+    return null;
+  }
+  return { region, game };
+}
+
 export function formatStateTitle(slug: string): string {
   return slug
     .split("-")
@@ -88,12 +107,9 @@ function regionGameFromDisplayName(name: string | undefined): {
   if (!name?.trim()) {
     return { region: "", game: "" };
   }
-  const dash = name.indexOf(" - ");
-  if (dash >= 0) {
-    return {
-      region: name.slice(0, dash).trim(),
-      game: name.slice(dash + 3).trim(),
-    };
+  const split = splitBrandRegionGame(name);
+  if (split) {
+    return { region: split.region, game: split.game };
   }
   return { region: "", game: name.trim() };
 }
@@ -176,13 +192,9 @@ export function buildJackpotResultsPath(record: TopJackpotApiRecord): string {
     return `/${normalizeSlug(state)}/${normalizeSlug(game)}`;
   }
   const brand = (record.Game_Brand ?? record.title ?? record.name ?? "").trim();
-  const dash = brand.indexOf(" - ");
-  if (dash >= 0) {
-    const region = brand.slice(0, dash).trim();
-    const gamePart = brand.slice(dash + 3).trim();
-    if (region && gamePart) {
-      return `/${normalizeSlug(region)}/${normalizeSlug(gamePart)}`;
-    }
+  const split = splitBrandRegionGame(brand);
+  if (split) {
+    return `/${normalizeSlug(split.region)}/${normalizeSlug(split.game)}`;
   }
   return "/top-jackpots";
 }
@@ -213,11 +225,9 @@ export function mapTopJackpot(
 }
 
 export function parseCountryRecord(record: InternationalCountryRecord): CountryView {
-  const dashIndex = record.name.indexOf(" - ");
-  const regionPart =
-    dashIndex >= 0 ? record.name.slice(0, dashIndex) : record.name;
-  const gamePart =
-    dashIndex >= 0 ? record.name.slice(dashIndex + 3) : "lotto";
+  const split = splitBrandRegionGame(record.name);
+  const regionPart = split?.region ?? record.name;
+  const gamePart = split?.game ?? "lotto";
   const regionSlug = normalizeSlug(regionPart);
   const gameSlug = normalizeSlug(gamePart);
   const slug = `${regionSlug}-${gameSlug}`;

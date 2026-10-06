@@ -25,6 +25,12 @@ export function getStateGames(stateSlug: string): string[] {
   return gamesByState.get(stateSlug) ?? [];
 }
 
+/** US state / territory slugs from synced state-games content. */
+export function isUsJurisdictionSlug(stateSlug: string): boolean {
+  const normalized = stateSlug.trim().toLowerCase().replace(/\s+/g, "-");
+  return gamesByState.has(normalized);
+}
+
 export function getAllStateGamePaths(): string[] {
   const paths: string[] = [];
   for (const [state, games] of gamesByState.entries()) {
