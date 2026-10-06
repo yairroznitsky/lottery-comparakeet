@@ -17,7 +17,10 @@ import {
 } from "@/lib/theLotterLinks";
 import { formatStateTitle } from "@/lib/parseDrawResults";
 import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
-import { getRecentPostSummaries } from "@/lib/wordpressContent";
+import {
+  getRecentPostSummaries,
+  postSummaryDisplayDate,
+} from "@/lib/wordpressContent";
 
 const HomePage = () => {
   const jackpotsQuery = useTopJackpots(12);
@@ -303,7 +306,9 @@ const HomePage = () => {
                       {post.title}
                     </span>
                     <span className="text-sm text-brand-600">
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(
+                        postSummaryDisplayDate(post),
+                      ).toLocaleDateString()}
                     </span>
                   </Link>
                 </li>

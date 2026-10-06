@@ -54,6 +54,13 @@ export interface WordPressPostSummary {
   slug: string;
   title: string;
   date: string;
+  modified?: string;
+}
+
+function postSummarySortTime(post: WordPressPostSummary): number {
+  const iso = post.modified ?? post.date;
+  const t = new Date(iso).getTime();
+  return Number.isNaN(t) ? 0 : t;
 }
 
 export function slugFromPathname(pathname: string): string | null {
@@ -138,10 +145,13 @@ export async function loadWordPressByPath(
 export function getRecentPostSummaries(perPage = 6): WordPressPostSummary[] {
   const posts = [...(wpManifest.posts ?? [])] as WordPressPostSummary[];
   return posts
-    .sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-    )
+    .sort((a, b) => postSummarySortTime(b) - postSummarySortTime(a))
     .slice(0, perPage);
+}
+
+/** Display date for guides list (prefers last updated). */
+export function postSummaryDisplayDate(post: WordPressPostSummary): string {
+  return post.modified ?? post.date;
 }
 
 export function getAllWordPressSlugs(): string[] {

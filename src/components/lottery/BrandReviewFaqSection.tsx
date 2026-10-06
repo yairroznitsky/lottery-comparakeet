@@ -3,14 +3,31 @@ import type { BrandReviewFaqItem } from "@/types/brandReviewFaq";
 interface BrandReviewFaqSectionProps {
   brandName: string;
   items: BrandReviewFaqItem[];
+  /** Post `modified` ISO — shown in FAQ intro. */
+  contentUpdated?: string;
 }
 
 const faqDetailsClass =
   "group rounded-xl border border-brand-200 bg-white shadow-sm open:ring-1 open:ring-brand-200";
 
+function formatUpdatedLabel(iso: string | undefined): string {
+  if (!iso) {
+    return "2026";
+  }
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) {
+    return "2026";
+  }
+  return new Intl.DateTimeFormat(undefined, {
+    month: "long",
+    year: "numeric",
+  }).format(d);
+}
+
 const BrandReviewFaqSection = ({
   brandName,
   items,
+  contentUpdated,
 }: BrandReviewFaqSectionProps) => {
   if (items.length === 0) {
     return null;
@@ -29,8 +46,8 @@ const BrandReviewFaqSection = ({
         {brandName} FAQ
       </h2>
       <p className="mb-6 text-sm text-brand-700">
-        Common questions people search about {brandName} online—answered for
-        2026.
+        Common questions people search about {brandName} online—updated{" "}
+        {formatUpdatedLabel(contentUpdated)}.
       </p>
       <div className="space-y-2">
         {items.map((item, index) => (

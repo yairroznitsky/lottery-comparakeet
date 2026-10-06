@@ -20,6 +20,7 @@
     "sync:lottery-icons": "node scripts/sync-lottery-icons.mjs",
     "sync:brand-reviews": "node scripts/sync-brand-reviews.mjs",
     "refresh:brand-reviews": "node scripts/refresh-brand-review-urls.mjs && node scripts/sync-vercel-brand-redirects.mjs",
+    "touch:brand-content-dates": "node scripts/touch-brand-content-dates.mjs",
     "fetch:brand-autocomplete": "node scripts/fetch-brand-autocomplete.mjs",
     "preview": "vite preview"
   },

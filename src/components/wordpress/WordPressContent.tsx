@@ -100,6 +100,7 @@ const WordPressContent = ({
             <BrandReviewFaqSection
               brandName={brandReviewName}
               items={brandReviewFaqs}
+              contentUpdated={content.modified}
             />
           ) : null}
         </>

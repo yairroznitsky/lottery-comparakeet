@@ -9,6 +9,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { applyBrandReviewContent } from "./lib/applyBrandReviewContent.mjs";
 import {
+  brandContentModifiedIso,
+  COMPARISON_PAGE_SLUG,
+} from "./lib/brandContentDates.mjs";
+import {
   BRAND_REVIEW_COPY,
   BRAND_REVIEW_SLUGS,
   LEGACY_FILE_RENAMES,
@@ -17,10 +21,11 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const POSTS_DIR = path.join(ROOT, "content", "wordpress", "posts");
+const PAGES_DIR = path.join(ROOT, "content", "wordpress", "pages");
 const MANIFEST_PATH = path.join(ROOT, "content", "wordpress", "manifest.json");
-const UPDATED_ISO = "2026-10-06T14:00:00";
 
 async function main() {
+  const UPDATED_ISO = brandContentModifiedIso();
   for (const [from, to] of Object.entries(LEGACY_FILE_RENAMES)) {
     const fromPath = path.join(POSTS_DIR, from);
     const toPath = path.join(POSTS_DIR, to);
@@ -58,6 +63,16 @@ async function main() {
 
   const manifestRaw = await fs.readFile(MANIFEST_PATH, "utf8");
   const manifest = JSON.parse(manifestRaw);
+  const comparisonPath = path.join(PAGES_DIR, `${COMPARISON_PAGE_SLUG}.json`);
+  try {
+    const page = JSON.parse(await fs.readFile(comparisonPath, "utf8"));
+    page.modified = UPDATED_ISO;
+    await fs.writeFile(comparisonPath, `${JSON.stringify(page, null, 2)}\n`, "utf8");
+    console.log(`Updated ${COMPARISON_PAGE_SLUG} modified date`);
+  } catch {
+    /* optional */
+  }
+
   manifest.posts = (manifest.posts ?? []).map((row) => {
     if (row.slug === "thelotter-2021-review") {
       const copy = BRAND_REVIEW_COPY["thelotter-review"];
@@ -78,7 +93,13 @@ async function main() {
     }
     return row;
   });
+  manifest.pages = (manifest.pages ?? []).map((row) =>
+    row.slug === COMPARISON_PAGE_SLUG
+      ? { ...row, modified: UPDATED_ISO.slice(0, 19) }
+      : row,
+  );
   manifest.brandReviewContentRewrittenAt = new Date().toISOString();
+  manifest.brandReviewContentUpdatedAt = manifest.brandReviewContentRewrittenAt;
   await fs.writeFile(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
   console.log("Patched manifest.json");
 }
