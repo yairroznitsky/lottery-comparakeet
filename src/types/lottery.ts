@@ -92,6 +92,8 @@ export interface TopJackpotView {
   logoUrl: string | null;
   playLink: string | null;
   nextDrawClose: string | null;
+  /** Draw datetime from the API (used for cache freshness). */
+  nextDrawAt: string | null;
   lastDrawResults: ParsedBalls | null;
   currencyGroup: string;
   /** In-app results route when state/game are known from the API. */

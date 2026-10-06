@@ -1,0 +1,2288 @@
+{
+  "fetchedAt": "2026-10-06T11:13:17.534Z",
+  "source": "http://34.222.9.46/api",
+  "rows": [
+    {
+      "id": 63056,
+      "lottery_id": 25,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 02:59:00",
+      "name": "U.S. - Powerball",
+      "title": "U.S. - Powerball",
+      "link": "https://www.thelotter.com/lottery-tickets/usa-powerball/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 02:59 GMT<br><b>Draw Result</b> 16;23;32;36;54 + 9<br><b>Next Draw Date</b> 08/10/2026 02:59 GMT<br><b>Next Draw Jackpot</b> US$ 485 Million<br><a href='https://www.thelotter.com/lottery-tickets/usa-powerball/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/usa-powerball/",
+      "last_draw_results": "16;23;32;36;54 + 9",
+      "next_draw_date": "2026-10-08T02:59:00.000000Z",
+      "next_draw_jackpot": "US$ 485 Million",
+      "next_draw_jackpot_usd": 485000000,
+      "next_draw_close_date": "2026-10-08 01:30:00",
+      "published": "2026-10-06 10:51:21",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:21.000000Z",
+      "Game_Name": " Powerball",
+      "state": "US ",
+      "next_draw_timestamp": "2026-10-08T02:59:00",
+      "Game_Brand": "U.S. - Powerball"
+    },
+    {
+      "id": 63053,
+      "lottery_id": 418,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 02:59:00",
+      "name": "Arizona - Powerball Double Play",
+      "title": "Arizona - Powerball Double Play",
+      "link": "https://www.thelotter.com/lottery-tickets/418/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 02:59 GMT<br><b>Draw Result</b> 16;23;32;36;54 + 9<br><b>Next Draw Date</b> 08/10/2026 02:59 GMT<br><b>Next Draw Jackpot</b> US$ 485 Million<br><a href='https://www.thelotter.com/lottery-tickets/418/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/418/",
+      "last_draw_results": "16;23;32;36;54 + 9",
+      "next_draw_date": "2026-10-08T02:59:00.000000Z",
+      "next_draw_jackpot": "US$ 485 Million",
+      "next_draw_jackpot_usd": 485000000,
+      "next_draw_close_date": "2026-10-08 00:29:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Powerball Double Play",
+      "state": "Arizona ",
+      "next_draw_timestamp": "2026-10-08T02:59:00",
+      "Game_Brand": "Arizona - Powerball Double Play"
+    },
+    {
+      "id": 62985,
+      "lottery_id": 60,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 03:00:00",
+      "name": "U.S. - Mega Millions",
+      "title": "U.S. - Mega Millions",
+      "link": "https://www.thelotter.com/lottery-tickets/usa-megamillions/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 03:00 GMT<br><b>Draw Result</b> 6;37;40;41;55 + 10<br><b>Next Draw Date</b> 07/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> US$ 345 Million<br><a href='https://www.thelotter.com/lottery-tickets/usa-megamillions/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/usa-megamillions/",
+      "last_draw_results": "6;37;40;41;55 + 10",
+      "next_draw_date": "2026-10-07T03:00:00.000000Z",
+      "next_draw_jackpot": "US$ 345 Million",
+      "next_draw_jackpot_usd": 345000000,
+      "next_draw_close_date": "2026-10-07 01:30:00",
+      "published": "2026-10-06 10:51:21",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:21.000000Z",
+      "Game_Name": " Mega Millions",
+      "state": "US ",
+      "next_draw_timestamp": "2026-10-07T03:00:00",
+      "Game_Brand": "U.S. - Mega Millions"
+    },
+    {
+      "id": 62984,
+      "lottery_id": 389,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 03:00:00",
+      "name": "Arizona - Mega Millions",
+      "title": "Arizona - Mega Millions",
+      "link": "https://www.thelotter.com/lottery-tickets/389/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 03:00 GMT<br><b>Draw Result</b> 6;37;40;41;55 + 10<br><b>Next Draw Date</b> 07/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> US$ 345 Million<br><a href='https://www.thelotter.com/lottery-tickets/389/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/389/",
+      "last_draw_results": "6;37;40;41;55 + 10",
+      "next_draw_date": "2026-10-07T03:00:00.000000Z",
+      "next_draw_jackpot": "US$ 345 Million",
+      "next_draw_jackpot_usd": 345000000,
+      "next_draw_close_date": "2026-10-07 00:29:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Mega Millions",
+      "state": "Arizona ",
+      "next_draw_timestamp": "2026-10-07T03:00:00",
+      "Game_Brand": "Arizona - Mega Millions"
+    },
+    {
+      "id": 62983,
+      "lottery_id": 351,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 03:00:00",
+      "name": "Minnesota - Mega Millions",
+      "title": "Minnesota - Mega Millions",
+      "link": "https://www.thelotter.com/lottery-tickets/351/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 03:00 GMT<br><b>Draw Result</b> 6;37;40;41;55 + 10<br><b>Next Draw Date</b> 07/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> US$ 345 Million<br><a href='https://www.thelotter.com/lottery-tickets/351/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/351/",
+      "last_draw_results": "6;37;40;41;55 + 10",
+      "next_draw_date": "2026-10-07T03:00:00.000000Z",
+      "next_draw_jackpot": "US$ 345 Million",
+      "next_draw_jackpot_usd": 345000000,
+      "next_draw_close_date": "2026-10-06 23:00:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Mega Millions",
+      "state": "Minnesota ",
+      "next_draw_timestamp": "2026-10-07T03:00:00",
+      "Game_Brand": "Minnesota - Mega Millions"
+    },
+    {
+      "id": 62967,
+      "lottery_id": 153,
+      "language_id": 1,
+      "last_draw_date": "2026-10-02 19:00:00",
+      "name": "Europe - EuroJackpot",
+      "title": "Europe - EuroJackpot",
+      "link": "https://www.thelotter.com/lottery-tickets/eurojackpot/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 02/10/2026 19:00 GMT<br><b>Draw Result</b> 4;6;7;17;45 + 7;12<br><b>Next Draw Date</b> 06/10/2026 19:00 GMT<br><b>Next Draw Jackpot</b> € 120 Million<br><a href='https://www.thelotter.com/lottery-tickets/eurojackpot/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/eurojackpot/",
+      "last_draw_results": "4;6;7;17;45 + 7;12",
+      "next_draw_date": "2026-10-06T19:00:00.000000Z",
+      "next_draw_jackpot": "€ 120 Million",
+      "next_draw_jackpot_usd": 134544231,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " EuroJackpot",
+      "state": "Europe ",
+      "next_draw_timestamp": "2026-10-06T19:00:00",
+      "Game_Brand": "Europe - EuroJackpot"
+    },
+    {
+      "id": 63002,
+      "lottery_id": 149,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 18:00:00",
+      "name": "Italy - SuperStar",
+      "title": "Italy - SuperStar",
+      "link": "https://www.thelotter.com/lottery-tickets/italy-superstar/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 18:00 GMT<br><b>Draw Result</b> 5;12;18;25;28;42 + 76 + 66<br><b>Next Draw Date</b> 06/10/2026 18:00 GMT<br><b>Next Draw Jackpot</b> € 38.6 Million<br><a href='https://www.thelotter.com/lottery-tickets/italy-superstar/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/italy-superstar/",
+      "last_draw_results": "5;12;18;25;28;42 + 76 + 66",
+      "next_draw_date": "2026-10-06T18:00:00.000000Z",
+      "next_draw_jackpot": "€ 38.6 Million",
+      "next_draw_jackpot_usd": 43278394,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " SuperStar",
+      "state": "Italy ",
+      "next_draw_timestamp": "2026-10-06T18:00:00",
+      "Game_Brand": "Italy - SuperStar"
+    },
+    {
+      "id": 62940,
+      "lottery_id": 12,
+      "language_id": 1,
+      "last_draw_date": "2026-10-01 10:30:00",
+      "name": "Australia - Powerball Lotto",
+      "title": "Australia - Powerball Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/australia-powerball-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 01/10/2026 10:30 GMT<br><b>Draw Result</b> 2;3;6;10;11;16;24 + 14<br><b>Next Draw Date</b> 08/10/2026 10:30 GMT<br><b>Next Draw Jackpot</b> AU$ 60 Million<br><a href='https://www.thelotter.com/lottery-tickets/australia-powerball-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/australia-powerball-lotto/",
+      "last_draw_results": "2;3;6;10;11;16;24 + 14",
+      "next_draw_date": "2026-10-08T10:30:00.000000Z",
+      "next_draw_jackpot": "AU$ 60 Million",
+      "next_draw_jackpot_usd": 41791461,
+      "next_draw_close_date": "2026-10-08 08:00:00",
+      "published": "2026-10-06 10:51:20",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:20.000000Z",
+      "Game_Name": " Powerball Lotto",
+      "state": "Australia ",
+      "next_draw_timestamp": "2026-10-08T10:30:00",
+      "Game_Brand": "Australia - Powerball Lotto"
+    },
+    {
+      "id": 63001,
+      "lottery_id": 22,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 18:00:00",
+      "name": "Italy - SuperEnalotto",
+      "title": "Italy - SuperEnalotto",
+      "link": "https://www.thelotter.com/lottery-tickets/italy-superenalotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 18:00 GMT<br><b>Draw Result</b> 5;12;18;25;28;42 + 66<br><b>Next Draw Date</b> 06/10/2026 18:00 GMT<br><b>Next Draw Jackpot</b> € 36.6 Million<br><a href='https://www.thelotter.com/lottery-tickets/italy-superenalotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/italy-superenalotto/",
+      "last_draw_results": "5;12;18;25;28;42 + 66",
+      "next_draw_date": "2026-10-06T18:00:00.000000Z",
+      "next_draw_jackpot": "€ 36.6 Million",
+      "next_draw_jackpot_usd": 41035991,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:21",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:21.000000Z",
+      "Game_Name": " SuperEnalotto",
+      "state": "Italy ",
+      "next_draw_timestamp": "2026-10-06T18:00:00",
+      "Game_Brand": "Italy - SuperEnalotto"
+    },
+    {
+      "id": 63046,
+      "lottery_id": 11,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 19:40:00",
+      "name": "Spain - La Primitiva",
+      "title": "Spain - La Primitiva",
+      "link": "https://www.thelotter.com/lottery-tickets/spain-la-primitiva/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 19:40 GMT<br><b>Draw Result</b> 4;10;20;25;40;49 + 3 + 29<br><b>Next Draw Date</b> 08/10/2026 19:40 GMT<br><b>Next Draw Jackpot</b> € 33.5 Million<br><a href='https://www.thelotter.com/lottery-tickets/spain-la-primitiva/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/spain-la-primitiva/",
+      "last_draw_results": "4;10;20;25;40;49 + 3 + 29",
+      "next_draw_date": "2026-10-08T19:40:00.000000Z",
+      "next_draw_jackpot": "€ 33.5 Million",
+      "next_draw_jackpot_usd": 37560265,
+      "next_draw_close_date": "2026-10-08 18:00:00",
+      "published": "2026-10-06 10:51:20",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:20.000000Z",
+      "Game_Name": " La Primitiva",
+      "state": "Spain ",
+      "next_draw_timestamp": "2026-10-08T19:40:00",
+      "Game_Brand": "Spain - La Primitiva"
+    },
+    {
+      "id": 63030,
+      "lottery_id": 113,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 19:30:00",
+      "name": "Spain - El Gordo",
+      "title": "Spain - El Gordo",
+      "link": "https://www.thelotter.com/lottery-tickets/spain-el-gordo/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 19:30 GMT<br><b>Draw Result</b> 2;3;20;41;47 + 8<br><b>Next Draw Date</b> 11/10/2026 19:30 GMT<br><b>Next Draw Jackpot</b> € 18.6 Million<br><a href='https://www.thelotter.com/lottery-tickets/spain-el-gordo/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/spain-el-gordo/",
+      "last_draw_results": "2;3;20;41;47 + 8",
+      "next_draw_date": "2026-10-11T19:30:00.000000Z",
+      "next_draw_jackpot": "€ 18.6 Million",
+      "next_draw_jackpot_usd": 20854356,
+      "next_draw_close_date": "2026-10-11 17:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " El Gordo",
+      "state": "Spain ",
+      "next_draw_timestamp": "2026-10-11T19:30:00",
+      "Game_Brand": "Spain - El Gordo"
+    },
+    {
+      "id": 62968,
+      "lottery_id": 177,
+      "language_id": 1,
+      "last_draw_date": "2026-10-02 19:00:00",
+      "name": "Austria - EuroMillions",
+      "title": "Austria - EuroMillions",
+      "link": "https://www.thelotter.com/lottery-tickets/austria-euromillions/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 02/10/2026 19:00 GMT<br><b>Draw Result</b> 7;8;10;22;35 + 2;10<br><b>Next Draw Date</b> 06/10/2026 19:00 GMT<br><b>Next Draw Jackpot</b> € 17 Million<br><a href='https://www.thelotter.com/lottery-tickets/austria-euromillions/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/austria-euromillions/",
+      "last_draw_results": "7;8;10;22;35 + 2;10",
+      "next_draw_date": "2026-10-06T19:00:00.000000Z",
+      "next_draw_jackpot": "€ 17 Million",
+      "next_draw_jackpot_usd": 19060433,
+      "next_draw_close_date": "2026-10-06 14:30:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " EuroMillions",
+      "state": "Austria ",
+      "next_draw_timestamp": "2026-10-06T19:00:00",
+      "Game_Brand": "Euro Millions"
+    },
+    {
+      "id": 62298,
+      "lottery_id": 204,
+      "language_id": 1,
+      "last_draw_date": "2026-09-05 10:30:00",
+      "name": "Australia - Superdraw Saturday Lotto",
+      "title": "Australia - Superdraw Saturday Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/australia-saturday-lotto-superdraw/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/09/2026 10:30 GMT<br><b>Draw Result</b> 5;17;27;38;40;43 + 2;39<br><b>Next Draw Date</b> 31/10/2026 10:30 GMT<br><b>Next Draw Jackpot</b> AU$ 20 Million<br><a href='https://www.thelotter.com/lottery-tickets/australia-saturday-lotto-superdraw/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/australia-saturday-lotto-superdraw/",
+      "last_draw_results": "5;17;27;38;40;43 + 2;39",
+      "next_draw_date": "2026-10-31T10:30:00.000000Z",
+      "next_draw_jackpot": "AU$ 20 Million",
+      "next_draw_jackpot_usd": 13930487,
+      "next_draw_close_date": "2026-10-31 07:30:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Superdraw Saturday Lotto",
+      "state": "Australia ",
+      "next_draw_timestamp": "2026-10-31T10:30:00",
+      "Game_Brand": "Australia - Superdraw Saturday Lotto"
+    },
+    {
+      "id": 62989,
+      "lottery_id": 160,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 16:45:00",
+      "name": "Hungary - Otoslotto",
+      "title": "Hungary - Otoslotto",
+      "link": "https://www.thelotter.com/lottery-tickets/hungary-otoslotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 16:45 GMT<br><b>Draw Result</b> 9;48;51;83;88<br><b>Next Draw Date</b> 10/10/2026 16:45 GMT<br><b>Next Draw Jackpot</b> Ft 4.555 Billion<br><a href='https://www.thelotter.com/lottery-tickets/hungary-otoslotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/hungary-otoslotto/",
+      "last_draw_results": "9;48;51;83;88",
+      "next_draw_date": "2026-10-10T16:45:00.000000Z",
+      "next_draw_jackpot": "Ft 4.555 Billion",
+      "next_draw_jackpot_usd": 13902738,
+      "next_draw_close_date": "2026-10-10 06:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Otoslotto",
+      "state": "Hungary ",
+      "next_draw_timestamp": "2026-10-10T16:45:00",
+      "Game_Brand": "Hungary - Otoslotto"
+    },
+    {
+      "id": 63029,
+      "lottery_id": 195,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 02:00:00",
+      "name": "Peru - Tinka",
+      "title": "Peru - Tinka",
+      "link": "https://www.thelotter.com/lottery-tickets/peru-tinka/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 02:00 GMT<br><b>Draw Result</b> 2;9;11;21;32;35 + 3<br><b>Next Draw Date</b> 08/10/2026 02:00 GMT<br><b>Next Draw Jackpot</b> S/ 31.6 Million<br><a href='https://www.thelotter.com/lottery-tickets/peru-tinka/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/peru-tinka/",
+      "last_draw_results": "2;9;11;21;32;35 + 3",
+      "next_draw_date": "2026-10-08T02:00:00.000000Z",
+      "next_draw_jackpot": "S/ 31.6 Million",
+      "next_draw_jackpot_usd": 9173513,
+      "next_draw_close_date": "2026-10-07 15:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Tinka",
+      "state": "Peru ",
+      "next_draw_timestamp": "2026-10-08T02:00:00",
+      "Game_Brand": "Peru - Tinka"
+    },
+    {
+      "id": 63048,
+      "lottery_id": 272,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 19:00:00",
+      "name": "Europe - EuroDreams",
+      "title": "Europe - EuroDreams",
+      "link": "https://www.thelotter.com/lottery-tickets/eurodreams/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 19:00 GMT<br><b>Draw Result</b> 3;6;16;24;29;40 + 2<br><b>Next Draw Date</b> 08/10/2026 19:00 GMT<br><b>Next Draw Jackpot</b> € 7.2 Million<br><a href='https://www.thelotter.com/lottery-tickets/eurodreams/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/eurodreams/",
+      "last_draw_results": "3;6;16;24;29;40 + 2",
+      "next_draw_date": "2026-10-08T19:00:00.000000Z",
+      "next_draw_jackpot": "€ 7.2 Million",
+      "next_draw_jackpot_usd": 8072654,
+      "next_draw_close_date": "2026-10-08 18:00:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " EuroDreams",
+      "state": "Europe ",
+      "next_draw_timestamp": "2026-10-08T19:00:00",
+      "Game_Brand": "Europe - EuroDreams"
+    },
+    {
+      "id": 63036,
+      "lottery_id": 121,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 18:35:00",
+      "name": "France - Loto",
+      "title": "France - Loto",
+      "link": "https://www.thelotter.com/lottery-tickets/france-loto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 18:35 GMT<br><b>Draw Result</b> 7;8;16;39;42 + 8<br><b>Next Draw Date</b> 07/10/2026 18:35 GMT<br><b>Next Draw Jackpot</b> € 6 Million<br><a href='https://www.thelotter.com/lottery-tickets/france-loto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/france-loto/",
+      "last_draw_results": "7;8;16;39;42 + 8",
+      "next_draw_date": "2026-10-07T18:35:00.000000Z",
+      "next_draw_jackpot": "€ 6 Million",
+      "next_draw_jackpot_usd": 6727212,
+      "next_draw_close_date": "2026-10-07 06:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " Loto",
+      "state": "France ",
+      "next_draw_timestamp": "2026-10-07T18:35:00",
+      "Game_Brand": "France - Loto"
+    },
+    {
+      "id": 62961,
+      "lottery_id": 189,
+      "language_id": 1,
+      "last_draw_date": "2026-10-02 09:45:00",
+      "name": "Japan - Loto 7",
+      "title": "Japan - Loto 7",
+      "link": "https://www.thelotter.com/lottery-tickets/japan-loto-7/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 02/10/2026 09:45 GMT<br><b>Draw Result</b> 1;6;12;23;28;32;36 + 31;34<br><b>Next Draw Date</b> 09/10/2026 09:45 GMT<br><b>Next Draw Jackpot</b> ¥ 1 Billion<br><a href='https://www.thelotter.com/lottery-tickets/japan-loto-7/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/japan-loto-7/",
+      "last_draw_results": "1;6;12;23;28;32;36 + 31;34",
+      "next_draw_date": "2026-10-09T09:45:00.000000Z",
+      "next_draw_jackpot": "¥ 1 Billion",
+      "next_draw_jackpot_usd": 6330600,
+      "next_draw_close_date": "2026-10-09 06:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Loto 7",
+      "state": "Japan ",
+      "next_draw_timestamp": "2026-10-09T09:45:00",
+      "Game_Brand": "Japan - Loto 7"
+    },
+    {
+      "id": 62965,
+      "lottery_id": 144,
+      "language_id": 1,
+      "last_draw_date": "2026-10-02 18:58:00",
+      "name": "South Africa - PowerBall",
+      "title": "South Africa - PowerBall",
+      "link": "https://www.thelotter.com/lottery-tickets/south-africa-powerball/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 02/10/2026 18:58 GMT<br><b>Draw Result</b> 15;26;27;28;39 + 10<br><b>Next Draw Date</b> 06/10/2026 18:58 GMT<br><b>Next Draw Jackpot</b> R 97 Million<br><a href='https://www.thelotter.com/lottery-tickets/south-africa-powerball/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/south-africa-powerball/",
+      "last_draw_results": "15;26;27;28;39 + 10",
+      "next_draw_date": "2026-10-06T18:58:00.000000Z",
+      "next_draw_jackpot": "R 97 Million",
+      "next_draw_jackpot_usd": 5826596,
+      "next_draw_close_date": "2026-10-06 12:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " PowerBall",
+      "state": "South Africa ",
+      "next_draw_timestamp": "2026-10-06T18:58:00",
+      "Game_Brand": "South Africa - PowerBall"
+    },
+    {
+      "id": 62998,
+      "lottery_id": 129,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 19:50:00",
+      "name": "Poland - Lotto",
+      "title": "Poland - Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/poland-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 19:50 GMT<br><b>Draw Result</b> 6;12;15;31;32;43<br><b>Next Draw Date</b> 06/10/2026 19:50 GMT<br><b>Next Draw Jackpot</b> zł 21 Million<br><a href='https://www.thelotter.com/lottery-tickets/poland-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/poland-lotto/",
+      "last_draw_results": "6;12;15;31;32;43",
+      "next_draw_date": "2026-10-06T19:50:00.000000Z",
+      "next_draw_jackpot": "zł 21 Million",
+      "next_draw_jackpot_usd": 5370295,
+      "next_draw_close_date": "2026-10-06 15:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " Lotto",
+      "state": "Poland ",
+      "next_draw_timestamp": "2026-10-06T19:50:00",
+      "Game_Brand": "Poland - Lotto"
+    },
+    {
+      "id": 63032,
+      "lottery_id": 161,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 03:15:00",
+      "name": "Mexico - Mexlotto",
+      "title": "Mexico - Mexlotto",
+      "link": "https://www.thelotter.com/lottery-tickets/mexico-melate/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 03:15 GMT<br><b>Draw Result</b> 20;27;32;38;43;54 + 26<br><b>Next Draw Date</b> 08/10/2026 03:15 GMT<br><b>Next Draw Jackpot</b> MXN 84.1 Million<br><a href='https://www.thelotter.com/lottery-tickets/mexico-melate/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/mexico-melate/",
+      "last_draw_results": "20;27;32;38;43;54 + 26",
+      "next_draw_date": "2026-10-08T03:15:00.000000Z",
+      "next_draw_jackpot": "MXN 84.1 Million",
+      "next_draw_jackpot_usd": 4644253,
+      "next_draw_close_date": "2026-10-07 22:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Mexlotto",
+      "state": "Mexico ",
+      "next_draw_timestamp": "2026-10-08T03:15:00",
+      "Game_Brand": "Mexico - Mexlotto"
+    },
+    {
+      "id": 62990,
+      "lottery_id": 14,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 10:30:00",
+      "name": "Australia - Saturday Lotto",
+      "title": "Australia - Saturday Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/australia-saturday-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 10:30 GMT<br><b>Draw Result</b> 9;18;20;32;39;45 + 19;24<br><b>Next Draw Date</b> 10/10/2026 10:30 GMT<br><b>Next Draw Jackpot</b> AU$ 6 Million<br><a href='https://www.thelotter.com/lottery-tickets/australia-saturday-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/australia-saturday-lotto/",
+      "last_draw_results": "9;18;20;32;39;45 + 19;24",
+      "next_draw_date": "2026-10-10T10:30:00.000000Z",
+      "next_draw_jackpot": "AU$ 6 Million",
+      "next_draw_jackpot_usd": 4179146,
+      "next_draw_close_date": "2026-10-10 08:00:00",
+      "published": "2026-10-06 10:51:20",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:20.000000Z",
+      "Game_Name": " Saturday Lotto",
+      "state": "Australia ",
+      "next_draw_timestamp": "2026-10-10T10:30:00",
+      "Game_Brand": "Australia - Saturday Lotto"
+    },
+    {
+      "id": 63055,
+      "lottery_id": 337,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 02:29:00",
+      "name": "Oregon - Megabucks",
+      "title": "Oregon - Megabucks",
+      "link": "https://www.thelotter.com/lottery-tickets/337/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 02:29 GMT<br><b>Draw Result</b> 3;20;28;34;38;39<br><b>Next Draw Date</b> 08/10/2026 02:29 GMT<br><b>Next Draw Jackpot</b> US$ 4.1 Million<br><a href='https://www.thelotter.com/lottery-tickets/337/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/337/",
+      "last_draw_results": "3;20;28;34;38;39",
+      "next_draw_date": "2026-10-08T02:29:00.000000Z",
+      "next_draw_jackpot": "US$ 4.1 Million",
+      "next_draw_jackpot_usd": 4100000,
+      "next_draw_close_date": "2026-10-08 00:29:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Megabucks",
+      "state": "Oregon ",
+      "next_draw_timestamp": "2026-10-08T02:29:00",
+      "Game_Brand": "Oregon - Megabucks"
+    },
+    {
+      "id": 63012,
+      "lottery_id": 17,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 02:30:00",
+      "name": "Canada - Lotto 649",
+      "title": "Canada - Lotto 649",
+      "link": "https://www.thelotter.com/lottery-tickets/canada-lotto-649/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 02:30 GMT<br><b>Draw Result</b> 1;4;7;23;28;37 + 38<br><b>Next Draw Date</b> 08/10/2026 02:30 GMT<br><b>Next Draw Jackpot</b> C$ 5 Million<br><a href='https://www.thelotter.com/lottery-tickets/canada-lotto-649/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/canada-lotto-649/",
+      "last_draw_results": "1;4;7;23;28;37 + 38",
+      "next_draw_date": "2026-10-08T02:30:00.000000Z",
+      "next_draw_jackpot": "C$ 5 Million",
+      "next_draw_jackpot_usd": 3509757,
+      "next_draw_close_date": "2026-10-07 22:00:00",
+      "published": "2026-10-06 10:51:20",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:20.000000Z",
+      "Game_Name": " Lotto 649",
+      "state": "Canada ",
+      "next_draw_timestamp": "2026-10-08T02:30:00",
+      "Game_Brand": "Canada - Lotto 649"
+    },
+    {
+      "id": 62997,
+      "lottery_id": 1,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 17:17:00",
+      "name": "Austria - Lotto",
+      "title": "Austria - Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/austria-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 17:17 GMT<br><b>Draw Result</b> 1;15;19;39;40;44 + 28<br><b>Next Draw Date</b> 07/10/2026 16:47 GMT<br><b>Next Draw Jackpot</b> € 3 Million<br><a href='https://www.thelotter.com/lottery-tickets/austria-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/austria-lotto/",
+      "last_draw_results": "1;15;19;39;40;44 + 28",
+      "next_draw_date": "2026-10-07T16:47:00.000000Z",
+      "next_draw_jackpot": "€ 3 Million",
+      "next_draw_jackpot_usd": 3363606,
+      "next_draw_close_date": "2026-10-07 14:30:00",
+      "published": "2026-10-06 10:51:20",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:20.000000Z",
+      "Game_Name": " Lotto",
+      "state": "Austria ",
+      "next_draw_timestamp": "2026-10-07T16:47:00",
+      "Game_Brand": "Austria - Lotto"
+    },
+    {
+      "id": 63054,
+      "lottery_id": 411,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 03:00:00",
+      "name": "Arizona - The Pick",
+      "title": "Arizona - The Pick",
+      "link": "https://www.thelotter.com/lottery-tickets/411/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 03:00 GMT<br><b>Draw Result</b> 10;13;16;23;32;40<br><b>Next Draw Date</b> 08/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> US$ 3.3 Million<br><a href='https://www.thelotter.com/lottery-tickets/411/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/411/",
+      "last_draw_results": "10;13;16;23;32;40",
+      "next_draw_date": "2026-10-08T03:00:00.000000Z",
+      "next_draw_jackpot": "US$ 3.3 Million",
+      "next_draw_jackpot_usd": 3300000,
+      "next_draw_close_date": "2026-10-08 00:29:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " The Pick",
+      "state": "Arizona ",
+      "next_draw_timestamp": "2026-10-08T03:00:00",
+      "Game_Brand": "Arizona - The Pick"
+    },
+    {
+      "id": 63003,
+      "lottery_id": 179,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 18:00:00",
+      "name": "Italy - Lotto",
+      "title": "Italy - Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/italy-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 18:00 GMT<br><b>Draw Result</b> 6;28;46;84;90<br><b>Next Draw Date</b> 06/10/2026 18:00 GMT<br><b>Next Draw Jackpot</b> € 2.8 Million<br><a href='https://www.thelotter.com/lottery-tickets/italy-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/italy-lotto/",
+      "last_draw_results": "6;28;46;84;90",
+      "next_draw_date": "2026-10-06T18:00:00.000000Z",
+      "next_draw_jackpot": "€ 2.8 Million",
+      "next_draw_jackpot_usd": 3139365,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Lotto",
+      "state": "Italy ",
+      "next_draw_timestamp": "2026-10-06T18:00:00",
+      "Game_Brand": "Italy - Lotto"
+    },
+    {
+      "id": 62988,
+      "lottery_id": 159,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 14:00:00",
+      "name": "Hungary - Hatoslotto",
+      "title": "Hungary - Hatoslotto",
+      "link": "https://www.thelotter.com/lottery-tickets/hungary-hatoslotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 14:00 GMT<br><b>Draw Result</b> 11;13;18;19;23;34<br><b>Next Draw Date</b> 08/10/2026 18:45 GMT<br><b>Next Draw Jackpot</b> Ft 980 Million<br><a href='https://www.thelotter.com/lottery-tickets/hungary-hatoslotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/hungary-hatoslotto/",
+      "last_draw_results": "11;13;18;19;23;34",
+      "next_draw_date": "2026-10-08T18:45:00.000000Z",
+      "next_draw_jackpot": "Ft 980 Million",
+      "next_draw_jackpot_usd": 2991149,
+      "next_draw_close_date": "2026-10-08 06:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Hatoslotto",
+      "state": "Hungary ",
+      "next_draw_timestamp": "2026-10-08T18:45:00",
+      "Game_Brand": "Hungary - Hatoslotto"
+    },
+    {
+      "id": 63024,
+      "lottery_id": 119,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 15:15:00",
+      "name": "Romania - Loto 6/49",
+      "title": "Romania - Loto 6/49",
+      "link": "https://www.thelotter.com/lottery-tickets/romania-lotto-649/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 15:15 GMT<br><b>Draw Result</b> 10;12;15;24;32;40<br><b>Next Draw Date</b> 08/10/2026 15:15 GMT<br><b>Next Draw Jackpot</b> lei 13.4 Million<br><a href='https://www.thelotter.com/lottery-tickets/romania-lotto-649/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/romania-lotto-649/",
+      "last_draw_results": "10;12;15;24;32;40",
+      "next_draw_date": "2026-10-08T15:15:00.000000Z",
+      "next_draw_jackpot": "lei 13.4 Million",
+      "next_draw_jackpot_usd": 2815658,
+      "next_draw_close_date": "2026-10-08 10:30:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " Loto 649",
+      "state": "Romania ",
+      "next_draw_timestamp": "2026-10-08T15:15:00",
+      "Game_Brand": "Romania - Loto 6/49"
+    },
+    {
+      "id": 62993,
+      "lottery_id": 211,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 21:00:00",
+      "name": "Portugal - Totoloto",
+      "title": "Portugal - Totoloto",
+      "link": "https://www.thelotter.com/lottery-tickets/portugal-totoloto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 21:00 GMT<br><b>Draw Result</b> 8;27;38;41;44 + 12<br><b>Next Draw Date</b> 07/10/2026 21:00 GMT<br><b>Next Draw Jackpot</b> € 2.4 Million<br><a href='https://www.thelotter.com/lottery-tickets/portugal-totoloto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/portugal-totoloto/",
+      "last_draw_results": "8;27;38;41;44 + 12",
+      "next_draw_date": "2026-10-07T21:00:00.000000Z",
+      "next_draw_jackpot": "€ 2.4 Million",
+      "next_draw_jackpot_usd": 2690885,
+      "next_draw_close_date": "2026-10-07 14:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Totoloto",
+      "state": "Portugal ",
+      "next_draw_timestamp": "2026-10-07T21:00:00",
+      "Game_Brand": "Portugal - Totoloto"
+    },
+    {
+      "id": 63049,
+      "lottery_id": 348,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 03:00:00",
+      "name": "Minnesota - Lotto America",
+      "title": "Minnesota - Lotto America",
+      "link": "https://www.thelotter.com/lottery-tickets/348/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 03:00 GMT<br><b>Draw Result</b> 1;19;22;37;47 + 2<br><b>Next Draw Date</b> 08/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> US$ 2.1 Million<br><a href='https://www.thelotter.com/lottery-tickets/348/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/348/",
+      "last_draw_results": "1;19;22;37;47 + 2",
+      "next_draw_date": "2026-10-08T03:00:00.000000Z",
+      "next_draw_jackpot": "US$ 2.1 Million",
+      "next_draw_jackpot_usd": 2100000,
+      "next_draw_close_date": "2026-10-07 21:00:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Lotto America",
+      "state": "Minnesota ",
+      "next_draw_timestamp": "2026-10-08T03:00:00",
+      "Game_Brand": "Minnesota - Lotto America"
+    },
+    {
+      "id": 63025,
+      "lottery_id": 241,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 15:15:00",
+      "name": "Romania - Joker",
+      "title": "Romania - Joker",
+      "link": "https://www.thelotter.com/lottery-tickets/romania-joker/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 15:15 GMT<br><b>Draw Result</b> 11;14;25;32;34 + 9<br><b>Next Draw Date</b> 08/10/2026 15:15 GMT<br><b>Next Draw Jackpot</b> lei 9.3 Million<br><a href='https://www.thelotter.com/lottery-tickets/romania-joker/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/romania-joker/",
+      "last_draw_results": "11;14;25;32;34 + 9",
+      "next_draw_date": "2026-10-08T15:15:00.000000Z",
+      "next_draw_jackpot": "lei 9.3 Million",
+      "next_draw_jackpot_usd": 1954151,
+      "next_draw_close_date": "2026-10-08 10:30:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " Joker",
+      "state": "Romania ",
+      "next_draw_timestamp": "2026-10-08T15:15:00",
+      "Game_Brand": "Romania - Joker"
+    },
+    {
+      "id": 63013,
+      "lottery_id": 131,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 02:30:00",
+      "name": "Canada - Ontario 49",
+      "title": "Canada - Ontario 49",
+      "link": "https://www.thelotter.com/lottery-tickets/canada-ontario-49/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 02:30 GMT<br><b>Draw Result</b> 12;15;19;29;42;47 + 7<br><b>Next Draw Date</b> 08/10/2026 02:30 GMT<br><b>Next Draw Jackpot</b> C$ 2 Million<br><a href='https://www.thelotter.com/lottery-tickets/canada-ontario-49/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/canada-ontario-49/",
+      "last_draw_results": "12;15;19;29;42;47 + 7",
+      "next_draw_date": "2026-10-08T02:30:00.000000Z",
+      "next_draw_jackpot": "C$ 2 Million",
+      "next_draw_jackpot_usd": 1403903,
+      "next_draw_close_date": "2026-10-07 22:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Ontario 49",
+      "state": "Canada ",
+      "next_draw_timestamp": "2026-10-08T02:30:00",
+      "Game_Brand": "Canada - Ontario 49"
+    },
+    {
+      "id": 63037,
+      "lottery_id": 142,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 09:45:00",
+      "name": "Japan - Loto 6",
+      "title": "Japan - Loto 6",
+      "link": "https://www.thelotter.com/lottery-tickets/japan-loto-6/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 09:45 GMT<br><b>Draw Result</b> 1;7;8;29;40;43 + 15<br><b>Next Draw Date</b> 08/10/2026 09:45 GMT<br><b>Next Draw Jackpot</b> ¥ 200 Million<br><a href='https://www.thelotter.com/lottery-tickets/japan-loto-6/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/japan-loto-6/",
+      "last_draw_results": "1;7;8;29;40;43 + 15",
+      "next_draw_date": "2026-10-08T09:45:00.000000Z",
+      "next_draw_jackpot": "¥ 200 Million",
+      "next_draw_jackpot_usd": 1266120,
+      "next_draw_close_date": "2026-10-08 06:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " Loto 6",
+      "state": "Japan ",
+      "next_draw_timestamp": "2026-10-08T09:45:00",
+      "Game_Brand": "Japan - Loto 6"
+    },
+    {
+      "id": 63060,
+      "lottery_id": 191,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 11:00:00",
+      "name": "Italy - MillionDAY",
+      "title": "Italy - MillionDAY",
+      "link": "https://www.thelotter.com/lottery-tickets/italy-millionday/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 11:00 GMT<br><b>Draw Result</b> Coming Soon<br><b>Next Draw Date</b> 06/10/2026 18:30 GMT<br><b>Next Draw Jackpot</b> € 1 Million<br><a href='https://www.thelotter.com/lottery-tickets/italy-millionday/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/italy-millionday/",
+      "last_draw_results": "Coming Soon",
+      "next_draw_date": "2026-10-06T18:30:00.000000Z",
+      "next_draw_jackpot": "€ 1 Million",
+      "next_draw_jackpot_usd": 1121202,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " MillionDAY",
+      "state": "Italy ",
+      "next_draw_timestamp": "2026-10-06T18:30:00",
+      "Game_Brand": "Italy - MillionDAY"
+    },
+    {
+      "id": 63061,
+      "lottery_id": 251,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 11:00:00",
+      "name": "Italy - MillionDAY Extra",
+      "title": "Italy - MillionDAY Extra",
+      "link": "https://www.thelotter.com/lottery-tickets/italy-millionday-extra/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 11:00 GMT<br><b>Draw Result</b> Coming Soon<br><b>Next Draw Date</b> 06/10/2026 18:30 GMT<br><b>Next Draw Jackpot</b> € 1 Million<br><a href='https://www.thelotter.com/lottery-tickets/italy-millionday-extra/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/italy-millionday-extra/",
+      "last_draw_results": "Coming Soon",
+      "next_draw_date": "2026-10-06T18:30:00.000000Z",
+      "next_draw_jackpot": "€ 1 Million",
+      "next_draw_jackpot_usd": 1121202,
+      "next_draw_close_date": "2026-10-06 16:00:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " MillionDAY Extra",
+      "state": "Italy ",
+      "next_draw_timestamp": "2026-10-06T18:30:00",
+      "Game_Brand": "Italy - MillionDAY Extra"
+    },
+    {
+      "id": 63040,
+      "lottery_id": 290,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 10:30:00",
+      "name": "Australia - Weekday Windfall",
+      "title": "Australia - Weekday Windfall",
+      "link": "https://www.thelotter.com/lottery-tickets/australia-weekday-windfall/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 10:30 GMT<br><b>Draw Result</b> 15;22;24;25;29;31 + 26;36<br><b>Next Draw Date</b> 07/10/2026 10:30 GMT<br><b>Next Draw Jackpot</b> AU$ 1 Million<br><a href='https://www.thelotter.com/lottery-tickets/australia-weekday-windfall/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/australia-weekday-windfall/",
+      "last_draw_results": "15;22;24;25;29;31 + 26;36",
+      "next_draw_date": "2026-10-07T10:30:00.000000Z",
+      "next_draw_jackpot": "AU$ 1 Million",
+      "next_draw_jackpot_usd": 696524,
+      "next_draw_close_date": "2026-10-07 08:00:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " Weekday Windfall",
+      "state": "Australia ",
+      "next_draw_timestamp": "2026-10-07T10:30:00",
+      "Game_Brand": "Australia - Weekday Windfall"
+    },
+    {
+      "id": 63047,
+      "lottery_id": 146,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 19:30:00",
+      "name": "Spain - BonoLoto",
+      "title": "Spain - BonoLoto",
+      "link": "https://www.thelotter.com/lottery-tickets/spain-bonoloto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 19:30 GMT<br><b>Draw Result</b> 16;29;31;36;38;41 + 27<br><b>Next Draw Date</b> 06/10/2026 19:30 GMT<br><b>Next Draw Jackpot</b> € 600 K<br><a href='https://www.thelotter.com/lottery-tickets/spain-bonoloto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/spain-bonoloto/",
+      "last_draw_results": "16;29;31;36;38;41 + 27",
+      "next_draw_date": "2026-10-06T19:30:00.000000Z",
+      "next_draw_jackpot": "€ 600 K",
+      "next_draw_jackpot_usd": 672721,
+      "next_draw_close_date": "2026-10-06 18:00:00",
+      "published": "2026-10-06 10:51:22",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:22.000000Z",
+      "Game_Name": " BonoLoto",
+      "state": "Spain ",
+      "next_draw_timestamp": "2026-10-06T19:30:00",
+      "Game_Brand": "Spain - BonoLoto"
+    },
+    {
+      "id": 63000,
+      "lottery_id": 243,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 02:00:00",
+      "name": "Peru - Kabala",
+      "title": "Peru - Kabala",
+      "link": "https://www.thelotter.com/lottery-tickets/peru-kabala/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 02:00 GMT<br><b>Draw Result</b> 2;7;9;21;24;38<br><b>Next Draw Date</b> 07/10/2026 02:00 GMT<br><b>Next Draw Jackpot</b> S/ 1.2 Million<br><a href='https://www.thelotter.com/lottery-tickets/peru-kabala/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/peru-kabala/",
+      "last_draw_results": "2;7;9;21;24;38",
+      "next_draw_date": "2026-10-07T02:00:00.000000Z",
+      "next_draw_jackpot": "S/ 1.2 Million",
+      "next_draw_jackpot_usd": 348361,
+      "next_draw_close_date": "2026-10-06 15:00:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " Kabala",
+      "state": "Peru ",
+      "next_draw_timestamp": "2026-10-07T02:00:00",
+      "Game_Brand": "Peru - Kabala"
+    },
+    {
+      "id": 63008,
+      "lottery_id": 162,
+      "language_id": 1,
+      "last_draw_date": "2026-10-04 03:15:00",
+      "name": "Mexico - Mexlotto Vintage",
+      "title": "Mexico - Mexlotto Vintage",
+      "link": "https://www.thelotter.com/lottery-tickets/mexico-melate-retro/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 04/10/2026 03:15 GMT<br><b>Draw Result</b> 10;11;13;16;19;31 + 20<br><b>Next Draw Date</b> 07/10/2026 03:15 GMT<br><b>Next Draw Jackpot</b> MXN 5.1 Million<br><a href='https://www.thelotter.com/lottery-tickets/mexico-melate-retro/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/mexico-melate-retro/",
+      "last_draw_results": "10;11;13;16;19;31 + 20",
+      "next_draw_date": "2026-10-07T03:15:00.000000Z",
+      "next_draw_jackpot": "MXN 5.1 Million",
+      "next_draw_jackpot_usd": 281637,
+      "next_draw_close_date": "2026-10-06 22:00:00",
+      "published": "2026-10-06 10:51:23",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:23.000000Z",
+      "Game_Name": " Mexlotto Vintage",
+      "state": "Mexico ",
+      "next_draw_timestamp": "2026-10-07T03:15:00",
+      "Game_Brand": "Mexico - Mexlotto Vintage"
+    },
+    {
+      "id": 63042,
+      "lottery_id": 196,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 19:50:00",
+      "name": "Poland - Mini Lotto",
+      "title": "Poland - Mini Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/poland-mini-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 19:50 GMT<br><b>Draw Result</b> 13;16;24;33;38<br><b>Next Draw Date</b> 06/10/2026 19:50 GMT<br><b>Next Draw Jackpot</b> zł 500 K<br><a href='https://www.thelotter.com/lottery-tickets/poland-mini-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/poland-mini-lotto/",
+      "last_draw_results": "13;16;24;33;38",
+      "next_draw_date": "2026-10-06T19:50:00.000000Z",
+      "next_draw_jackpot": "zł 500 K",
+      "next_draw_jackpot_usd": 127864,
+      "next_draw_close_date": "2026-10-06 15:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Mini Lotto",
+      "state": "Poland ",
+      "next_draw_timestamp": "2026-10-06T19:50:00",
+      "Game_Brand": "Poland - Mini Lotto"
+    },
+    {
+      "id": 62995,
+      "lottery_id": 86,
+      "language_id": 1,
+      "last_draw_date": "2026-10-03 18:57:00",
+      "name": "South Africa - Lotto",
+      "title": "South Africa - Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/south-africa-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 03/10/2026 18:57 GMT<br><b>Draw Result</b> 7;18;25;36;40;44 + 38<br><b>Next Draw Date</b> 07/10/2026 18:57 GMT<br><b>Next Draw Jackpot</b> R 1.5 Million<br><a href='https://www.thelotter.com/lottery-tickets/south-africa-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/south-africa-lotto/",
+      "last_draw_results": "7;18;25;36;40;44 + 38",
+      "next_draw_date": "2026-10-07T18:57:00.000000Z",
+      "next_draw_jackpot": "R 1.5 Million",
+      "next_draw_jackpot_usd": 90102,
+      "next_draw_close_date": "2026-10-07 12:00:00",
+      "published": "2026-10-06 10:51:21",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:21.000000Z",
+      "Game_Name": " Lotto",
+      "state": "South Africa ",
+      "next_draw_timestamp": "2026-10-07T18:57:00",
+      "Game_Brand": "South Africa - Lotto"
+    },
+    {
+      "id": 63058,
+      "lottery_id": 203,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 09:45:00",
+      "name": "Japan - Mini Loto",
+      "title": "Japan - Mini Loto",
+      "link": "https://www.thelotter.com/lottery-tickets/japan-mini-loto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 09:45 GMT<br><b>Draw Result</b> Coming Soon<br><b>Next Draw Date</b> 13/10/2026 09:45 GMT<br><b>Next Draw Jackpot</b> ¥ 10 Million<br><a href='https://www.thelotter.com/lottery-tickets/japan-mini-loto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/japan-mini-loto/",
+      "last_draw_results": "Coming Soon",
+      "next_draw_date": "2026-10-13T09:45:00.000000Z",
+      "next_draw_jackpot": "¥ 10 Million",
+      "next_draw_jackpot_usd": 63306,
+      "next_draw_close_date": "2026-10-13 06:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Mini Loto",
+      "state": "Japan ",
+      "next_draw_timestamp": "2026-10-13T09:45:00",
+      "Game_Brand": "Japan - Mini Loto"
+    },
+    {
+      "id": 63051,
+      "lottery_id": 287,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 03:00:00",
+      "name": "Mexico - Triple Chance Clasico",
+      "title": "Mexico - Triple Chance Clasico",
+      "link": "https://www.thelotter.com/lottery-tickets/mexico-tris-clasico/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 03:00 GMT<br><b>Draw Result</b> 9;5;2;7;6<br><b>Next Draw Date</b> 07/10/2026 03:00 GMT<br><b>Next Draw Jackpot</b> MXN 1 Million<br><a href='https://www.thelotter.com/lottery-tickets/mexico-tris-clasico/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/mexico-tris-clasico/",
+      "last_draw_results": "9;5;2;7;6",
+      "next_draw_date": "2026-10-07T03:00:00.000000Z",
+      "next_draw_jackpot": "MXN 1 Million",
+      "next_draw_jackpot_usd": 55223,
+      "next_draw_close_date": "2026-10-06 22:00:00",
+      "published": "2026-10-06 10:51:25",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:25.000000Z",
+      "Game_Name": " Triple Chance Clasico",
+      "state": "Mexico ",
+      "next_draw_timestamp": "2026-10-07T03:00:00",
+      "Game_Brand": "Mexico - Triple Chance Clasico"
+    },
+    {
+      "id": 63041,
+      "lottery_id": 206,
+      "language_id": 1,
+      "last_draw_date": "2026-10-05 19:00:00",
+      "name": "South Africa - Daily Lotto",
+      "title": "South Africa - Daily Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/south-africa-daily-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 05/10/2026 19:00 GMT<br><b>Draw Result</b> 1;5;7;25;27<br><b>Next Draw Date</b> 06/10/2026 19:00 GMT<br><b>Next Draw Jackpot</b> R 500 K<br><a href='https://www.thelotter.com/lottery-tickets/south-africa-daily-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/south-africa-daily-lotto/",
+      "last_draw_results": "1;5;7;25;27",
+      "next_draw_date": "2026-10-06T19:00:00.000000Z",
+      "next_draw_jackpot": "R 500 K",
+      "next_draw_jackpot_usd": 30034,
+      "next_draw_close_date": "2026-10-06 12:00:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Daily Lotto",
+      "state": "South Africa ",
+      "next_draw_timestamp": "2026-10-06T19:00:00",
+      "Game_Brand": "South Africa - Daily Lotto"
+    },
+    {
+      "id": 63050,
+      "lottery_id": 205,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 03:15:00",
+      "name": "Mexico - Chispa Boom",
+      "title": "Mexico - Chispa Boom",
+      "link": "https://www.thelotter.com/lottery-tickets/mexico-chispazo/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 03:15 GMT<br><b>Draw Result</b> 2;5;7;18;22<br><b>Next Draw Date</b> 06/10/2026 21:00 GMT<br><b>Next Draw Jackpot</b> MXN 150 K<br><a href='https://www.thelotter.com/lottery-tickets/mexico-chispazo/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/mexico-chispazo/",
+      "last_draw_results": "2;5;7;18;22",
+      "next_draw_date": "2026-10-06T21:00:00.000000Z",
+      "next_draw_jackpot": "MXN 150 K",
+      "next_draw_jackpot_usd": 8283,
+      "next_draw_close_date": "2026-10-06 15:45:00",
+      "published": "2026-10-06 10:51:24",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:24.000000Z",
+      "Game_Name": " Chispa Boom",
+      "state": "Mexico ",
+      "next_draw_timestamp": "2026-10-06T21:00:00",
+      "Game_Brand": "Mexico - Chispa Boom"
+    },
+    {
+      "id": 63057,
+      "lottery_id": 379,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 05:00:00",
+      "name": "Oregon - Pick 4 - 10PM",
+      "title": "Oregon - Pick 4 - 10PM",
+      "link": "https://www.thelotter.com/lottery-tickets/379/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 05:00 GMT<br><b>Draw Result</b> 9;1;9;3<br><b>Next Draw Date</b> 07/10/2026 05:00 GMT<br><b>Next Draw Jackpot</b> US$ 5 K<br><a href='https://www.thelotter.com/lottery-tickets/379/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/379/",
+      "last_draw_results": "9;1;9;3",
+      "next_draw_date": "2026-10-07T05:00:00.000000Z",
+      "next_draw_jackpot": "US$ 5 K",
+      "next_draw_jackpot_usd": 5000,
+      "next_draw_close_date": "2026-10-07 02:00:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Pick 4 - 10PM",
+      "state": "Oregon ",
+      "next_draw_timestamp": "2026-10-07T05:00:00",
+      "Game_Brand": "Oregon - Pick 4 - 10PM"
+    },
+    {
+      "id": 63059,
+      "lottery_id": 105,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 10:30:00",
+      "name": "Australia - Oz Lotto",
+      "title": "Australia - Oz Lotto",
+      "link": "https://www.thelotter.com/lottery-tickets/australia-oz-lotto/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 10:30 GMT<br><b>Draw Result</b> Coming Soon<br><b>Next Draw Date</b> 13/10/2026 10:30 GMT<br><b>Next Draw Jackpot</b> Jackpot pending<br><a href='https://www.thelotter.com/lottery-tickets/australia-oz-lotto/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/australia-oz-lotto/",
+      "last_draw_results": "Coming Soon",
+      "next_draw_date": "2026-10-13T10:30:00.000000Z",
+      "next_draw_jackpot": "Jackpot pending",
+      "next_draw_jackpot_usd": null,
+      "next_draw_close_date": "2026-10-13 08:00:00",
+      "published": "2026-10-06 10:51:21",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:21.000000Z",
+      "Game_Name": " Oz Lotto",
+      "state": "Australia ",
+      "next_draw_timestamp": "2026-10-13T10:30:00",
+      "Game_Brand": "Australia - Oz Lotto"
+    },
+    {
+      "id": 63052,
+      "lottery_id": 412,
+      "language_id": 1,
+      "last_draw_date": "2026-10-06 02:05:00",
+      "name": "Arizona - Pick 3",
+      "title": "Arizona - Pick 3",
+      "link": "https://www.thelotter.com/lottery-tickets/412/",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png",
+      "content": "<b>Draw Date</b> 06/10/2026 02:05 GMT<br><b>Draw Result</b> 7;7;2<br><b>Next Draw Date</b> 07/10/2026 02:05 GMT<br><b>Next Draw Jackpot</b> US$ 500 <br><a href='https://www.thelotter.com/lottery-tickets/412/'>Buy a Lottery Ticket now!</a>",
+      "play_link": "https://www.thelotter.com/lottery-tickets/412/",
+      "last_draw_results": "7;7;2",
+      "next_draw_date": "2026-10-07T02:05:00.000000Z",
+      "next_draw_jackpot": "US$ 500 ",
+      "next_draw_jackpot_usd": null,
+      "next_draw_close_date": "2026-10-06 23:30:00",
+      "published": "2026-10-06 10:51:26",
+      "created_at": null,
+      "updated_at": "2026-10-06T10:51:26.000000Z",
+      "Game_Name": " Pick 3",
+      "state": "Arizona ",
+      "next_draw_timestamp": "2026-10-07T02:05:00",
+      "Game_Brand": "Arizona - Pick 3"
+    }
+  ],
+  "countryRows": [
+    {
+      "name": "Austria - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Hong Kong - Mark Six",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/hong-kong--mark-six.png"
+    },
+    {
+      "name": "Connecticut - Lotto!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/connecticut--lotto!.png"
+    },
+    {
+      "name": "Estonia - Vikinglotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/estonia--vikinglotto.png"
+    },
+    {
+      "name": "Spain - La Primitiva",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/spain--la-primitiva.png"
+    },
+    {
+      "name": "Australia - Powerball Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--powerball-lotto.png"
+    },
+    {
+      "name": "Australia - Saturday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--saturday-lotto.png"
+    },
+    {
+      "name": "Finland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/finland--lotto.png"
+    },
+    {
+      "name": "Belgium - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/belgium--lotto.png"
+    },
+    {
+      "name": "Canada - Lotto 649",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/canada--lotto649.png"
+    },
+    {
+      "name": "Canada - Quebec 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/canada--quebec49.png"
+    },
+    {
+      "name": "Germany - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/germany--lotto.png"
+    },
+    {
+      "name": "Ireland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ireland--lotto.png"
+    },
+    {
+      "name": "Italy - SuperEnalotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/italy--super-enalotto.png"
+    },
+    {
+      "name": "Switzerland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/switzerland--lotto.png"
+    },
+    {
+      "name": "U.K. - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-k.--lotto.png"
+    },
+    {
+      "name": "U.S. - Powerball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-s.--powerball.png"
+    },
+    {
+      "name": "California - SuperLotto Plus",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/california--super-lotto-plus.png"
+    },
+    {
+      "name": "Illinois - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/illinois--lotto.png"
+    },
+    {
+      "name": "Louisiana - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/louisiana--lotto.png"
+    },
+    {
+      "name": "Massachusetts - Megabucks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/massachusetts--megabucks.png"
+    },
+    {
+      "name": "Washington - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/washington--lotto.png"
+    },
+    {
+      "name": "Wisconsin - Megabucks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/wisconsin--megabucks.png"
+    },
+    {
+      "name": "U.S. - Mega Millions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-s.--mega-millions.png"
+    },
+    {
+      "name": "Missouri - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/missouri--lotto.png"
+    },
+    {
+      "name": "Sweden - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/sweden--lotto.png"
+    },
+    {
+      "name": "Kansas - Super Kansas Cash",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/kansas--super-kansas-cash.png"
+    },
+    {
+      "name": "South Africa - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/south-africa--lotto.png"
+    },
+    {
+      "name": "Israel - Lotto",
+      "logo": "https://www.thelotter.com/objects/dm.tlo?id=803"
+    },
+    {
+      "name": "Spain - EuroMillions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/spain--euro-millions.png"
+    },
+    {
+      "name": "Canada - BC 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/canada--b-c49.png"
+    },
+    {
+      "name": "Michigan - Classic Lotto 47",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/michigan--classic-lotto47.png"
+    },
+    {
+      "name": "Indiana - Hoosier Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/indiana--hoosier-lotto.png"
+    },
+    {
+      "name": "Australia - Oz Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--oz-lotto.png"
+    },
+    {
+      "name": "Ohio - Classic Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ohio--classic-lotto.png"
+    },
+    {
+      "name": "Spain - El Gordo",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/spain--el-gordo.png"
+    },
+    {
+      "name": "Arizona - The Pick",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/arizona--the-pick.png"
+    },
+    {
+      "name": "New Zealand - Powerball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/new-zealand--powerball.png"
+    },
+    {
+      "name": "romania - Loto 6/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/romania--lotto6/49.png"
+    },
+    {
+      "name": "France - Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/france--loto.png"
+    },
+    {
+      "name": "Greece - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/greece--lotto.png"
+    },
+    {
+      "name": "Poland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/poland--lotto.png"
+    },
+    {
+      "name": "U.K. - Thunderball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-k.--thunderball.png"
+    },
+    {
+      "name": "Australia - Wednesday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--wednesday-lotto.png"
+    },
+    {
+      "name": "Vermont - Megabucks Plus",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/vermont--megabucks-plus.png"
+    },
+    {
+      "name": "Turkey - Sayisal Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/turkey--sayisal-loto.png"
+    },
+    {
+      "name": "Turkey - Super Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/turkey--super-loto.png"
+    },
+    {
+      "name": "Japan - Loto 6",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/japan--loto6.png"
+    },
+    {
+      "name": "Canada - Lotto Max",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/canada--lotto-max.png"
+    },
+    {
+      "name": "South Africa - Powerball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/south-africa--powerball.png"
+    },
+    {
+      "name": "Spain - BonoLoto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/spain--bono-loto.png"
+    },
+    {
+      "name": "Israel - Double Lotto",
+      "logo": "https://www.thelotter.com/objects/dm.tlo?id=801"
+    },
+    {
+      "name": "Italy - SuperStar",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/italy--super-star.png"
+    },
+    {
+      "name": "Brazil - Dupla Sena",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/brazil--dupla-sena.png"
+    },
+    {
+      "name": "Europe - EuroJackpot",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-jackpot.png"
+    },
+    {
+      "name": "U.K. - EuroMillions and UK Millionaire Maker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-k.--euro-millions-and-u-k-millionaire-maker.png"
+    },
+    {
+      "name": "Russia - Gosloto 6/45",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/russia--gosloto6/45.png"
+    },
+    {
+      "name": "Ontario - Lottario",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ontario--lottario.png"
+    },
+    {
+      "name": "Ontario - Ontario 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ontario--ontario49.png"
+    },
+    {
+      "name": "Hungary - Hatoslotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/hungary--hatoslotto.png"
+    },
+    {
+      "name": "Hungary - Otoslotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/hungary--otoslotto.png"
+    },
+    {
+      "name": "Mexico - Melate",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--melate.png"
+    },
+    {
+      "name": "Mexico - Melate Retro",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--melate-retro.png"
+    },
+    {
+      "name": "Ukraine - Megalot",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ukraine--megalot.png"
+    },
+    {
+      "name": "Ukraine - Super Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ukraine--super-loto.png"
+    },
+    {
+      "name": "Australia - Monday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--monday-lotto.png"
+    },
+    {
+      "name": "Canada - Western 6/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/canada--western6/49.png"
+    },
+    {
+      "name": "France - EuroMillions and My Million Raffle",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/france--euro-millions-and-my-million-raffle.png"
+    },
+    {
+      "name": "U.S. - Cash4Life",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-s.--cash4-life.png"
+    },
+    {
+      "name": "Greece - Joker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/greece--joker.png"
+    },
+    {
+      "name": "Colombia - Baloto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/colombia--baloto.png"
+    },
+    {
+      "name": "U.K. - Lotto HotPicks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-k.--lotto-hot-picks.png"
+    },
+    {
+      "name": "Austria - EuroMillions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--euro-millions.png"
+    },
+    {
+      "name": "Italy - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/italy--lotto.png"
+    },
+    {
+      "name": "California - Fantasy 5",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/california--fantasy5.png"
+    },
+    {
+      "name": "Chile - Clasico Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/chile--clasico-loto.png"
+    },
+    {
+      "name": "Japan - Loto 7",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/japan--loto7.png"
+    },
+    {
+      "name": "Italy - MillionDAY",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/italy--million-d-a-y.png"
+    },
+    {
+      "name": "Latvia - Latloto 535",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/latvia--latloto535.png"
+    },
+    {
+      "name": "Brazil - Lotofacil",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/brazil--lotofacil.png"
+    },
+    {
+      "name": "Brazil - Dia de Sorte",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/brazil--dia-de-sorte.png"
+    },
+    {
+      "name": "Spain - EuroMillions Superdraw",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/spain--euro-millions-superdraw.png"
+    },
+    {
+      "name": "Poland - Mini Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/poland--mini-lotto.png"
+    },
+    {
+      "name": "Peru - Tinka",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/peru--tinka.png"
+    },
+    {
+      "name": "Australia - Superdraw Saturday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/australia--superdraw-saturday-lotto.png"
+    },
+    {
+      "name": "Japan - Mini Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/japan--mini-loto.png"
+    },
+    {
+      "name": "South Africa - Daily Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/south-africa--daily-lotto.png"
+    },
+    {
+      "name": "Mexico - Chispazo",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--chispazo.png"
+    },
+    {
+      "name": "Texas - Texas Two Step",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/texas--texas-two-step.png"
+    },
+    {
+      "name": "Texas - Lotto Texas",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/texas--lotto-texas.png"
+    },
+    {
+      "name": "Texas - Lotto Texas Extra",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/texas--lotto-texas-extra.png"
+    },
+    {
+      "name": "Texas - Cash Five",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/texas--cash-five.png"
+    },
+    {
+      "name": "France - Loto Special Draw",
+      "logo": "https://www.thelotter.com/objects/dm.tlo?id=25326"
+    },
+    {
+      "name": "Portugal - Totoloto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/portugal--totoloto.png"
+    },
+    {
+      "name": "Ukraine - Loto Maxima",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ukraine--loto-maxima.png"
+    },
+    {
+      "name": "U.S. - Lotto America",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/u.-s.--lotto-america.png"
+    },
+    {
+      "name": "Ireland - Daily Million",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ireland--daily-million.png"
+    },
+    {
+      "name": "New Zealand - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/new-zealand--lotto.png"
+    },
+    {
+      "name": "Slovakia - Loto 5 z 35",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/slovakia--loto5-z35.png"
+    },
+    {
+      "name": "Slovakia - Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/slovakia--loto.png"
+    },
+    {
+      "name": "Romania - Joker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/romania--joker.png"
+    },
+    {
+      "name": "Slovakia - Euromiliony",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/slovakia--euromiliony.png"
+    },
+    {
+      "name": "Peru - Kabala",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/peru--kabala.png"
+    },
+    {
+      "name": "France - Loto Special Draw",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/france--loto-special-draw.png"
+    },
+    {
+      "name": "Philippines - Mega Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/philippines--mega-lotto.png"
+    },
+    {
+      "name": "Philippines - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/philippines--lotto.png"
+    },
+    {
+      "name": "Philippines - Super Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/philippines--super-lotto.png"
+    },
+    {
+      "name": "Philippines - Grand Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/philippines--grand-lotto.png"
+    },
+    {
+      "name": "Philippines - Ultra Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/philippines--ultra-lotto.png"
+    },
+    {
+      "name": "Kazakhstan - Loto 6/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/kazakhstan--loto6/49.png"
+    },
+    {
+      "name": "Kazakhstan - 5/36",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/kazakhstan-5/36.png"
+    },
+    {
+      "name": "Italy - MillionDAY Extra",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/italy--million-d-a-y-extra.png"
+    },
+    {
+      "name": "Canada - Ontario 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/ontario--ontario49.png"
+    },
+    {
+      "name": "Europe - EuroDreams",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Texas - Pick 3",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Texas - Daily 4",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Mexico - Tris Clasico",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Australia - Weekday Windfall",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Europe - EuroJackpot GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-jackpot-g-o!.png"
+    },
+    {
+      "name": "Mexico - Mexlotto Vintage",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--melate-retro.png"
+    },
+    {
+      "name": "Mexico - Mexlotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--melate.png"
+    },
+    {
+      "name": "Mexico - Chispa Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--chispazo.png"
+    },
+    {
+      "name": "Mexico - Triple Chance Clasico",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Mexico - Chispa Boom",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/mexico--chispazo.png"
+    },
+    {
+      "name": "New Zealand - LottoLuck",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/new-zealand--lotto.png"
+    },
+    {
+      "name": "New Zealand - PowerLuck",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/europe--euro-dreams.png"
+    },
+    {
+      "name": "Japan - Mini Loto",
+      "logo": ""
+    },
+    {
+      "name": "Australia - Oz Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Europe - EuroDreams",
+      "logo": ""
+    },
+    {
+      "name": "South Africa - PowerBall",
+      "logo": ""
+    },
+    {
+      "name": "Austria - EuroMillions",
+      "logo": ""
+    },
+    {
+      "name": "Europe - EuroJackpot",
+      "logo": ""
+    },
+    {
+      "name": "Spain - EuroMillions",
+      "logo": ""
+    },
+    {
+      "name": "U.S. - Mega Millions",
+      "logo": ""
+    },
+    {
+      "name": "New Zealand - LottoLuck",
+      "logo": ""
+    },
+    {
+      "name": "New Zealand - PowerLuck",
+      "logo": ""
+    },
+    {
+      "name": "Portugal - Totoloto",
+      "logo": ""
+    },
+    {
+      "name": "South Africa - Lotto",
+      "logo": ""
+    },
+    {
+      "name": "France - Loto",
+      "logo": ""
+    },
+    {
+      "name": "Austria - Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Poland - Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Peru - Kabala",
+      "logo": ""
+    },
+    {
+      "name": "Italy - SuperEnalotto",
+      "logo": ""
+    },
+    {
+      "name": "Italy - SuperStar",
+      "logo": ""
+    },
+    {
+      "name": "Italy - Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Spain - La Primitiva",
+      "logo": ""
+    },
+    {
+      "name": "Mexico - Mexlotto Vintage",
+      "logo": ""
+    },
+    {
+      "name": "U.S. - Powerball",
+      "logo": ""
+    },
+    {
+      "name": "South Africa - Daily Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Poland - Mini Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Spain - BonoLoto",
+      "logo": ""
+    },
+    {
+      "name": "Mexico - Chispa Boom",
+      "logo": ""
+    },
+    {
+      "name": "Mexico - Triple Chance Clasico",
+      "logo": ""
+    },
+    {
+      "name": "Philippines - Grand Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Philippines - Mega Lotto",
+      "logo": ""
+    },
+    {
+      "name": "Italy - MillionDAY",
+      "logo": ""
+    },
+    {
+      "name": "Italy - MillionDAY Extra",
+      "logo": ""
+    },
+    {
+      "name": "Australia - Weekday Windfall",
+      "logo": ""
+    },
+    {
+      "name": "Spain - EuroMillions Superdraw",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Superdraw Saturday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Japan - Mini Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Oz Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Powerball Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Europe - EuroDreams",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Japan - Loto 7",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Weekday Windfall",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "South Africa - PowerBall",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Europe - EuroJackpot",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Austria - EuroMillions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Spain - EuroMillions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.S. - Mega Millions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Hungary - Hatoslotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Hungary - Otoslotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Saturday Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Portugal - Totoloto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "South Africa - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "France - Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Poland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Peru - Kabala",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - SuperEnalotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - SuperStar",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Spain - La Primitiva",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Mexico - Mexlotto Vintage",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - Lotto 649",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - Ontario 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.S. - Powerball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Philippines - Mega Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - MillionDAY",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Philippines - Grand Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - MillionDAY Extra",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Romania - Loto 6/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Romania - Joker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "South Africa - Daily Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Poland - Mini Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Peru - Tinka",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Spain - El Gordo",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Spain - BonoLoto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Mexico - Triple Chance Clasico",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Mexico - Mexlotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Mexico - Chispa Boom",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Japan - Loto 6",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Estonia - Vikinglotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Finland - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Belgium - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - Quebec 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.K. - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "California - SuperLotto Plus",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Colorado - Lotto+",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Illinois - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Louisiana - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Massachusetts - Megabucks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Washington - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Wisconsin - Megabucks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.S. - Hot Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Missouri - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Kansas - Super Kansas Cash",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Israel - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - BC 49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Michigan - Classic Lotto 47",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Indiana - Hoosier Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Ohio - Classic Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Arizona - The Pick",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Greece - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Massachusetts - Cash WinFall",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.K. - Thunderball",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Vermont - Megabucks Plus",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Turkey - Sayisal Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Turkey - Super Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - Lotto Max",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "New York - Sweet Million Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Israel - Double Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - SiVinceTutto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Brazil - Mega da Virada",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Brazil - Dupla Sena",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.K. - EuroMillions and UK Millionaire Maker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Russia - Gosloto 6/45",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Russia - Gosloto 7/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Ontario - Lottario",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Florida - Mega Money",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Canada - Western 6/49",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "France - EuroMillions and My Million Raffle",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Florida - Lucky Money",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Greece - Joker",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.K. - Lotto HotPicks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "California - Fantasy 5",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Latvia - Latloto 535",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Brazil - Lotofacil",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Brazil - Dia de Sorte",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "France - Loto Special Draw",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "U.S. - Lotto America",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Italy - SuperEnalotto+",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Slovakia - Loto 5 z 35",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Slovakia - Loto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Europe - EuroMillions GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Europe - EuroJackpot GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Germany - Lotto GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Slovakia - Euromiliony",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Philippines - Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Philippines - Super Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Philippines - Ultra Lotto",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "USA - Mega GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "USA - Power GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Australia - Powerball Lotto GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Spain - El Gordo GO!",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "New Zealand - LottoLuck",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "New Zealand - PowerLuck",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Arizona - ",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Minnesota - Lotto America",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Minnesota - Mega Millions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Oregon - Megabucks",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Oregon - ",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Arizona - Mega Millions",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Arizona - Pick 3",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Arizona - Powerball Double Play",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    },
+    {
+      "name": "Oregon - Pick 4 - 10PM",
+      "logo": "https://lottery-comparakeet-media.s3-us-west-2.amazonaws.com/lottery_logos/austria--lotto.png"
+    }
+  ]
+}

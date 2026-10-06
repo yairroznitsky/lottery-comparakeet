@@ -140,21 +140,45 @@ export async function fetchInternationalResults(
   return rows.map(mapUsaDraw);
 }
 
-const TOP_JACKPOTS_OVERFETCH = 200;
+export const TOP_JACKPOTS_OVERFETCH = 200;
+/** Largest slice any caller requests (play-link lookup). */
+export const TOP_JACKPOTS_MAX_COUNT = 80;
+export const TOP_JACKPOTS_API_LIMIT =
+  TOP_JACKPOTS_MAX_COUNT + TOP_JACKPOTS_OVERFETCH;
 
-export async function fetchTopJackpots(count: number): Promise<TopJackpotView[]> {
-  const apiLimit = count + TOP_JACKPOTS_OVERFETCH;
+export function buildTopJackpotsFromApiRecords(
+  rows: TopJackpotApiRecord[],
+  countryRows: InternationalCountryRecord[],
+  maxCount = TOP_JACKPOTS_API_LIMIT,
+): TopJackpotView[] {
+  const logoLookup = buildLotteryLogoLookup(countryRows);
+  return rows
+    .filter((row) => !shouldOmitJackpotFromListings(row))
+    .slice(0, maxCount)
+    .map((row) => mapTopJackpot(row, logoLookup));
+}
+
+async function fetchTopJackpotsApiPayload(): Promise<{
+  rows: TopJackpotApiRecord[];
+  countryRows: InternationalCountryRecord[];
+}> {
   const [rows, countryRows] = await Promise.all([
     lotteryGet<TopJackpotApiRecord[]>(
-      `/international/lottery/topUpcoming/${apiLimit}`,
+      `/international/lottery/topUpcoming/${TOP_JACKPOTS_API_LIMIT}`,
     ),
     lotteryGet<InternationalCountryRecord[]>(
       "/international/lottery/countries",
     ).catch(() => [] as InternationalCountryRecord[]),
   ]);
-  const logoLookup = buildLotteryLogoLookup(countryRows);
-  return rows
-    .filter((row) => !shouldOmitJackpotFromListings(row))
-    .slice(0, count)
-    .map((row) => mapTopJackpot(row, logoLookup));
+  return { rows, countryRows };
+}
+
+export async function fetchTopJackpotsList(): Promise<TopJackpotView[]> {
+  const { rows, countryRows } = await fetchTopJackpotsApiPayload();
+  return buildTopJackpotsFromApiRecords(rows, countryRows);
+}
+
+export async function fetchTopJackpots(count: number): Promise<TopJackpotView[]> {
+  const list = await fetchTopJackpotsList();
+  return list.slice(0, count);
 }

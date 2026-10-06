@@ -217,6 +217,11 @@ export function mapTopJackpot(
     logoUrl,
     playLink: record.play_link ?? record.link ?? null,
     nextDrawClose: record.next_draw_close_date ?? record.next_draw_timestamp ?? null,
+    nextDrawAt:
+      record.next_draw_timestamp ??
+      record.next_draw_date ??
+      record.next_draw_close_date ??
+      null,
     lastDrawResults: record.last_draw_results
       ? parseResultsString(record.last_draw_results)
       : null,

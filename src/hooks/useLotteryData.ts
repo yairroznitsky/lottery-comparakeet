@@ -1,8 +1,16 @@
+import { useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
+import {
+  isTopJackpotsListStale,
+  msUntilNextJackpotDraw,
+} from "@/lib/topJackpotsCache";
+import {
+  fetchTopJackpotsListWithCache,
+  getTopJackpotsQueryDefaults,
+} from "@/services/topJackpotsQuery";
 import {
   fetchInternationalCountries,
   fetchInternationalResults,
-  fetchTopJackpots,
   fetchUsaResults,
   fetchUsaStateGames,
   fetchUsaStates,
@@ -17,7 +25,7 @@ export const lotteryQueryKeys = {
   countries: ["lottery", "international", "countries"] as const,
   intlResults: (state: string | undefined, game: string | undefined, period: ResultsPeriod) =>
     ["lottery", "intl", "results", state ?? "", game ?? "", period] as const,
-  topJackpots: (count: number) => ["lottery", "topJackpots", count] as const,
+  topJackpots: ["lottery", "topJackpots"] as const,
 };
 
 export function useUsaStates(enabled = true) {
@@ -73,11 +81,48 @@ export function useInternationalResults(
   });
 }
 
-export function useTopJackpots(count: number, enabled = true) {
-  return useQuery({
-    queryKey: lotteryQueryKeys.topJackpots(count),
-    queryFn: () => fetchTopJackpots(count),
-    staleTime: 5 * 60 * 1000,
+export function useTopJackpots(count?: number, enabled = true) {
+  const bootstrap = useMemo(
+    () => getTopJackpotsQueryDefaults(),
+    [],
+  );
+
+  const query = useQuery({
+    queryKey: lotteryQueryKeys.topJackpots,
+    queryFn: fetchTopJackpotsListWithCache,
+    staleTime: Number.POSITIVE_INFINITY,
     enabled,
+    refetchInterval: (q) => {
+      const list = q.state.data;
+      if (!list?.length) {
+        return false;
+      }
+      if (isTopJackpotsListStale(list)) {
+        return 60_000;
+      }
+      return msUntilNextJackpotDraw(list);
+    },
+    refetchOnWindowFocus: (q) => {
+      const list = q.state.data;
+      return Boolean(list?.length && isTopJackpotsListStale(list));
+    },
+    ...bootstrap,
   });
+
+  useEffect(() => {
+    if (!enabled || !query.data?.length || query.isFetching) {
+      return;
+    }
+    if (isTopJackpotsListStale(query.data)) {
+      void query.refetch();
+    }
+  }, [enabled, query.data, query.isFetching, query.refetch]);
+
+  const data = useMemo(
+    () =>
+      count != null ? query.data?.slice(0, count) : query.data,
+    [query.data, count],
+  );
+
+  return { ...query, data };
 }
