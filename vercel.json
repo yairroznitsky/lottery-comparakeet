@@ -3,6 +3,86 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/us/hot-lotto",
+      "destination": "/u-s/hot-lotto",
+      "permanent": true
+    },
+    {
+      "source": "/us/hot-lotto/",
+      "destination": "/u-s/hot-lotto",
+      "permanent": true
+    },
+    {
+      "source": "/russia/gosloto-749",
+      "destination": "/russia/gosloto-7-49",
+      "permanent": true
+    },
+    {
+      "source": "/russia/gosloto-749/",
+      "destination": "/russia/gosloto-7-49",
+      "permanent": true
+    },
+    {
+      "source": "/australia/powerball-lotto-go!",
+      "destination": "/australia/powerball-lotto-go",
+      "permanent": true
+    },
+    {
+      "source": "/australia/powerball-lotto-go!/",
+      "destination": "/australia/powerball-lotto-go",
+      "permanent": true
+    },
+    {
+      "source": "/usa/power-go!",
+      "destination": "/usa/power-go",
+      "permanent": true
+    },
+    {
+      "source": "/usa/power-go!/",
+      "destination": "/usa/power-go",
+      "permanent": true
+    },
+    {
+      "source": "/germany/lotto-go!",
+      "destination": "/germany/lotto-go",
+      "permanent": true
+    },
+    {
+      "source": "/germany/lotto-go!/",
+      "destination": "/germany/lotto-go",
+      "permanent": true
+    },
+    {
+      "source": "/europe/euromillions-go!",
+      "destination": "/europe/euromillions-go",
+      "permanent": true
+    },
+    {
+      "source": "/europe/euromillions-go!/",
+      "destination": "/europe/euromillions-go",
+      "permanent": true
+    },
+    {
+      "source": "/spain/el-gordo-go!",
+      "destination": "/spain/el-gordo-go",
+      "permanent": true
+    },
+    {
+      "source": "/spain/el-gordo-go!/",
+      "destination": "/spain/el-gordo-go",
+      "permanent": true
+    },
+    {
+      "source": "/usa/mega-go!",
+      "destination": "/usa/mega-go",
+      "permanent": true
+    },
+    {
+      "source": "/usa/mega-go!/",
+      "destination": "/usa/mega-go",
+      "permanent": true
+    },
+    {
       "source": "/visit-thelotter",
       "destination": "https://lnk.to/TLHP?tl_affid=11798&ft=5",
       "permanent": true
