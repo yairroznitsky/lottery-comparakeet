@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc --noEmit",
-    "build": "node scripts/generate-sitemap.mjs && tsc && vite-react-ssg build",
+    "build": "node scripts/generate-sitemap.mjs && tsc && vite-react-ssg build && node scripts/write-spa-shell.mjs",
     "sync:state-faqs": "node scripts/sync-state-faqs.mjs",
     "sync:state-games": "node scripts/sync-state-games.mjs",
     "sync:state-content": "node scripts/sync-state-faqs.mjs && node scripts/sync-state-games.mjs",

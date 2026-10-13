@@ -45,6 +45,11 @@ import {
   useWordPressSlug,
 } from "@/hooks/useLocalWordPressContent";
 import type { DrawResultView, ResultsPeriod } from "@/types/lottery";
+import type { WordPressContentView } from "@/types/wordpress";
+import {
+  loadWordPressIntlGameOptional,
+  loadWordPressOptional,
+} from "@/lib/wordpressContent";
 import WordPressContent from "@/components/wordpress/WordPressContent";
 
 export interface DrawResultsLoaderData {
@@ -52,6 +57,7 @@ export interface DrawResultsLoaderData {
   period: ResultsPeriod;
   isUsa: boolean;
   faqItems: IntlFaqItem[];
+  aboutContent: WordPressContentView | null;
 }
 
 export function getDrawResultsStaticPaths() {
@@ -83,11 +89,14 @@ export async function drawResultsLoader({
   const isUsa =
     getUsaStatePrerenderSlugs().includes(region) || region === "us";
   const locale = localeFromPathname(pathname);
-  const faqItems = isUsa
-    ? []
-    : await loadIntlFaqItems(region, game, locale);
+  const [faqItems, aboutContent] = await Promise.all([
+    isUsa ? Promise.resolve([]) : loadIntlFaqItems(region, game, locale),
+    isUsa
+      ? loadWordPressOptional(game, locale)
+      : loadWordPressIntlGameOptional(region, game, locale),
+  ]);
 
-  return { rows: [], period, isUsa, faqItems };
+  return { rows: [], period, isUsa, faqItems, aboutContent };
 }
 
 const DrawResultsPage = () => {
@@ -120,11 +129,17 @@ const DrawResultsPage = () => {
   const activeQuery = isUsa ? usaQuery : intlQuery;
 
   const wpEnabled = Boolean(region && game);
-  const usaWpQuery = useWordPressSlug(game, wpEnabled && isUsa);
+  const preloadedAbout = loaderData?.aboutContent;
+  const usaWpQuery = useWordPressSlug(
+    game,
+    wpEnabled && isUsa,
+    isUsa ? preloadedAbout : undefined,
+  );
   const intlWpQuery = useWordPressIntlGame(
     region,
     game,
     wpEnabled && !isUsa,
+    isUsa ? undefined : preloadedAbout,
   );
   const wpContent = isUsa ? usaWpQuery.data : intlWpQuery.data;
 

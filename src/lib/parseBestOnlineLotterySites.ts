@@ -214,15 +214,22 @@ function parseReviewSections(
   return reviews;
 }
 
+/** First text-editor paragraph before the comparison rows (works for translated HTML). */
+function findIntroText(html: string): string | null {
+  const beforeComparison = html.split(/<section[^>]*id="CT-ID"/i)[0] ?? "";
+  const match = beforeComparison.match(
+    /elementor-widget-text-editor[\s\S]*?<p>([\s\S]*?)<\/p>/i,
+  );
+  const text = match ? stripTags(match[1]) : "";
+  return text || null;
+}
+
 export function parseBestOnlineLotterySitesHtml(
   html: string,
 ): BestLotterySitesContent | null {
-  const introMatch = html.match(
-    /Without further ado![^<]*(?:<[^>]+>[^<]*)*?online lottery sites\./i,
-  );
-  const intro = introMatch
-    ? stripTags(introMatch[0])
-    : "Our picks for the best genuine online lottery sites.";
+  const intro =
+    findIntroText(html) ??
+    "Our picks for the best genuine online lottery sites.";
 
   const quickJumpIdx = html.search(/Quick Jump to a Lottery Review/i);
   const comparisonHtml =

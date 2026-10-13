@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import StarRating from "@/components/lottery/StarRating";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useT } from "@/i18n/LocaleContext";
 import { resolveBrandVisitHref } from "@/lib/brandVisitLinks";
 import type { LotterySiteReviewDetail } from "@/lib/parseBestOnlineLotterySites";
 
@@ -9,6 +10,7 @@ interface LotteryBrandReviewSectionProps {
 }
 
 const LotteryBrandReviewSection = ({ review }: LotteryBrandReviewSectionProps) => {
+  const t = useT();
   return (
     <section
       id={`review-${review.rank}`}
@@ -48,15 +50,15 @@ const LotteryBrandReviewSection = ({ review }: LotteryBrandReviewSectionProps) =
       <div className="mt-6 flex flex-wrap gap-2">
         <PlayTicketsCta
           href={resolveBrandVisitHref(review.visitUrl)}
-          label={`Visit ${review.name}`}
+          label={t("comparison.visit", { name: review.name })}
         />
         {review.reviewUrl ? (
-          <Link
+          <LocalizedLink
             to={review.reviewUrl}
             className="inline-flex rounded-lg border border-brand-300 px-4 py-2 text-sm font-semibold text-brand-800 hover:bg-brand-50"
           >
-            Read full review
-          </Link>
+            {t("comparison.readFullReview")}
+          </LocalizedLink>
         ) : null}
       </div>
 
@@ -65,7 +67,7 @@ const LotteryBrandReviewSection = ({ review }: LotteryBrandReviewSectionProps) =
           {review.pros.length > 0 ? (
             <div className="rounded-xl bg-brand-50 p-4">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-800">
-                What we like
+                {t("comparison.pros")}
               </h3>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-brand-900">
                 {review.pros.map((item) => (
@@ -77,7 +79,7 @@ const LotteryBrandReviewSection = ({ review }: LotteryBrandReviewSectionProps) =
           {review.cons.length > 0 ? (
             <div className="rounded-xl bg-amber-50/80 p-4">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-950">
-                What could be better
+                {t("comparison.cons")}
               </h3>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-amber-950/90">
                 {review.cons.map((item) => (

@@ -40,6 +40,14 @@ const GLOSSARY = [
   "El Gordo",
 ];
 
+const TRANSLATE_ONLY = new Set([
+  "messages",
+  "state-faqs",
+  "intl-faqs",
+  "brand-review-faqs",
+  "wordpress",
+]);
+
 function parseArgs(argv) {
   const args = {
     locale: "es",
@@ -47,6 +55,7 @@ function parseArgs(argv) {
     limit: null,
     dryRun: false,
     slug: null,
+    force: false,
   };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
@@ -60,6 +69,8 @@ function parseArgs(argv) {
       args.slug = argv[++i];
     } else if (a === "--dry-run") {
       args.dryRun = true;
+    } else if (a === "--force") {
+      args.force = true;
     }
   }
   return args;
@@ -105,7 +116,10 @@ function hashEntryKey(category, id) {
   return `${category}:${id}`;
 }
 
-function shouldTranslate(hashes, category, id, sourceText) {
+function shouldTranslate(hashes, category, id, sourceText, force = false) {
+  if (force) {
+    return true;
+  }
   return hashes[hashEntryKey(category, id)] !== sha256(sourceText);
 }
 
@@ -171,12 +185,31 @@ async function translatePlain(text, targetLanguage) {
   return callLlm(system, text);
 }
 
-function parseJsonArrayFromLlm(text) {
+function parseJsonFromLlm(text) {
   let t = text.trim();
   if (t.startsWith("```")) {
     t = t.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
   }
   return JSON.parse(t);
+}
+
+async function tryTranslateBatchObject(segments, languageName) {
+  const payload = {};
+  for (let i = 0; i < segments.length; i++) {
+    payload[String(i)] = segments[i];
+  }
+  const keys = Object.keys(payload);
+  const system = `Translate each JSON object value to ${languageName}. Return ONLY a JSON object with exactly these keys: ${keys.join(", ")}. Preserve HTML entities like &nbsp; and &amp;. Do not translate: ${GLOSSARY.join(", ")}.`;
+  const parsed = parseJsonFromLlm(await callLlm(system, JSON.stringify(payload)));
+  const values = [];
+  for (let i = 0; i < segments.length; i++) {
+    const key = String(i);
+    if (!(key in parsed)) {
+      throw new Error(`missing key ${key}`);
+    }
+    values.push(String(parsed[key]));
+  }
+  return values;
 }
 
 function shouldSkipTextSegment(text) {
@@ -190,30 +223,69 @@ function shouldSkipTextSegment(text) {
 }
 
 async function translateTextSegmentBatch(segments, languageName) {
-  const system = `Translate each string in the JSON array to ${languageName}. Return ONLY a JSON array with exactly ${segments.length} strings in the same order. Preserve HTML entities like &nbsp; and &amp;. Do not translate: ${GLOSSARY.join(", ")}.`;
-  const user = JSON.stringify(segments);
-  for (let attempt = 0; attempt < 3; attempt++) {
+  if (segments.length === 0) {
+    return { values: [], allSucceeded: true };
+  }
+  if (segments.length === 1) {
     try {
-      const out = await callLlm(system, user);
-      const parsed = parseJsonArrayFromLlm(out);
-      if (!Array.isArray(parsed) || parsed.length !== segments.length) {
-        throw new Error("JSON array length mismatch");
-      }
-      return parsed.map(String);
+      return {
+        values: [await translatePlain(segments[0], languageName)],
+        allSucceeded: true,
+      };
     } catch (err) {
-      if (attempt === 2) {
-        console.warn(
-          `  Warning: batch translation failed (${err.message}); keeping English for this batch.`,
-        );
-        return segments;
-      }
-      await sleep(400 * (attempt + 1));
+      console.warn(`  Warning: segment translation failed (${err.message})`);
+      return { values: segments, allSucceeded: false };
     }
   }
-  return segments;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      return {
+        values: await tryTranslateBatchObject(segments, languageName),
+        allSucceeded: true,
+      };
+    } catch (err) {
+      if (attempt < 2) {
+        await sleep(400 * (attempt + 1));
+        continue;
+      }
+      console.warn(
+        `  Warning: batch of ${segments.length} segments failed (${err.message}); splitting.`,
+      );
+    }
+  }
+
+  const mid = Math.ceil(segments.length / 2);
+  const left = await translateTextSegmentBatch(
+    segments.slice(0, mid),
+    languageName,
+  );
+  const right = await translateTextSegmentBatch(
+    segments.slice(mid),
+    languageName,
+  );
+  return {
+    values: [...left.values, ...right.values],
+    allSucceeded: left.allSucceeded && right.allSucceeded,
+  };
 }
 
-async function translateHtmlBySegments(html, languageName) {
+/**
+ * Text that src/lib/parseBestOnlineLotterySites.ts matches literally. Translating
+ * it breaks the parsed comparison view, which renders its own localized labels.
+ */
+const PRESERVED_SEGMENTS_BY_SLUG = {
+  "best-online-lottery-sites": [
+    /^\s*Rated\s+[0-9.]+\s+out\s+of\s+5/i,
+    /^\s*Visit\s+\S/i,
+    /^\s*Read Full Review\s*$/i,
+    /^\s*What we like\s*$/i,
+    /^\s*What could be better\s*$/i,
+    /^\s*Quick Jump to a Lottery Review/i,
+  ],
+};
+
+async function translateHtmlBySegments(html, languageName, preserve = []) {
   const parts = html.split(/(<[^>]+>)/);
   let inScript = false;
   let inStyle = false;
@@ -237,23 +309,33 @@ async function translateHtmlBySegments(html, languageName) {
       }
       continue;
     }
-    if (inScript || inStyle || shouldSkipTextSegment(part)) {
+    if (
+      inScript ||
+      inStyle ||
+      shouldSkipTextSegment(part) ||
+      preserve.some((re) => re.test(part))
+    ) {
       continue;
     }
     work.push({ index: i, text: part });
   }
 
-  const maxBatchChars = 6000;
-  const maxBatchItems = 40;
+  const maxBatchChars = 4000;
+  const maxBatchItems = 20;
   let batch = [];
   let batchChars = 0;
+  let allSucceeded = true;
 
   async function flushBatch() {
     if (batch.length === 0) {
       return;
     }
     const texts = batch.map((b) => b.text);
-    const translated = await translateTextSegmentBatch(texts, languageName);
+    const { values: translated, allSucceeded: batchOk } =
+      await translateTextSegmentBatch(texts, languageName);
+    if (!batchOk) {
+      allSucceeded = false;
+    }
     for (let j = 0; j < batch.length; j++) {
       parts[batch[j].index] = translated[j];
     }
@@ -274,7 +356,7 @@ async function translateHtmlBySegments(html, languageName) {
   }
   await flushBatch();
 
-  return parts.join("");
+  return { html: parts.join(""), allSucceeded };
 }
 
 function loadMergedFaq(locale, category) {
@@ -316,6 +398,7 @@ async function translateFaqDir(
   srcDir,
   category,
   fileFilter,
+  force = false,
 ) {
   const files = fs
     .readdirSync(srcDir)
@@ -330,7 +413,7 @@ async function translateFaqDir(
     const payload = readJson(srcPath);
     const hashId = file;
     const source = JSON.stringify(payload);
-    if (!shouldTranslate(hashes, category, hashId, source)) {
+    if (!shouldTranslate(hashes, category, hashId, source, force)) {
       continue;
     }
     if (dryRun) {
@@ -363,7 +446,7 @@ async function translateFaqDir(
   return changed;
 }
 
-async function translateMessages(locale, languageName, hashes, dryRun) {
+async function translateMessages(locale, languageName, hashes, dryRun, force = false) {
   const en = readJson(MESSAGES_EN);
   const outPath = path.join(ROOT, "src/i18n/messages", `${locale}.json`);
   const existing = fs.existsSync(outPath) ? readJson(outPath) : {};
@@ -372,7 +455,7 @@ async function translateMessages(locale, languageName, hashes, dryRun) {
 
   for (const [key, value] of Object.entries(en)) {
     const source = String(value);
-    if (!shouldTranslate(hashes, "messages", key, source)) {
+    if (!shouldTranslate(hashes, "messages", key, source, force)) {
       continue;
     }
     if (dryRun) {
@@ -399,22 +482,25 @@ async function translateWordPressFile(
   dryRun,
   kind,
   slug,
+  force = false,
 ) {
   const srcPath = path.join(ROOT, "content/wordpress", kind, `${slug}.json`);
   if (!fs.existsSync(srcPath)) {
-    return 0;
+    return { count: 0, ok: true };
   }
   const payload = readJson(srcPath);
   const hashId = `${kind}/${slug}.json`;
   const source = JSON.stringify(payload);
-  if (!shouldTranslate(hashes, "wordpress", hashId, source)) {
-    return 0;
+  if (!shouldTranslate(hashes, "wordpress", hashId, source, force)) {
+    return { count: 0, ok: true };
   }
   if (dryRun) {
-    return 1;
+    return { count: 1, ok: true };
   }
 
   const translated = structuredClone(payload);
+  let allSucceeded = true;
+
   if (translated.title) {
     translated.title = await translatePlain(translated.title, languageName);
   }
@@ -431,10 +517,15 @@ async function translateWordPressFile(
     );
   }
   if (translated.contentHtml) {
-    translated.contentHtml = await translateHtmlBySegments(
+    const htmlResult = await translateHtmlBySegments(
       translated.contentHtml,
       languageName,
+      PRESERVED_SEGMENTS_BY_SLUG[slug],
     );
+    translated.contentHtml = htmlResult.html;
+    if (!htmlResult.allSucceeded) {
+      allSucceeded = false;
+    }
   }
 
   const outPath = path.join(
@@ -446,9 +537,19 @@ async function translateWordPressFile(
     `${slug}.json`,
   );
   writeJson(outPath, translated);
-  markTranslated(hashes, "wordpress", hashId, source);
+
+  if (allSucceeded) {
+    markTranslated(hashes, "wordpress", hashId, source);
+    saveHashes(locale, hashes);
+    return { count: 1, ok: true };
+  }
+
+  delete hashes[hashEntryKey("wordpress", hashId)];
   saveHashes(locale, hashes);
-  return 1;
+  console.warn(
+    `  Warning: ${kind}/${slug} has untranslated HTML segments; hash not updated (re-run to retry).`,
+  );
+  return { count: 0, ok: false };
 }
 
 function listWordPressPrerenderSlugs() {
@@ -462,6 +563,7 @@ function listWordPressPrerenderSlugs() {
     }
   }
   const staticPages = [
+    "best-online-lottery-sites",
     "about-us",
     "articles",
     "cookies-policy",
@@ -581,8 +683,15 @@ async function main() {
     throw new Error(`Unsupported locale: ${locale}`);
   }
 
-  const hashes = loadHashes(locale);
   const only = args.only;
+  if (only && !TRANSLATE_ONLY.has(only)) {
+    throw new Error(
+      `Unknown --only "${only}". Use one of: ${[...TRANSLATE_ONLY].join(", ")}`,
+    );
+  }
+
+  const hashes = loadHashes(locale);
+  const force = args.force;
   let total = 0;
   const wpFailed = [];
 
@@ -593,6 +702,7 @@ async function main() {
         languageName,
         hashes,
         args.dryRun,
+        force,
       );
     }
 
@@ -604,6 +714,8 @@ async function main() {
         args.dryRun,
         path.join(ROOT, "content/state-faqs"),
         "state-faqs",
+        undefined,
+        force,
       );
     }
 
@@ -615,6 +727,8 @@ async function main() {
         args.dryRun,
         path.join(ROOT, "content/intl-faqs"),
         "intl-faqs",
+        undefined,
+        force,
       );
     }
 
@@ -626,6 +740,8 @@ async function main() {
         args.dryRun,
         path.join(ROOT, "content/brand-review-faqs"),
         "brand-review-faqs",
+        undefined,
+        force,
       );
     }
 
@@ -647,14 +763,19 @@ async function main() {
           : "pages";
         console.log(`[wordpress] ${kind}/${slug}`);
         try {
-          total += await translateWordPressFile(
+          const result = await translateWordPressFile(
             locale,
             languageName,
             hashes,
             args.dryRun,
             kind,
             slug,
+            force,
           );
+          total += result.count;
+          if (!result.ok) {
+            wpFailed.push(`${kind}/${slug}`);
+          }
         } catch (err) {
           console.error(`[wordpress] FAILED ${kind}/${slug}: ${err.message}`);
           wpFailed.push(`${kind}/${slug}`);

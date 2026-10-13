@@ -17,7 +17,6 @@ export const UI_HUB_PATHS = [
   "top-jackpots",
   "usa-lottery",
   "international-results",
-  "best-online-lottery-sites",
 ];
 
 export const FAQ_MERGED_FILES = {

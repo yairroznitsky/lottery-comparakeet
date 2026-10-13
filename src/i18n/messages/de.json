@@ -100,5 +100,19 @@
   "drawResults.browseIntl": "Internationale Lotterien durchsuchen",
   "stateLanding.playAtTheLotter": "Spielen Sie bei theLotter",
   "languageSwitcher.label": "Sprache",
-  "languageSwitcher.current": "Aktuelle Sprache: {language}"
+  "languageSwitcher.current": "Aktuelle Sprache: {language}",
+
+  "comparison.tableHeading": "Die besten Online-Lotterieseiten im Vergleich",
+  "comparison.quickJumpLabel": "Direkt zu den Testberichten",
+  "comparison.quickJumpTitle": "Direkt zu einem Testbericht",
+  "comparison.reviewsHeading": "Ausführliche Testberichte zu Lotterieanbietern",
+  "comparison.brand": "Lotterieanbieter",
+  "comparison.rating": "Bewertung",
+  "comparison.highlight": "Highlight",
+  "comparison.actions": "Aktionen",
+  "comparison.jumpToReview": "Zum Testbericht",
+  "comparison.visit": "{name} besuchen",
+  "comparison.readFullReview": "Vollständigen Testbericht lesen",
+  "comparison.pros": "Was uns gefällt",
+  "comparison.cons": "Was besser sein könnte"
 }

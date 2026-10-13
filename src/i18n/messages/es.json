@@ -113,5 +113,19 @@
   "stateLanding.playAtTheLotter": "Jugar en theLotter",
 
   "languageSwitcher.label": "Idioma",
-  "languageSwitcher.current": "Idioma actual: {language}"
+  "languageSwitcher.current": "Idioma actual: {language}",
+
+  "comparison.tableHeading": "Comparativa de los mejores sitios de lotería online",
+  "comparison.quickJumpLabel": "Ir directamente a las reseñas",
+  "comparison.quickJumpTitle": "Ir directamente a una reseña",
+  "comparison.reviewsHeading": "Reseñas detalladas de marcas de lotería",
+  "comparison.brand": "Marca de lotería",
+  "comparison.rating": "Valoración",
+  "comparison.highlight": "Destacado",
+  "comparison.actions": "Acciones",
+  "comparison.jumpToReview": "Ir a la reseña",
+  "comparison.visit": "Visitar {name}",
+  "comparison.readFullReview": "Leer la reseña completa",
+  "comparison.pros": "Lo que nos gusta",
+  "comparison.cons": "Lo que podría mejorar"
 }

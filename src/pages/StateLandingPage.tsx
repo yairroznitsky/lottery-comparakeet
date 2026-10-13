@@ -30,12 +30,14 @@ import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import type { DrawResultView } from "@/types/lottery";
 import type { StateFaqItem } from "@/types/stateFaq";
+import type { WordPressContentView } from "@/types/wordpress";
 
 interface StateLandingPageProps {
   stateSlug: string;
   initialGames?: string[];
   initialResults?: DrawResultView[];
   initialFaqItems?: StateFaqItem[];
+  initialAboutContent?: WordPressContentView | null;
 }
 
 const POPULAR_GAME_SLUGS = ["powerball", "mega-millions", "megamillions"];
@@ -53,6 +55,7 @@ const StateLandingPage = ({
   initialGames,
   initialResults,
   initialFaqItems,
+  initialAboutContent,
 }: StateLandingPageProps) => {
   const locale = useLocale();
   const t = useT();
@@ -60,7 +63,7 @@ const StateLandingPage = ({
   const gamesQuery = useStateGames(stateSlug);
   const resultsQuery = useUsaResults(stateSlug, undefined, "lastTen");
   const statesQuery = useUsaStates(true);
-  const aboutQuery = useWordPressSlug(stateSlug);
+  const aboutQuery = useWordPressSlug(stateSlug, true, initialAboutContent);
   const aboutContent = aboutQuery.data;
 
   const games =

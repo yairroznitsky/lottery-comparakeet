@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import LotteryBrandReviewSection from "@/components/lottery/LotteryBrandReviewSection";
 import LotteryComparisonTable from "@/components/lottery/LotteryComparisonTable";
+import { useT } from "@/i18n/LocaleContext";
 import { parseBestOnlineLotterySitesHtml } from "@/lib/parseBestOnlineLotterySites";
 import type { WordPressContentView } from "@/types/wordpress";
 
@@ -9,6 +10,7 @@ interface BestOnlineLotterySitesViewProps {
 }
 
 const BestOnlineLotterySitesView = ({ content }: BestOnlineLotterySitesViewProps) => {
+  const t = useT();
   const parsed = useMemo(
     () => parseBestOnlineLotterySitesHtml(content.contentHtml),
     [content.contentHtml],
@@ -34,16 +36,18 @@ const BestOnlineLotterySitesView = ({ content }: BestOnlineLotterySitesViewProps
           id="comparison-heading"
           className="font-display mb-4 text-2xl font-semibold text-brand-950"
         >
-          Top online lottery sites compared
+          {t("comparison.tableHeading")}
         </h2>
         <LotteryComparisonTable rows={parsed.comparison} />
       </section>
 
       <nav
-        aria-label="Quick jump to reviews"
+        aria-label={t("comparison.quickJumpLabel")}
         className="rounded-xl border border-brand-200 bg-brand-50/70 p-4"
       >
-        <p className="text-sm font-semibold text-brand-900">Quick jump to a review</p>
+        <p className="text-sm font-semibold text-brand-900">
+          {t("comparison.quickJumpTitle")}
+        </p>
         <ul className="mt-2 flex flex-wrap gap-2">
           {parsed.comparison.map((row) => (
             <li key={row.rank}>
@@ -63,7 +67,7 @@ const BestOnlineLotterySitesView = ({ content }: BestOnlineLotterySitesViewProps
           id="reviews-heading"
           className="font-display text-2xl font-semibold text-brand-950"
         >
-          In-depth lottery brand reviews
+          {t("comparison.reviewsHeading")}
         </h2>
         {parsed.reviews.map((review) => (
           <LotteryBrandReviewSection key={review.anchorId} review={review} />

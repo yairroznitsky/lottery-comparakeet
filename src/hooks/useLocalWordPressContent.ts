@@ -5,10 +5,15 @@ import {
   loadWordPressOptional,
   slugFromPathname,
 } from "@/lib/wordpressContent";
+import type { WordPressContentView } from "@/types/wordpress";
+
+/** `undefined` = not preloaded (fetch on client); `null` = preloaded, no content. */
+type PreloadedContent = WordPressContentView | null | undefined;
 
 export function useWordPressSlug(
   slug: string | null | undefined,
   enabled = true,
+  initialData?: PreloadedContent,
 ) {
   const locale = useLocale();
   return useQuery({
@@ -18,18 +23,23 @@ export function useWordPressSlug(
     enabled: Boolean(slug && enabled),
     staleTime: Number.POSITIVE_INFINITY,
     gcTime: 30 * 60 * 1000,
+    initialData,
   });
 }
 
-export function useWordPressPath(pathname: string) {
+export function useWordPressPath(
+  pathname: string,
+  initialData?: PreloadedContent,
+) {
   const slug = slugFromPathname(pathname);
-  return useWordPressSlug(slug);
+  return useWordPressSlug(slug, true, initialData);
 }
 
 export function useWordPressIntlGame(
   regionSlug: string | undefined,
   gameSlug: string | undefined,
   enabled: boolean,
+  initialData?: PreloadedContent,
 ) {
   const locale = useLocale();
   return useQuery({
@@ -41,5 +51,6 @@ export function useWordPressIntlGame(
     enabled: Boolean(regionSlug && gameSlug && enabled),
     staleTime: Number.POSITIVE_INFINITY,
     gcTime: 30 * 60 * 1000,
+    initialData,
   });
 }

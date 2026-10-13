@@ -1,5 +1,6 @@
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
 import StarRating from "@/components/lottery/StarRating";
+import { useT } from "@/i18n/LocaleContext";
 import { resolveBrandVisitHref } from "@/lib/brandVisitLinks";
 import type { LotterySiteRow } from "@/lib/parseBestOnlineLotterySites";
 
@@ -11,6 +12,7 @@ const fieldLabelClass =
   "text-xs font-semibold uppercase tracking-wide text-brand-600";
 
 const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
+  const t = useT();
   return (
     <div className="overflow-hidden rounded-2xl border border-brand-200 bg-white shadow-sm">
       <ul className="divide-y divide-brand-200 md:hidden">
@@ -30,21 +32,21 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
               ) : null}
             </div>
             <div>
-              <p className={fieldLabelClass}>Lottery brand</p>
+              <p className={fieldLabelClass}>{t("comparison.brand")}</p>
               <p className="mt-0.5 font-semibold text-brand-950">{row.name}</p>
               <a
                 href={`#review-${row.rank}`}
                 className="mt-1 inline-block text-xs font-medium text-brand-600 hover:text-brand-800"
               >
-                Jump to review
+                {t("comparison.jumpToReview")}
               </a>
             </div>
             <div>
-              <p className={`${fieldLabelClass} mb-1.5`}>Rating</p>
+              <p className={`${fieldLabelClass} mb-1.5`}>{t("comparison.rating")}</p>
               <StarRating rating={row.rating} />
             </div>
             <div>
-              <p className={fieldLabelClass}>Highlight</p>
+              <p className={fieldLabelClass}>{t("comparison.highlight")}</p>
               <p className="mt-0.5 text-sm text-brand-800">
                 {row.highlight || "—"}
               </p>
@@ -52,7 +54,7 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
             <div className="pt-1">
               <PlayTicketsCta
                 href={resolveBrandVisitHref(row.visitUrl)}
-                label={`Visit ${row.name}`}
+                label={t("comparison.visit", { name: row.name })}
                 variant="primary"
                 className="w-full"
               />
@@ -69,16 +71,16 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
                 #
               </th>
               <th scope="col" className="px-4 py-3 font-semibold text-brand-900">
-                Lottery brand
+                {t("comparison.brand")}
               </th>
               <th scope="col" className="px-4 py-3 font-semibold text-brand-900">
-                Rating
+                {t("comparison.rating")}
               </th>
               <th scope="col" className="px-4 py-3 font-semibold text-brand-900">
-                Highlight
+                {t("comparison.highlight")}
               </th>
               <th scope="col" className="px-4 py-3 font-semibold text-brand-900">
-                Actions
+                {t("comparison.actions")}
               </th>
             </tr>
           </thead>
@@ -109,7 +111,7 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
                         href={`#review-${row.rank}`}
                         className="text-xs font-medium text-brand-600 hover:text-brand-800"
                       >
-                        Jump to review
+                        {t("comparison.jumpToReview")}
                       </a>
                     </div>
                   </div>
@@ -123,7 +125,7 @@ const LotteryComparisonTable = ({ rows }: LotteryComparisonTableProps) => {
                 <td className="px-4 py-4 align-middle">
                   <PlayTicketsCta
                     href={resolveBrandVisitHref(row.visitUrl)}
-                    label={`Visit ${row.name}`}
+                    label={t("comparison.visit", { name: row.name })}
                     variant="compact"
                   />
                 </td>

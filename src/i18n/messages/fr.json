@@ -100,5 +100,19 @@
   "drawResults.browseIntl": "Parcourez les loteries internationales",
   "stateLanding.playAtTheLotter": "Jouez sur leLotter",
   "languageSwitcher.label": "Langue",
-  "languageSwitcher.current": "Langue actuelle : {language}"
+  "languageSwitcher.current": "Langue actuelle : {language}",
+
+  "comparison.tableHeading": "Comparatif des meilleurs sites de loterie en ligne",
+  "comparison.quickJumpLabel": "Accès rapide aux avis",
+  "comparison.quickJumpTitle": "Accès rapide à un avis",
+  "comparison.reviewsHeading": "Avis détaillés sur les marques de loterie",
+  "comparison.brand": "Marque de loterie",
+  "comparison.rating": "Note",
+  "comparison.highlight": "Point fort",
+  "comparison.actions": "Actions",
+  "comparison.jumpToReview": "Voir l'avis",
+  "comparison.visit": "Visiter {name}",
+  "comparison.readFullReview": "Lire l'avis complet",
+  "comparison.pros": "Ce que nous aimons",
+  "comparison.cons": "Ce qui pourrait être amélioré"
 }

@@ -9,7 +9,6 @@ const UI_HUB_PATHS = new Set([
   "top-jackpots",
   "usa-lottery",
   "international-results",
-  "best-online-lottery-sites",
 ]);
 
 type LocaleIndex = {

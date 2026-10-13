@@ -16,6 +16,7 @@ import TopJackpotsPage from "@/pages/TopJackpotsPage";
 import UsStatesIndexPage from "@/pages/UsStatesIndexPage";
 import WordPressPage, {
   getWordPressCatchAllStaticPaths,
+  wordPressLoader,
 } from "@/pages/WordPressPage";
 import { LOCALES, type Locale } from "@/i18n/locales";
 import { DEFAULT_LOCALE } from "@/i18n/locales";
@@ -32,6 +33,7 @@ function buildChildren(locale: Locale): RouteRecord[] {
       path: "best-online-lottery-sites",
       Component: WordPressPage,
       entry: "src/pages/WordPressPage.tsx",
+      loader: wordPressLoader,
     },
     {
       path: "top-jackpots",
@@ -81,6 +83,7 @@ function buildChildren(locale: Locale): RouteRecord[] {
       path: "*",
       Component: WordPressPage,
       entry: "src/pages/WordPressPage.tsx",
+      loader: wordPressLoader,
       getStaticPaths: wrapGetStaticPaths(getWordPressCatchAllStaticPaths, locale),
     },
   ];
