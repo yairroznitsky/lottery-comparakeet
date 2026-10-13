@@ -1,4 +1,5 @@
 import { RESERVED_SLUGS } from "@/constants/reservedSlugs";
+import { logicalPathFromPathname } from "@/i18n/paths";
 import type { CountryView } from "@/types/lottery";
 
 const STATIC_ROUTES = new Set([
@@ -9,7 +10,7 @@ const STATIC_ROUTES = new Set([
 ]);
 
 export function pathnameSegments(pathname: string): string[] {
-  return pathname.split("/").filter(Boolean);
+  return logicalPathFromPathname(pathname).split("/").filter(Boolean);
 }
 
 /** Whether to prefetch state/country lists for section highlighting. */
@@ -29,7 +30,8 @@ export function isUsaLotterySection(
   pathname: string,
   states: string[] | undefined,
 ): boolean {
-  if (pathname === "/usa-lottery") {
+  const logical = logicalPathFromPathname(pathname);
+  if (logical === "usa-lottery") {
     return true;
   }
   const segments = pathnameSegments(pathname);
@@ -48,7 +50,8 @@ export function isInternationalLotterySection(
   states: string[] | undefined,
   countries: CountryView[] | undefined,
 ): boolean {
-  if (pathname.startsWith("/international-results")) {
+  const logical = logicalPathFromPathname(pathname);
+  if (logical === "international-results" || logical.startsWith("international-results/")) {
     return true;
   }
   const segments = pathnameSegments(pathname);

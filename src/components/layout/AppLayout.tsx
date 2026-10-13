@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import MainNav from "@/components/layout/MainNav";
+import { LocaleProvider } from "@/i18n/LocaleContext";
 import BrandReviewRedirect from "@/components/layout/BrandReviewRedirect";
 import LegacyPathRedirect from "@/components/layout/LegacyPathRedirect";
 import ScrollToTop from "@/components/layout/ScrollToTop";
@@ -11,6 +12,7 @@ import { queryClient } from "@/lib/queryClient";
 const AppLayout = () => {
   return (
     <QueryClientProvider client={queryClient}>
+      <LocaleProvider>
       <ScrollToTop />
       <BrandReviewRedirect />
       <LegacyPathRedirect />
@@ -26,6 +28,7 @@ const AppLayout = () => {
       </main>
       <Footer />
     </div>
+      </LocaleProvider>
     </QueryClientProvider>
   );
 };

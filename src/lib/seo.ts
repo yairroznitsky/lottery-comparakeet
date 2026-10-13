@@ -1,3 +1,6 @@
+import type { Locale } from "@/i18n/locales";
+import { LOCALE_HTML_LANG } from "@/i18n/locales";
+import { localizePath } from "@/i18n/paths";
 import type { BreadcrumbItem } from "@/types/seo";
 
 export function upsertMeta(
@@ -57,39 +60,50 @@ export function upsertJsonLd(payload: object | object[] | undefined) {
 export function buildBreadcrumbJsonLd(
   items: BreadcrumbItem[],
   siteUrl: string,
+  locale: Locale = "en",
 ): object {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    inLanguage: LOCALE_HTML_LANG[locale],
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.path ? `${siteUrl}${item.path.startsWith("/") ? item.path : `/${item.path}`}` : undefined,
+      item: item.path
+        ? `${siteUrl}${localizePath(item.path.startsWith("/") ? item.path : `/${item.path}`, locale)}`
+        : undefined,
     })),
   };
 }
 
-export function buildWebSiteJsonLd(siteUrl: string, siteName: string): object {
+export function buildWebSiteJsonLd(
+  siteUrl: string,
+  siteName: string,
+  description: string,
+  locale: Locale = "en",
+): object {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteName,
     url: siteUrl,
-    description:
-      "Lottery results, jackpot trackers, and reviews of online lottery services worldwide.",
+    inLanguage: LOCALE_HTML_LANG[locale],
+    description,
   };
 }
 
 export function buildOrganizationJsonLd(
   siteUrl: string,
   siteName: string,
+  locale: Locale = "en",
 ): object {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteName,
     url: siteUrl,
+    inLanguage: LOCALE_HTML_LANG[locale],
     logo: `${siteUrl}/android-chrome-512x512.png`,
   };
 }

@@ -1,0 +1,22 @@
+{
+  "id": 450,
+  "title": "Risultati della Lotteria",
+  "contentHtml": "",
+  "excerptHtml": "",
+  "slug": "lottery-results",
+  "date": "2020-07-08T13:41:14",
+  "modified": "2020-07-08T13:41:14",
+  "link": "/lottery-results",
+  "featuredImage": null,
+  "seo": {
+    "title": "Risultati della Lotteria",
+    "description": "Risultati della lotteria e numeri vincenti da Lottery USA. Risultati rapidi, convenienti e facili per tutte le lotterie statali degli Stati Uniti, inclusi POWERBALL e MEGA MILLIONS.",
+    "canonical": "/",
+    "ogTitle": "Lottery Results",
+    "ogDescription": "Lottery Results and Winning Numbers from Lottery USA. Fast, convenient and easy results for all US state lotteries including POWERBALL and MEGA MILLIONS.",
+    "ogUrl": "https://lottery.comparakeet.com/",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

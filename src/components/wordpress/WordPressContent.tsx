@@ -4,9 +4,11 @@ import {
   getBrandReviewDisplayName,
   getBrandReviewFaqItems,
 } from "@/lib/brandReviewFaqs";
+import type { BrandReviewFaqItem } from "@/types/brandReviewFaq";
 import { rewriteBrandVisitLinksInHtml } from "@/lib/brandVisitLinks";
 import { isBrandReviewSlug } from "@/lib/brandReviewSlugs";
 import { rewriteWordPressTheLotterLinks } from "@/lib/theLotterLinks";
+import { useLocale } from "@/i18n/LocaleContext";
 import type { WordPressContentView } from "@/types/wordpress";
 
 const LOTTERY_COMPARISON_SLUG = "best-online-lottery-sites";
@@ -18,6 +20,7 @@ function sanitizeSnapshotHtml(html: string): string {
 
 interface WordPressContentProps {
   content: WordPressContentView;
+  brandReviewFaqItems?: BrandReviewFaqItem[];
   /** Omit page chrome when nested (e.g. state landing About section). */
   variant?: "full" | "embedded";
 }
@@ -30,11 +33,14 @@ function formatDate(iso: string): string {
 
 const WordPressContent = ({
   content,
+  brandReviewFaqItems,
   variant = "full",
 }: WordPressContentProps) => {
+  const locale = useLocale();
   const isLotteryComparison = content.slug === LOTTERY_COMPARISON_SLUG;
   const brandReviewFaqs = isBrandReviewSlug(content.slug)
-    ? getBrandReviewFaqItems(content.slug)
+    ? (brandReviewFaqItems ??
+      getBrandReviewFaqItems(content.slug, locale))
     : [];
   const brandReviewName = isBrandReviewSlug(content.slug)
     ? getBrandReviewDisplayName(content.slug)

@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/locales";
+
 export interface BreadcrumbItem {
   name: string;
   path?: string;
@@ -13,4 +15,6 @@ export interface PageMeta {
   noIndex?: boolean;
   breadcrumbs?: BreadcrumbItem[];
   jsonLd?: object | object[];
+  /** Locales with a full translation for this page (for hreflang). Defaults to current locale only. */
+  availableLocales?: Locale[];
 }

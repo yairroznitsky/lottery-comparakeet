@@ -7,14 +7,15 @@ interface PageSeoProps {
   seo: WordPressSeoMetadata;
   path: string;
   jsonLd?: object | object[];
+  noIndex?: boolean;
 }
 
-const PageSeo = ({ fallbackTitle, seo, path, jsonLd }: PageSeoProps) => {
+const PageSeo = ({ fallbackTitle, seo, path, jsonLd, noIndex }: PageSeoProps) => {
   const description =
     seo.description ??
     `Read ${fallbackTitle} on Lottery Parakeet — lottery results, jackpots, and guides.`;
 
-  const noIndex = seo.robotsIndex === false;
+  const noIndexFinal = noIndex === true || seo.robotsIndex === false;
   const canonical = seo.canonical ?? absoluteUrl(path);
 
   return (
@@ -25,7 +26,7 @@ const PageSeo = ({ fallbackTitle, seo, path, jsonLd }: PageSeoProps) => {
       canonical={canonical}
       image={seo.ogImage}
       ogType="article"
-      noIndex={noIndex}
+      noIndex={noIndexFinal}
       titleTemplate={!seo.title}
       jsonLd={jsonLd}
     />

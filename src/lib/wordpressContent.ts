@@ -1,4 +1,7 @@
 import { RESERVED_SLUGS } from "@/constants/reservedSlugs";
+import type { Locale } from "@/i18n/locales";
+import { DEFAULT_LOCALE } from "@/i18n/locales";
+import { logicalPathFromPathname } from "@/i18n/paths";
 import { intlGameWordPressSlugCandidates } from "@/lib/intlWpSlugs";
 import { getUsaStatePrerenderSlugs } from "@/lib/prerenderRoutes";
 import type { WordPressContentView } from "@/types/wordpress";
@@ -8,6 +11,12 @@ type JsonModule = { default: WordPressContentView };
 
 const pageLoaders = import.meta.glob("../../content/wordpress/pages/*.json");
 const postLoaders = import.meta.glob("../../content/wordpress/posts/*.json");
+const i18nPageLoaders = import.meta.glob(
+  "../../content/i18n/*/wordpress/pages/*.json",
+);
+const i18nPostLoaders = import.meta.glob(
+  "../../content/i18n/*/wordpress/posts/*.json",
+);
 
 const contentCache = new Map<string, WordPressContentView>();
 
@@ -50,6 +59,24 @@ function buildSlugLoaderMap(
 const pageBySlug = buildSlugLoaderMap(pageLoaders);
 const postBySlug = buildSlugLoaderMap(postLoaders);
 
+function buildI18nSlugLoaderMap(
+  loaders: Record<string, () => Promise<unknown>>,
+): Map<string, () => Promise<JsonModule>> {
+  const map = new Map<string, () => Promise<JsonModule>>();
+  for (const [modulePath, loader] of Object.entries(loaders)) {
+    const match = modulePath.match(
+      /content\/i18n\/([^/]+)\/wordpress\/(?:pages|posts)\/([^/]+)\.json$/,
+    );
+    if (match) {
+      map.set(`${match[1]}/${match[2]}`, loader as () => Promise<JsonModule>);
+    }
+  }
+  return map;
+}
+
+const i18nPageByLocaleSlug = buildI18nSlugLoaderMap(i18nPageLoaders);
+const i18nPostByLocaleSlug = buildI18nSlugLoaderMap(i18nPostLoaders);
+
 export interface WordPressPostSummary {
   slug: string;
   title: string;
@@ -64,13 +91,26 @@ function postSummarySortTime(post: WordPressPostSummary): number {
 }
 
 export function slugFromPathname(pathname: string): string | null {
-  const normalized = pathname.replace(/\/+$/, "") || "/";
-  if (normalized === "/") {
+  const logical = logicalPathFromPathname(pathname);
+  if (!logical) {
     return null;
   }
-  const segments = normalized.split("/").filter(Boolean);
+  const segments = logical.split("/").filter(Boolean);
   const slug = segments[segments.length - 1];
   return slug ? decodeURIComponent(slug) : null;
+}
+
+export function hasWordPressTranslation(
+  slug: string,
+  locale: Locale,
+): boolean {
+  if (locale === DEFAULT_LOCALE) {
+    return hasWordPressSlug(slug);
+  }
+  return (
+    i18nPageByLocaleSlug.has(`${locale}/${slug}`) ||
+    i18nPostByLocaleSlug.has(`${locale}/${slug}`)
+  );
 }
 
 export function hasWordPressSlug(slug: string): boolean {
@@ -99,10 +139,24 @@ export function isLegacyMirrorWordPressSlug(slug: string): boolean {
 
 export async function loadWordPressOptional(
   slug: string,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<WordPressContentView | null> {
-  const cached = contentCache.get(slug);
+  const cacheKey = `${locale}:${slug}`;
+  const cached = contentCache.get(cacheKey);
   if (cached) {
     return cached;
+  }
+
+  if (locale !== DEFAULT_LOCALE) {
+    const i18nLoader =
+      i18nPageByLocaleSlug.get(`${locale}/${slug}`) ??
+      i18nPostByLocaleSlug.get(`${locale}/${slug}`);
+    if (i18nLoader) {
+      const mod = await i18nLoader();
+      const view = mod.default;
+      contentCache.set(cacheKey, view);
+      return view;
+    }
   }
 
   const loader = pageBySlug.get(slug) ?? postBySlug.get(slug);
@@ -112,19 +166,20 @@ export async function loadWordPressOptional(
 
   const mod = await loader();
   const view = mod.default;
-  contentCache.set(slug, view);
+  contentCache.set(cacheKey, view);
   return view;
 }
 
 export async function loadWordPressIntlGameOptional(
   regionSlug: string,
   gameSlug: string,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<WordPressContentView | null> {
   for (const candidate of intlGameWordPressSlugCandidates(
     regionSlug,
     gameSlug,
   )) {
-    const content = await loadWordPressOptional(candidate);
+    const content = await loadWordPressOptional(candidate, locale);
     if (content) {
       return content;
     }
@@ -134,12 +189,13 @@ export async function loadWordPressIntlGameOptional(
 
 export async function loadWordPressByPath(
   pathname: string,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<WordPressContentView | null> {
   const slug = slugFromPathname(pathname);
   if (!slug) {
     return null;
   }
-  return loadWordPressOptional(slug);
+  return loadWordPressOptional(slug, locale);
 }
 
 export function getRecentPostSummaries(perPage = 6): WordPressPostSummary[] {

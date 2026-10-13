@@ -1,0 +1,28 @@
+{
+  "id": 15,
+  "title": "Chi Siamo",
+  "contentHtml": "```html\n\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"15\" class=\"elementor elementor-15\" data-elementor-post-type=\"page\">\n\t\t\t\t\t\t<section class=\"has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-7fc4ee79 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-eae-slider=\"87389\" data-id=\"7fc4ee79\" data-element_type=\"section\" data-e-type=\"section\">\n\t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">\n\t\t\t\t\t<div class=\"has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5e66cfba\" data-eae-slider=\"80620\" data-id=\"5e66cfba\" data-element_type=\"column\" data-e-type=\"column\">\n\t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">\n\t\t\t\t\t\t<div class=\"elementor-element elementor-element-18069104 elementor-widget elementor-widget-text-editor\" data-id=\"18069104\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><b>Ciao, e grazie per aver visitato il nostro sito web &#8211; Lottery Parakeet è il primo uccello della lotteria!</b></p>\n<p><br></p><p>Lottery Parakeet mira a fornirti i risultati e i numeri vincenti per <a href=\"/top-jackpots/\">TUTTE le lotterie</a> in tutto il mondo e negli <a href=\"/usa-lottery/\">Stati Uniti d'America</a>. Inoltre, il nostro obiettivo è fornirti quei risultati della lotteria il prima possibile dopo che l'estrazione ha avuto luogo.</p>\n<p><br></p><p>In aggiunta, i nostri scrittori dedicati aggiungono dettagli sui premi, statistiche e dati di gioco per ogni estrazione in ogni stato, insieme alle ultime notizie sulla lotteria e <a href=\"/articles/\">articoli</a>.</p>\n<p><br></p><p>Per contattare qualsiasi membro del team, ti preghiamo di&nbsp;<a href=\"/contact-us/\">cliccare qui</a>.</p>\n<p></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n```",
+  "excerptHtml": "<p>Hi, and thank you for checking out our website &#8211; Lottery Parakeet is the first lottery bird! Lottery Parakeet aims to bring you the results and winning numbers for ALL lotteries around the world and in the United States of America. Furthermore, our goal is to bring you those lottery results as soon as possible [&hellip;]</p>\n",
+  "slug": "about-us",
+  "date": "2020-06-28T16:42:31",
+  "modified": "2020-12-27T12:45:50",
+  "link": "/about-us",
+  "featuredImage": {
+    "url": "/wp-media/wp-content/uploads/2020/07/lottery-parakeet-Favicon.jpg",
+    "alt": "lottery parakeet",
+    "width": 1168,
+    "height": 1099
+  },
+  "seo": {
+    "title": "? Informazioni su Lottery Parakeet ?",
+    "description": "Lottery Parakeet si propone di offrirti i risultati e i numeri vincenti per TUTTE le lotterie in tutto il mondo e negli Stati Uniti d'America. ✨",
+    "canonical": "/about-us",
+    "ogTitle": "About Comparakeet Lottery",
+    "ogDescription": "Check out latest worldwide lottery results",
+    "ogImage": "/wp-media/wp-content/uploads/2020/07/lottery-parakeet-Favicon.jpg",
+    "ogUrl": "https://lottery.comparakeet.com/about-us",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

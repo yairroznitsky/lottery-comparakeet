@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import {
+  LocalizedLink,
+  LocalizedNavLink,
+} from "@/i18n/LocalizedLink";
+import { useT } from "@/i18n/LocaleContext";
 import NavDropdown, { type NavDropdownLink } from "@/components/layout/NavDropdown";
 import {
   POPULAR_USA_STATE_SLUGS,
@@ -38,6 +43,7 @@ const DESKTOP_MENU_CLOSE_DELAY_MS = 400;
 type DesktopMenuId = "intl" | "usa";
 
 const MainNav = () => {
+  const t = useT();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [usaExpanded, setUsaExpanded] = useState(false);
@@ -225,32 +231,32 @@ const MainNav = () => {
       {expanded ? (
         <div className="mt-1 space-y-0.5 pl-1">
           {links.popular.map((item) => (
-            <Link
+            <LocalizedLink
               key={item.to + item.label}
               to={item.to}
               className={mobileLinkClass}
               onClick={closeMobile}
             >
               {item.label}
-            </Link>
+            </LocalizedLink>
           ))}
           {links.more.map((item) => (
-            <Link
+            <LocalizedLink
               key={item.to + item.label}
               to={item.to}
               className={mobileLinkClass}
               onClick={closeMobile}
             >
               {item.label}
-            </Link>
+            </LocalizedLink>
           ))}
-          <Link
+          <LocalizedLink
             to={indexPath}
             className="block rounded-md px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50"
             onClick={closeMobile}
           >
             {viewAllLabel}
-          </Link>
+          </LocalizedLink>
         </div>
       ) : null}
     </div>
@@ -260,18 +266,20 @@ const MainNav = () => {
     <>
       <nav
         className="flex flex-1 items-center justify-end lg:flex-row"
-        aria-label="Primary"
+        aria-label={t("nav.primary")}
       >
         <button
           ref={toggleRef}
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/30 text-white transition-transform hover:bg-white/10 lg:hidden"
-          aria-label="Toggle menu"
+          aria-label={t("nav.toggleMenu")}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav-sheet"
           onClick={() => setMobileOpen((v) => !v)}
         >
-          <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
+          <span className="sr-only">
+            {mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+          </span>
           <svg
             className={`h-5 w-5 transition-transform duration-200 ${mobileOpen ? "rotate-90" : ""}`}
             viewBox="0 0 24 24"
@@ -295,15 +303,15 @@ const MainNav = () => {
           onMouseLeave={scheduleDesktopMenuClose}
         >
           <NavDropdown
-            label="International Lottery"
+            label={t("nav.internationalLottery")}
             indexPath="/top-jackpots"
             sectionActive={intlSectionActive}
             popular={intlJackpotLinks.popular}
             more={intlJackpotLinks.more}
-            moreSectionTitle="Top 20 jackpots"
+            moreSectionTitle={t("nav.top20Jackpots")}
             panelScrollable
             panelAlign="left"
-            viewAllLabel="View all top jackpots"
+            viewAllLabel={t("nav.viewAllTopJackpots")}
             ready={intlReady}
             isOpen={openDesktopMenu === "intl"}
             onTriggerEnter={() => openDesktopMenuId("intl")}
@@ -311,28 +319,28 @@ const MainNav = () => {
             onNavigate={closeDesktopMenus}
           />
           <NavDropdown
-            label="USA Lottery"
+            label={t("nav.usaLottery")}
             indexPath="/usa-lottery"
             sectionActive={usaSectionActive}
             popular={usaLinks.popular}
             more={usaLinks.more}
             panelAlign="right"
-            viewAllLabel="Browse all US states"
+            viewAllLabel={t("nav.browseAllUsStates")}
             ready={usaReady}
             isOpen={openDesktopMenu === "usa"}
             onTriggerEnter={() => openDesktopMenuId("usa")}
             onToggleClick={() => onDesktopTriggerClick("usa")}
             onNavigate={closeDesktopMenus}
           />
-          <NavLink to="/top-jackpots" className={plainLinkClass}>
-            Top Jackpots
-          </NavLink>
-          <NavLink to="/best-online-lottery-sites" className={plainLinkClass}>
-            Best Online Lottery Sites
-          </NavLink>
-          <NavLink to="/#guides" className={plainLinkClass}>
-            Resources
-          </NavLink>
+          <LocalizedNavLink to="/top-jackpots" className={plainLinkClass}>
+            {t("nav.topJackpots")}
+          </LocalizedNavLink>
+          <LocalizedNavLink to="/best-online-lottery-sites" className={plainLinkClass}>
+            {t("nav.bestOnlineSites")}
+          </LocalizedNavLink>
+          <LocalizedNavLink to="/#guides" className={plainLinkClass}>
+            {t("nav.resources")}
+          </LocalizedNavLink>
         </div>
       </nav>
 
@@ -341,7 +349,7 @@ const MainNav = () => {
           <button
             type="button"
             className="absolute inset-0 bg-black/40"
-            aria-label="Close menu"
+            aria-label={t("nav.closeMenu")}
             onClick={closeMobile}
           />
           <div
@@ -349,52 +357,52 @@ const MainNav = () => {
             className="absolute left-0 right-0 top-0 max-h-[min(85vh,32rem)] overflow-y-auto border-b border-brand-200 bg-white px-4 pb-6 pt-[4.25rem] shadow-xl sm:px-6"
             role="dialog"
             aria-modal="true"
-            aria-label="Main menu"
+            aria-label={t("nav.mainMenu")}
           >
-            <NavLink
+            <LocalizedNavLink
               ref={firstFocusRef}
               to="/international-results"
               className={mobileLinkClass}
               onClick={closeMobile}
             >
-              International Lottery (hub)
-            </NavLink>
+              {t("nav.intlHub")}
+            </LocalizedNavLink>
             {renderMobileAccordion(
-              "Top 20 jackpots",
+              t("nav.top20Jackpots"),
               "/top-jackpots",
               intlExpanded,
               setIntlExpanded,
               intlJackpotLinks,
-              "View all top jackpots",
+              t("nav.viewAllTopJackpots"),
             )}
-            <NavLink
+            <LocalizedNavLink
               to="/usa-lottery"
               className={mobileLinkClass}
               onClick={closeMobile}
             >
-              USA Lottery (hub)
-            </NavLink>
+              {t("nav.usaHub")}
+            </LocalizedNavLink>
             {renderMobileAccordion(
-              "US states",
+              t("nav.usStates"),
               "/usa-lottery",
               usaExpanded,
               setUsaExpanded,
               usaLinks,
-              "Browse all US states",
+              t("nav.browseAllUsStates"),
             )}
-            <NavLink to="/top-jackpots" className={mobileLinkClass} onClick={closeMobile}>
-              Top Jackpots
-            </NavLink>
-            <NavLink
+            <LocalizedNavLink to="/top-jackpots" className={mobileLinkClass} onClick={closeMobile}>
+              {t("nav.topJackpots")}
+            </LocalizedNavLink>
+            <LocalizedNavLink
               to="/best-online-lottery-sites"
               className={mobileLinkClass}
               onClick={closeMobile}
             >
-              Best Online Lottery Sites
-            </NavLink>
-            <NavLink to="/#guides" className={mobileLinkClass} onClick={closeMobile}>
-              Resources
-            </NavLink>
+              {t("nav.bestOnlineSites")}
+            </LocalizedNavLink>
+            <LocalizedNavLink to="/#guides" className={mobileLinkClass} onClick={closeMobile}>
+              {t("nav.resources")}
+            </LocalizedNavLink>
           </div>
         </div>
       ) : null}

@@ -1,5 +1,8 @@
 import { useMemo } from "react";
-import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
+import { useLoaderData, useLocation, useParams } from "react-router-dom";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import { localizePath } from "@/i18n/paths";
 import IntlGameSidebar from "@/components/lottery/IntlGameSidebar";
 import LatestDrawCard from "@/components/lottery/LatestDrawCard";
 import StateFaqSection from "@/components/lottery/StateFaqSection";
@@ -16,7 +19,13 @@ import {
 import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import SiteSeo from "@/components/seo/SiteSeo";
 import { formatGameTitle, formatStateTitle } from "@/lib/parseDrawResults";
-import { getIntlFaqItems, intlFaqPathsWithContent } from "@/lib/intlFaqs";
+import {
+  getIntlFaqItems,
+  intlFaqPathsWithContent,
+  loadIntlFaqItems,
+} from "@/lib/intlFaqs";
+import { localeFromPathname } from "@/i18n/paths";
+import type { IntlFaqItem } from "@/types/intlFaq";
 import { getIntlGamePaths, getIntlRegionGameEntries } from "@/lib/intlGames";
 import {
   intlGameIntroShort,
@@ -47,6 +56,7 @@ export interface DrawResultsLoaderData {
   rows: DrawResultView[];
   period: ResultsPeriod;
   isUsa: boolean;
+  faqItems: IntlFaqItem[];
 }
 
 export function getDrawResultsStaticPaths() {
@@ -76,9 +86,13 @@ export async function drawResultsLoader({
 
   const isUsa =
     getUsaStatePrerenderSlugs().includes(region) || region === "us";
+  const locale = localeFromPathname(pathname);
+  const faqItems = isUsa
+    ? []
+    : await loadIntlFaqItems(region, game, locale);
 
   if (!import.meta.env.SSR) {
-    return { rows: [], period, isUsa };
+    return { rows: [], period, isUsa, faqItems };
   }
 
   let rows: DrawResultView[] = [];
@@ -90,10 +104,12 @@ export async function drawResultsLoader({
     rows = [];
   }
 
-  return { rows, period, isUsa };
+  return { rows, period, isUsa, faqItems };
 }
 
 const DrawResultsPage = () => {
+  const locale = useLocale();
+  const t = useT();
   const { region, game } = useParams<{
     region: string;
     game: string;
@@ -179,20 +195,29 @@ const DrawResultsPage = () => {
   const resultRows = rows ?? [];
   const latest = resultRows[0];
   const title = `${formatStateTitle(region)} ${formatGameTitle(game)}`;
-  const lastYearPath = `/${region}/${game}/last-year`;
-  const latestPath = `/${region}/${game}`;
+  const lastYearPath = localizePath(`/${region}/${game}/last-year`, locale);
+  const latestPath = localizePath(`/${region}/${game}`, locale);
 
-  const canonicalPath = gameResultsCanonicalPath(region, game, period);
+  const canonicalPath = gameResultsCanonicalPath(region, game, period, locale);
+  const spanLabel =
+    period === "lastYear"
+      ? t("seo.intl.spanLastYear")
+      : t("seo.intl.spanLatest");
   const seoTitle = isUsa
-    ? `${title} ${period === "lastYear" ? "Last Year" : "Latest"} Results`
-    : intlGameSeoTitle(region, game, period);
+    ? t("seo.game.usTitle", { title, span: spanLabel })
+    : intlGameSeoTitle(region, game, period, locale);
   const seoDescription = isUsa
-    ? gameResultsSeoDescription(region, game, period)
-    : intlGameSeoDescription(region, game, period);
+    ? gameResultsSeoDescription(region, game, period, locale)
+    : intlGameSeoDescription(region, game, period, locale);
   const parentPath = isUsa ? "/usa-lottery" : "/international-results";
-  const parentName = isUsa ? "USA Lottery" : "International Lottery";
+  const parentName = isUsa
+    ? t("drawResults.usaLottery")
+    : t("drawResults.internationalLottery");
   const stateHubPath = isUsa ? `/${region}` : parentPath;
-  const intlFaqItems = isUsa ? [] : getIntlFaqItems(region, game);
+  const intlFaqItems = isUsa
+    ? []
+    : (loaderData?.faqItems ??
+      getIntlFaqItems(region, game, locale));
   const faqJsonLd = buildFaqPageJsonLd(intlFaqItems);
   const hasAbout = Boolean(wpContent);
   const regionGameEntries = isUsa ? [] : getIntlRegionGameEntries(region);
@@ -211,14 +236,14 @@ const DrawResultsPage = () => {
           ]}
           jsonLd={faqJsonLd ? [faqJsonLd] : undefined}
         />
-        <nav className="mb-4 text-sm text-brand-700" aria-label="Breadcrumb">
-          <Link to="/" className="hover:text-brand-900">
-            Home
-          </Link>
+        <nav className="mb-4 text-sm text-brand-700" aria-label={t("common.breadcrumb")}>
+          <LocalizedLink to="/" className="hover:text-brand-900">
+            {t("common.home")}
+          </LocalizedLink>
           {" · "}
-          <Link to="/international-results" className="hover:text-brand-900">
-            International
-          </Link>
+          <LocalizedLink to="/international-results" className="hover:text-brand-900">
+            {t("drawResults.international")}
+          </LocalizedLink>
           {" · "}
           <span className="text-brand-950">{title}</span>
         </nav>
@@ -228,28 +253,28 @@ const DrawResultsPage = () => {
             {title} {period === "lastYear" ? "Last Year" : "Latest"} Results
           </h1>
           <p className="mt-3 max-w-3xl text-brand-800">
-            {intlGameIntroShort(region, game)}
+            {intlGameIntroShort(region, game, locale)}
           </p>
           <StateQuickFacts
             gamesCount={resultRows.length}
             latestDrawDate={latest?.drawDate ?? null}
-            countLabel="Draws shown"
-            hubLabel="Browse international lotteries"
+            countLabel={t("drawResults.drawsShown")}
+            hubLabel={t("drawResults.browseIntl")}
             hubTo="/international-results"
           />
           <div className="mt-4 flex flex-wrap gap-2">
-            <Link
+            <LocalizedLink
               to={latestPath}
               className={`rounded-full px-3 py-1 text-sm font-medium ${period === "lastTen" ? "bg-brand-600 text-white" : "bg-brand-100 text-brand-800"}`}
             >
               Latest 10
-            </Link>
-            <Link
+            </LocalizedLink>
+            <LocalizedLink
               to={lastYearPath}
               className={`rounded-full px-3 py-1 text-sm font-medium ${period === "lastYear" ? "bg-brand-600 text-white" : "bg-brand-100 text-brand-800"}`}
             >
               Last year
-            </Link>
+            </LocalizedLink>
           </div>
         </header>
 
@@ -319,20 +344,20 @@ const DrawResultsPage = () => {
           { name: title, path: `/${region}/${game}` },
         ]}
       />
-      <nav className="mb-4 text-sm text-brand-700" aria-label="Breadcrumb">
-        <Link to="/" className="hover:text-brand-900">
-          Home
-        </Link>
+      <nav className="mb-4 text-sm text-brand-700" aria-label={t("common.breadcrumb")}>
+        <LocalizedLink to="/" className="hover:text-brand-900">
+          {t("common.home")}
+        </LocalizedLink>
         {" · "}
-        <Link to={isUsa ? "/usa-lottery" : "/international-results"} className="hover:text-brand-900">
-          {isUsa ? "US Lottery" : "International"}
-        </Link>
+        <LocalizedLink to={isUsa ? "/usa-lottery" : "/international-results"} className="hover:text-brand-900">
+          {isUsa ? t("drawResults.usLottery") : t("drawResults.international")}
+        </LocalizedLink>
         {isUsa ? (
           <>
             {" · "}
-            <Link to={stateHubPath} className="hover:text-brand-900">
+            <LocalizedLink to={stateHubPath} className="hover:text-brand-900">
               {formatStateTitle(region)}
-            </Link>
+            </LocalizedLink>
           </>
         ) : null}
         {" · "}
@@ -344,18 +369,18 @@ const DrawResultsPage = () => {
           {title} {period === "lastYear" ? "Last Year" : "Latest"} Results
         </h1>
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link
+          <LocalizedLink
             to={latestPath}
             className={`rounded-full px-3 py-1 text-sm font-medium ${period === "lastTen" ? "bg-brand-600 text-white" : "bg-brand-100 text-brand-800"}`}
           >
             Latest 10
-          </Link>
-          <Link
+          </LocalizedLink>
+          <LocalizedLink
             to={lastYearPath}
             className={`rounded-full px-3 py-1 text-sm font-medium ${period === "lastYear" ? "bg-brand-600 text-white" : "bg-brand-100 text-brand-800"}`}
           >
             Last year
-          </Link>
+          </LocalizedLink>
         </div>
       </header>
 

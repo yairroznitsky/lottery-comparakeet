@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { Link } from "react-router-dom";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 export interface NavDropdownLink {
   to: string;
@@ -110,14 +110,14 @@ const NavDropdown = ({
                   Popular
                 </p>
                 {popular.map((item) => (
-                  <Link
+                  <LocalizedLink
                     key={item.to + item.label}
                     to={item.to}
                     className={panelLinkClass}
                     onClick={onNavigate}
                   >
                     {item.label}
-                  </Link>
+                  </LocalizedLink>
                 ))}
               </div>
             ) : null}
@@ -131,7 +131,7 @@ const NavDropdown = ({
                   </p>
                 ) : null}
                 {more.map((item) => (
-                  <Link
+                  <LocalizedLink
                     key={item.to + item.label}
                     to={item.to}
                     className={panelLinkClass}
@@ -139,18 +139,18 @@ const NavDropdown = ({
                     title={item.label}
                   >
                     {item.label}
-                  </Link>
+                  </LocalizedLink>
                 ))}
               </div>
             ) : null}
             <div className="mt-1 border-t border-brand-100 px-2 pt-1">
-              <Link
+              <LocalizedLink
                 to={indexPath}
                 className="block rounded-md px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50"
                 onClick={onNavigate}
               >
                 {viewAllLabel}
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>

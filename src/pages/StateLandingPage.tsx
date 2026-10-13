@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import SiteSeo from "@/components/seo/SiteSeo";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import { localizePath } from "@/i18n/paths";
 import StateFaqSection from "@/components/lottery/StateFaqSection";
 import StateLandingSidebar from "@/components/lottery/StateLandingSidebar";
 import StateQuickFacts from "@/components/lottery/StateQuickFacts";
@@ -27,11 +29,13 @@ import { listPopularUsaStatesExcept } from "@/constants/navPopular";
 import { useWordPressSlug } from "@/hooks/useLocalWordPressContent";
 import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import type { DrawResultView } from "@/types/lottery";
+import type { StateFaqItem } from "@/types/stateFaq";
 
 interface StateLandingPageProps {
   stateSlug: string;
   initialGames?: string[];
   initialResults?: DrawResultView[];
+  initialFaqItems?: StateFaqItem[];
 }
 
 const POPULAR_GAME_SLUGS = ["powerball", "mega-millions", "megamillions"];
@@ -48,7 +52,10 @@ const StateLandingPage = ({
   stateSlug,
   initialGames,
   initialResults,
+  initialFaqItems,
 }: StateLandingPageProps) => {
+  const locale = useLocale();
+  const t = useT();
   const manifestGames = getStateGames(stateSlug);
   const gamesQuery = useStateGames(stateSlug);
   const resultsQuery = useUsaResults(stateSlug, undefined, "lastTen");
@@ -88,7 +95,8 @@ const StateLandingPage = ({
   }
 
   const title = formatStateTitle(stateSlug);
-  const faqItems = getStateFaqItems(stateSlug);
+  const faqItems =
+    initialFaqItems ?? getStateFaqItems(stateSlug, locale);
   const faqJsonLd = buildFaqPageJsonLd(faqItems);
   const gamesListJsonLd = buildItemListJsonLd(
     games.map((game) => ({
@@ -98,10 +106,10 @@ const StateLandingPage = ({
   );
   const jsonLd = [faqJsonLd, gamesListJsonLd].filter(Boolean);
 
-  const pagePath = `/${stateSlug}`;
-  const seoTitle = stateLandingSeoTitle(stateSlug);
-  const seoDescription = stateLandingSeoDescription(stateSlug, games);
-  const intro = stateLandingIntroShort(stateSlug);
+  const pagePath = localizePath(`/${stateSlug}`, locale);
+  const seoTitle = stateLandingSeoTitle(stateSlug, locale);
+  const seoDescription = stateLandingSeoDescription(stateSlug, games, locale);
+  const intro = stateLandingIntroShort(stateSlug, locale);
   const latestDrawDate = results[0]?.drawDate ?? null;
 
   const siblingStates = listPopularUsaStatesExcept(
@@ -120,20 +128,20 @@ const StateLandingPage = ({
         description={seoDescription}
         path={pagePath}
         breadcrumbs={[
-          { name: "Home", path: "/" },
-          { name: "USA Lottery", path: "/usa-lottery" },
-          { name: title, path: pagePath },
+          { name: t("common.home"), path: "/" },
+          { name: t("usaIndex.breadcrumb"), path: "/usa-lottery" },
+          { name: title, path: `/${stateSlug}` },
         ]}
         jsonLd={jsonLd.length > 0 ? jsonLd : undefined}
       />
-      <nav className="mb-4 text-sm text-brand-700" aria-label="Breadcrumb">
-        <Link to="/" className="hover:text-brand-900">
-          Home
-        </Link>
+      <nav className="mb-4 text-sm text-brand-700" aria-label={t("common.breadcrumb")}>
+        <LocalizedLink to="/" className="hover:text-brand-900">
+          {t("common.home")}
+        </LocalizedLink>
         {" · "}
-        <Link to="/usa-lottery" className="hover:text-brand-900">
-          US Lottery
-        </Link>
+        <LocalizedLink to="/usa-lottery" className="hover:text-brand-900">
+          {t("usaIndex.breadcrumb")}
+        </LocalizedLink>
         {" · "}
         <span className="text-brand-950">{title}</span>
       </nav>
@@ -171,7 +179,7 @@ const StateLandingPage = ({
                 {games.map((game) => {
                   const emphasized = POPULAR_GAME_SLUGS.includes(game);
                   return (
-                    <Link
+                    <LocalizedLink
                       key={game}
                       to={`/${stateSlug}/${game}`}
                       className={
@@ -181,7 +189,7 @@ const StateLandingPage = ({
                       }
                     >
                       {game.replace(/-/g, " ")}
-                    </Link>
+                    </LocalizedLink>
                   );
                 })}
               </div>

@@ -1,5 +1,12 @@
+import type { Locale } from "@/i18n/locales";
+import { LOCALE_HTML_LANG } from "@/i18n/locales";
+
 function pad2(n: number): string {
   return String(n).padStart(2, "0");
+}
+
+function intlLocale(locale?: Locale): string {
+  return locale ? LOCALE_HTML_LANG[locale] : "en";
 }
 
 /** Parse API / ISO draw timestamps (space or `T` separator, optional seconds). */
@@ -52,12 +59,15 @@ export function formatDrawDate(isoOrDate: string): string {
 }
 
 /** Next draw / jackpot close: locale date with `HH:mm` time. */
-export function formatDateTimeDisplay(isoOrDate: string): string {
+export function formatDateTimeDisplay(
+  isoOrDate: string,
+  locale?: Locale,
+): string {
   const d = parseLotteryDateTime(isoOrDate);
   if (!d) {
     return isoOrDate;
   }
-  const datePart = new Intl.DateTimeFormat(undefined, {
+  const datePart = new Intl.DateTimeFormat(intlLocale(locale), {
     dateStyle: "medium",
   }).format(d);
   if (!hasExplicitTime(isoOrDate)) {

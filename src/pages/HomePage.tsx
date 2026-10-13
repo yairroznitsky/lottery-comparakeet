@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
-import SiteSeo, { DEFAULT_DESCRIPTION } from "@/components/seo/SiteSeo";
+import SiteSeo, { useDefaultDescription } from "@/components/seo/SiteSeo";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import { LOCALE_HTML_LANG } from "@/i18n/locales";
 import JackpotCard from "@/components/lottery/JackpotCard";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PlayTicketsCta from "@/components/lottery/PlayTicketsCta";
@@ -23,6 +25,9 @@ import {
 } from "@/lib/wordpressContent";
 
 const HomePage = () => {
+  const t = useT();
+  const locale = useLocale();
+  const defaultDescription = useDefaultDescription();
   const jackpotsQuery = useTopJackpots(12);
   const statesQuery = useUsaStates();
   const countriesQuery = useInternationalCountries();
@@ -43,48 +48,48 @@ const HomePage = () => {
   return (
     <div>
       <SiteSeo
-        title="Lottery Numbers, Jackpots, and Resources"
-        description={DEFAULT_DESCRIPTION}
+        title={t("home.seoTitle")}
+        description={defaultDescription}
         path="/"
       />
       <section className="hero-lottery-banner px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl bg-brand-700/80 px-6 py-10 text-center shadow-lg backdrop-blur-sm sm:px-10 sm:py-12">
             <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.35rem]">
-              Lottery Numbers, Jackpots, and Resources
+              {t("home.heroTitle")}
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/90 sm:text-lg">
-              Live results, prize trackers, and trusted reviews — updated daily.
+              {t("home.heroSubtitle")}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link
+              <LocalizedLink
                 to="/top-jackpots"
                 className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-800 hover:bg-brand-50"
               >
-                Top Jackpots
-              </Link>
-              <Link
+                {t("nav.topJackpots")}
+              </LocalizedLink>
+              <LocalizedLink
                 to="/international-results"
                 className="rounded-md border border-white/50 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
               >
-                International Lottery
-              </Link>
-              <Link
+                {t("nav.internationalLottery")}
+              </LocalizedLink>
+              <LocalizedLink
                 to="/usa-lottery"
                 className="rounded-md border border-white/50 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
               >
-                USA Lottery
-              </Link>
+                {t("nav.usaLottery")}
+              </LocalizedLink>
             </div>
           </div>
         </div>
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
-        <nav className="text-sm text-neutral-500" aria-label="Breadcrumb">
-          <Link to="/" className="hover:text-brand-700 hover:underline">
-            Home
-          </Link>
+        <nav className="text-sm text-neutral-500" aria-label={t("common.breadcrumb")}>
+          <LocalizedLink to="/" className="hover:text-brand-700 hover:underline">
+            {t("common.home")}
+          </LocalizedLink>
         </nav>
         <section>
           <div className="mb-6 flex items-end justify-between gap-4">
@@ -96,12 +101,12 @@ const HomePage = () => {
                 Ranked by prize pool — updated throughout the day.
               </p>
             </div>
-            <Link
+            <LocalizedLink
               to="/top-jackpots"
               className="text-sm font-medium text-accent-600 hover:text-brand-700"
             >
-              View all
-            </Link>
+              {t("common.viewAll")}
+            </LocalizedLink>
           </div>
           {jackpotsQuery.isPending ? (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -177,12 +182,12 @@ const HomePage = () => {
               <h2 className="font-display text-2xl font-semibold text-brand-950">
                 Top-rated lottery sites
               </h2>
-              <Link
+              <LocalizedLink
                 to="/best-online-lottery-sites"
                 className="text-sm font-medium text-accent-600 hover:text-brand-700"
               >
-                Full comparison
-              </Link>
+                {t("home.fullComparison")}
+              </LocalizedLink>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {topSites.map((site) => (
@@ -218,29 +223,29 @@ const HomePage = () => {
               <SectionSkeleton lines={4} />
             ) : statesQuery.isError ? (
               <p className="text-sm text-brand-700">
-                <Link to="/usa-lottery" className="font-medium text-brand-600 underline">
-                  Browse US lottery results
-                </Link>
+                <LocalizedLink to="/usa-lottery" className="font-medium text-brand-600 underline">
+                  {t("home.browseUsResults")}
+                </LocalizedLink>
               </p>
             ) : (
               <>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {(statesQuery.data ?? []).slice(0, 12).map((state) => (
-                    <Link
+                    <LocalizedLink
                       key={state}
                       to={`/${state}`}
                       className="rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-800 ring-1 ring-brand-200 hover:bg-brand-100"
                     >
                       {formatStateTitle(state)}
-                    </Link>
+                    </LocalizedLink>
                   ))}
                 </div>
-                <Link
+                <LocalizedLink
                   to="/usa-lottery"
                   className="mt-3 inline-block text-sm font-medium text-brand-600"
                 >
-                  All US states
-                </Link>
+                  {t("home.allUsStates")}
+                </LocalizedLink>
               </>
             )}
           </div>
@@ -252,18 +257,18 @@ const HomePage = () => {
               <SectionSkeleton lines={4} />
             ) : countriesQuery.isError ? (
               <p className="text-sm text-brand-700">
-                <Link
+                <LocalizedLink
                   to="/international-results"
                   className="font-medium text-brand-600 underline"
                 >
-                  Browse international results
-                </Link>
+                  {t("home.browseIntlResults")}
+                </LocalizedLink>
               </p>
             ) : (
               <>
                 <div className="grid grid-cols-2 gap-2">
                   {(countriesQuery.data ?? []).slice(0, 8).map((c) => (
-                    <Link
+                    <LocalizedLink
                       key={c.slug}
                       to={`/${c.regionSlug}/${c.gameSlug}`}
                       className="flex items-center gap-2 rounded-lg bg-white px-2 py-2 text-sm ring-1 ring-brand-200 hover:bg-brand-50"
@@ -276,15 +281,15 @@ const HomePage = () => {
                         className="h-6 w-6 shrink-0 object-contain"
                       />
                       <span className="line-clamp-2 text-brand-800">{c.name}</span>
-                    </Link>
+                    </LocalizedLink>
                   ))}
                 </div>
-                <Link
+                <LocalizedLink
                   to="/international-results"
                   className="mt-3 inline-block text-sm font-medium text-brand-600"
                 >
-                  Browse all countries
-                </Link>
+                  {t("home.browseAllCountries")}
+                </LocalizedLink>
               </>
             )}
           </div>
@@ -298,7 +303,7 @@ const HomePage = () => {
             <ul className="divide-y divide-brand-200 rounded-2xl border border-brand-200 bg-white">
               {recentPosts.map((post) => (
                 <li key={post.slug}>
-                  <Link
+                  <LocalizedLink
                     to={`/${post.slug}`}
                     className="flex flex-col gap-1 px-4 py-4 hover:bg-brand-25 sm:flex-row sm:items-center sm:justify-between"
                   >
@@ -308,9 +313,9 @@ const HomePage = () => {
                     <span className="text-sm text-brand-600">
                       {new Date(
                         postSummaryDisplayDate(post),
-                      ).toLocaleDateString()}
+                      ).toLocaleDateString(LOCALE_HTML_LANG[locale])}
                     </span>
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>

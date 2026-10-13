@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import SiteSeo from "@/components/seo/SiteSeo";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { localizePath } from "@/i18n/paths";
 import PageErrorState from "@/components/wordpress/PageErrorState";
 import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
@@ -14,6 +16,8 @@ import {
 type SortKey = "jackpotUsd" | "brand";
 
 const TopJackpotsPage = () => {
+  const t = useT();
+  const locale = useLocale();
   const { data, isPending, isError, error, refetch } = useTopJackpots(50);
   const [currency, setCurrency] = useState<string>("All");
   const [sortKey, setSortKey] = useState<SortKey>("jackpotUsd");
@@ -69,17 +73,17 @@ const TopJackpotsPage = () => {
   return (
     <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <SiteSeo
-        title="Top Jackpots"
-        description="See the biggest upcoming lottery jackpots worldwide, sorted by prize pool with live updates and draw dates."
-        path="/top-jackpots"
+        title={t("topJackpots.seoTitle")}
+        description={t("topJackpots.seoDescription")}
+        path={localizePath("/top-jackpots", locale)}
         breadcrumbs={[
-          { name: "Home", path: "/" },
-          { name: "Top Jackpots", path: "/top-jackpots" },
+          { name: t("common.home"), path: "/" },
+          { name: t("topJackpots.seoTitle"), path: "/top-jackpots" },
         ]}
       />
       <header className="mb-8 border-b border-brand-200 pb-6">
         <h1 className="font-display text-3xl font-semibold text-brand-950 sm:text-4xl">
-          Top Jackpots
+          {t("topJackpots.seoTitle")}
         </h1>
         <p className="mt-2 max-w-2xl text-brand-800">
           Upcoming jackpots from lotteries worldwide, updated from live draw
@@ -241,9 +245,9 @@ const TopJackpotsPage = () => {
       </div>
 
       <p className="mt-6 text-sm text-brand-700">
-        <Link to="/best-online-lottery-sites" className="font-medium text-brand-600 hover:text-brand-800">
+        <LocalizedLink to="/best-online-lottery-sites" className="font-medium text-brand-600 hover:text-brand-800">
           Compare the best online lottery sites
-        </Link>
+        </LocalizedLink>
       </p>
     </article>
   );

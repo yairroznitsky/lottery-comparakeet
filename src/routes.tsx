@@ -17,70 +17,92 @@ import UsStatesIndexPage from "@/pages/UsStatesIndexPage";
 import WordPressPage, {
   getWordPressCatchAllStaticPaths,
 } from "@/pages/WordPressPage";
+import { LOCALES, type Locale } from "@/i18n/locales";
+import { DEFAULT_LOCALE } from "@/i18n/locales";
+import { wrapGetStaticPaths } from "@/i18n/wrapStaticPaths";
 
-export const routes: RouteRecord[] = [
-  {
-    path: "/",
+function buildChildren(locale: Locale): RouteRecord[] {
+  return [
+    {
+      index: true,
+      Component: HomePage,
+      entry: "src/pages/HomePage.tsx",
+    },
+    {
+      path: "best-online-lottery-sites",
+      Component: WordPressPage,
+      entry: "src/pages/WordPressPage.tsx",
+    },
+    {
+      path: "top-jackpots",
+      Component: TopJackpotsPage,
+      entry: "src/pages/TopJackpotsPage.tsx",
+    },
+    {
+      path: "usa-lottery",
+      Component: UsStatesIndexPage,
+      entry: "src/pages/UsStatesIndexPage.tsx",
+    },
+    {
+      path: "international-results",
+      Component: InternationalIndexPage,
+      entry: "src/pages/InternationalIndexPage.tsx",
+    },
+    {
+      path: "international-results/:lottery",
+      Component: InternationalResultsPage,
+      entry: "src/pages/InternationalResultsPage.tsx",
+    },
+    {
+      path: ":region/:game/last-year",
+      Component: DrawResultsPage,
+      entry: "src/pages/DrawResultsPage.tsx",
+      loader: drawResultsLoader,
+      getStaticPaths: wrapGetStaticPaths(
+        getDrawResultsLastYearStaticPaths,
+        locale,
+      ),
+    },
+    {
+      path: ":region/:game",
+      Component: DrawResultsPage,
+      entry: "src/pages/DrawResultsPage.tsx",
+      loader: drawResultsLoader,
+      getStaticPaths: wrapGetStaticPaths(getDrawResultsStaticPaths, locale),
+    },
+    {
+      path: ":slug",
+      Component: SlugOrStatePage,
+      entry: "src/pages/SlugOrStatePage.tsx",
+      loader: slugOrStateLoader,
+      getStaticPaths: wrapGetStaticPaths(getSlugOrStateStaticPaths, locale),
+    },
+    {
+      path: "*",
+      Component: WordPressPage,
+      entry: "src/pages/WordPressPage.tsx",
+      getStaticPaths: wrapGetStaticPaths(getWordPressCatchAllStaticPaths, locale),
+    },
+  ];
+}
+
+function localeRootRoute(locale: Locale): RouteRecord {
+  if (locale === DEFAULT_LOCALE) {
+    return {
+      path: "/",
+      element: <AppLayout />,
+      entry: "src/components/layout/AppLayout.tsx",
+      children: buildChildren(locale),
+    };
+  }
+  return {
+    path: `/${locale}`,
     element: <AppLayout />,
     entry: "src/components/layout/AppLayout.tsx",
-    children: [
-      {
-        index: true,
-        Component: HomePage,
-        entry: "src/pages/HomePage.tsx",
-      },
-      {
-        path: "best-online-lottery-sites",
-        Component: WordPressPage,
-        entry: "src/pages/WordPressPage.tsx",
-      },
-      {
-        path: "top-jackpots",
-        Component: TopJackpotsPage,
-        entry: "src/pages/TopJackpotsPage.tsx",
-      },
-      {
-        path: "usa-lottery",
-        Component: UsStatesIndexPage,
-        entry: "src/pages/UsStatesIndexPage.tsx",
-      },
-      {
-        path: "international-results",
-        Component: InternationalIndexPage,
-        entry: "src/pages/InternationalIndexPage.tsx",
-      },
-      {
-        path: "international-results/:lottery",
-        Component: InternationalResultsPage,
-        entry: "src/pages/InternationalResultsPage.tsx",
-      },
-      {
-        path: ":region/:game/last-year",
-        Component: DrawResultsPage,
-        entry: "src/pages/DrawResultsPage.tsx",
-        loader: drawResultsLoader,
-        getStaticPaths: getDrawResultsLastYearStaticPaths,
-      },
-      {
-        path: ":region/:game",
-        Component: DrawResultsPage,
-        entry: "src/pages/DrawResultsPage.tsx",
-        loader: drawResultsLoader,
-        getStaticPaths: getDrawResultsStaticPaths,
-      },
-      {
-        path: ":slug",
-        Component: SlugOrStatePage,
-        entry: "src/pages/SlugOrStatePage.tsx",
-        loader: slugOrStateLoader,
-        getStaticPaths: getSlugOrStateStaticPaths,
-      },
-      {
-        path: "*",
-        Component: WordPressPage,
-        entry: "src/pages/WordPressPage.tsx",
-        getStaticPaths: getWordPressCatchAllStaticPaths,
-      },
-    ],
-  },
-];
+    children: buildChildren(locale),
+  };
+}
+
+export const routes: RouteRecord[] = LOCALES.map((locale) =>
+  localeRootRoute(locale),
+);

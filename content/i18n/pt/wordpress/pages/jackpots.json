@@ -1,0 +1,22 @@
+{
+  "id": 93,
+  "title": "Prêmios acumulados",
+  "contentHtml": "<p>Prêmios</p>\n",
+  "excerptHtml": "<p>Jackpots</p>\n",
+  "slug": "jackpots",
+  "date": "2020-06-28T16:42:41",
+  "modified": "2020-06-28T16:42:41",
+  "link": "/jackpots",
+  "featuredImage": null,
+  "seo": {
+    "title": "Principais Prêmios de Loteria - Maiores Prêmios de Loteria dos EUA",
+    "description": "Os maiores jackpots de loteria ordenados por tamanho, incluindo as grandes loterias de múltiplos estados POWERBALL e MEGA MILLIONS.",
+    "canonical": "/jackpots",
+    "ogTitle": "Top Lottery Jackpots - Biggest US Lottery Jackpots",
+    "ogDescription": "Top Lottery Jackpots ordered by size, including the big multi-state lotteries POWERBALL and MEGA MILLIONS.",
+    "ogUrl": "https://lottery.comparakeet.com/jackpots",
+    "robotsIndex": true,
+    "robotsFollow": true
+  },
+  "contentType": "page"
+}

@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useLocale } from "@/i18n/LocaleContext";
 import {
   loadWordPressIntlGameOptional,
   loadWordPressOptional,
@@ -9,10 +10,11 @@ export function useWordPressSlug(
   slug: string | null | undefined,
   enabled = true,
 ) {
+  const locale = useLocale();
   return useQuery({
-    queryKey: ["wordpress-local", slug],
+    queryKey: ["wordpress-local", locale, slug],
     queryFn: () =>
-      slug ? loadWordPressOptional(slug) : Promise.resolve(null),
+      slug ? loadWordPressOptional(slug, locale) : Promise.resolve(null),
     enabled: Boolean(slug && enabled),
     staleTime: Number.POSITIVE_INFINITY,
     gcTime: 30 * 60 * 1000,
@@ -29,11 +31,12 @@ export function useWordPressIntlGame(
   gameSlug: string | undefined,
   enabled: boolean,
 ) {
+  const locale = useLocale();
   return useQuery({
-    queryKey: ["wordpress-local", "intl", regionSlug, gameSlug],
+    queryKey: ["wordpress-local", "intl", locale, regionSlug, gameSlug],
     queryFn: () =>
       regionSlug && gameSlug
-        ? loadWordPressIntlGameOptional(regionSlug, gameSlug)
+        ? loadWordPressIntlGameOptional(regionSlug, gameSlug, locale)
         : Promise.resolve(null),
     enabled: Boolean(regionSlug && gameSlug && enabled),
     staleTime: Number.POSITIVE_INFINITY,

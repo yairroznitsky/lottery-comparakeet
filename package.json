@@ -22,7 +22,9 @@
     "refresh:brand-reviews": "node scripts/refresh-brand-review-urls.mjs && node scripts/sync-vercel-brand-redirects.mjs",
     "touch:brand-content-dates": "node scripts/touch-brand-content-dates.mjs",
     "fetch:brand-autocomplete": "node scripts/fetch-brand-autocomplete.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "translate": "node scripts/translate-content.mjs",
+    "migrate:i18n": "node scripts/migrate-i18n-layout.mjs"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",

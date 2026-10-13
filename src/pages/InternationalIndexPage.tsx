@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import SiteSeo from "@/components/seo/SiteSeo";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { localizePath } from "@/i18n/paths";
 import JackpotCard from "@/components/lottery/JackpotCard";
 import LotteryLogo from "@/components/lottery/LotteryLogo";
 import PageErrorState from "@/components/wordpress/PageErrorState";
@@ -14,6 +16,8 @@ import {
 } from "@/lib/intlSeoCopy";
 
 const InternationalIndexPage = () => {
+  const t = useT();
+  const locale = useLocale();
   const countriesQuery = useInternationalCountries();
   const jackpotsQuery = useTopJackpots(6);
 
@@ -37,12 +41,12 @@ const InternationalIndexPage = () => {
   return (
     <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <SiteSeo
-        title={internationalHubSeoTitle()}
-        description={internationalHubSeoDescription()}
-        path="/international-results"
+        title={internationalHubSeoTitle(locale)}
+        description={internationalHubSeoDescription(locale)}
+        path={localizePath("/international-results", locale)}
         breadcrumbs={[
-          { name: "Home", path: "/" },
-          { name: "International Lottery", path: "/international-results" },
+          { name: t("common.home"), path: "/" },
+          { name: t("intlIndex.breadcrumb"), path: "/international-results" },
         ]}
       />
       <header className="mb-8 border-b border-brand-200 pb-6">
@@ -71,7 +75,7 @@ const InternationalIndexPage = () => {
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {countries.map((country) => (
-            <Link
+            <LocalizedLink
               key={country.slug}
               to={`/${country.regionSlug}/${country.gameSlug}`}
               className="flex items-center gap-3 rounded-xl border border-brand-200 bg-white p-3 shadow-sm hover:bg-brand-25"
@@ -84,7 +88,7 @@ const InternationalIndexPage = () => {
                 className="h-10 w-10 shrink-0 object-contain"
               />
               <span className="text-sm font-medium text-brand-900">{country.name}</span>
-            </Link>
+            </LocalizedLink>
           ))}
         </div>
       </section>

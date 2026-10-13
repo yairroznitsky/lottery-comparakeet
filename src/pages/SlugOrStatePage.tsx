@@ -1,8 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { RESERVED_SLUGS } from "@/constants/reservedSlugs";
+import { localeFromPathname } from "@/i18n/paths";
 import { useUsaStates } from "@/hooks/useLotteryData";
+import { loadBrandReviewFaqItems } from "@/lib/brandReviewFaqs";
+import { isBrandReviewSlug } from "@/lib/brandReviewSlugs";
 import { getUsaStatePrerenderSlugs } from "@/lib/prerenderRoutes";
 import { getStateGames } from "@/lib/stateGames";
+import { loadStateFaqItems } from "@/lib/stateFaqs";
 import { getWordPressSingleSegmentStaticSlugs } from "@/lib/wordpressContent";
 import StateLandingPage from "@/pages/StateLandingPage";
 import WordPressPage from "@/pages/WordPressPage";
@@ -11,13 +15,16 @@ import {
   fetchUsaResults,
   fetchUsaStateGames,
 } from "@/services/lotteryResultsApi";
+import type { BrandReviewFaqItem } from "@/types/brandReviewFaq";
 import type { DrawResultView } from "@/types/lottery";
+import type { StateFaqItem } from "@/types/stateFaq";
 
 export interface SlugOrStateLoaderData {
-  kind: "state" | "other";
+  kind: "state" | "wordpress" | "other";
   slug?: string;
   games?: string[];
   results?: DrawResultView[];
+  faqItems?: StateFaqItem[] | BrandReviewFaqItem[];
 }
 
 export function getSlugOrStateStaticPaths() {
@@ -31,19 +38,30 @@ export function getSlugOrStateStaticPaths() {
 
 export async function slugOrStateLoader({
   params,
+  request,
 }: {
   params: { slug?: string };
+  request: Request;
 }): Promise<SlugOrStateLoaderData> {
   const slug = params.slug;
+  const locale = localeFromPathname(new URL(request.url).pathname);
   if (!slug || RESERVED_SLUGS.has(slug)) {
     return { kind: "other" };
+  }
+  if (isBrandReviewSlug(slug)) {
+    return {
+      kind: "wordpress",
+      slug,
+      faqItems: await loadBrandReviewFaqItems(slug, locale),
+    };
   }
   if (!getUsaStatePrerenderSlugs().includes(slug)) {
     return { kind: "other" };
   }
   const manifestGames = getStateGames(slug);
+  const faqItems = await loadStateFaqItems(slug, locale);
   if (!import.meta.env.SSR) {
-    return { kind: "state", slug, games: manifestGames };
+    return { kind: "state", slug, games: manifestGames, faqItems };
   }
   let games = manifestGames;
   let results: DrawResultView[] = [];
@@ -55,7 +73,7 @@ export async function slugOrStateLoader({
   } catch {
     /* build-time API hiccup; page still prerenders from manifest + FAQ */
   }
-  return { kind: "state", slug, games, results };
+  return { kind: "state", slug, games, results, faqItems };
 }
 
 const SlugOrStatePage = () => {
@@ -71,12 +89,23 @@ const SlugOrStatePage = () => {
     return <WordPressPage />;
   }
 
+  if (loaderData?.kind === "wordpress") {
+    return (
+      <WordPressPage
+        initialBrandReviewFaqItems={
+          loaderData.faqItems as BrandReviewFaqItem[] | undefined
+        }
+      />
+    );
+  }
+
   if (loaderData?.kind === "state" && loaderData.slug) {
     return (
       <StateLandingPage
         stateSlug={loaderData.slug}
         initialGames={loaderData.games}
         initialResults={loaderData.results}
+        initialFaqItems={loaderData.faqItems as StateFaqItem[] | undefined}
       />
     );
   }

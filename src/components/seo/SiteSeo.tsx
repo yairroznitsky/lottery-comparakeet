@@ -1,12 +1,24 @@
 import { Head } from "vite-react-ssg";
 import {
-  DEFAULT_DESCRIPTION,
   SITE_NAME,
   absoluteUrl,
   defaultOgImageUrl,
   getSiteUrl,
   pageTitle,
 } from "@/config/site";
+import { useLocale, useT } from "@/i18n/LocaleContext";
+import {
+  LOCALE_HREFLANG,
+  LOCALE_HTML_LANG,
+  LOCALE_OG,
+  LOCALES,
+  type Locale,
+} from "@/i18n/locales";
+import { localizePath, logicalPathFromPathname } from "@/i18n/paths";
+import {
+  getAvailableLocalesForPath,
+  shouldNoIndexFallback,
+} from "@/i18n/pageTranslations";
 import {
   buildBreadcrumbJsonLd,
   buildOrganizationJsonLd,
@@ -23,14 +35,21 @@ function buildStructuredGraph(
   path: string | undefined,
   breadcrumbs: PageMeta["breadcrumbs"],
   extra: PageMeta["jsonLd"],
+  locale: Locale,
+  siteDescription: string,
 ): object | undefined {
   const siteUrl = getSiteUrl();
-  const structured: object[] = [buildOrganizationJsonLd(siteUrl, SITE_NAME)];
-  if (path === "/" || path === undefined || path === "") {
-    structured.push(buildWebSiteJsonLd(siteUrl, SITE_NAME));
+  const structured: object[] = [
+    buildOrganizationJsonLd(siteUrl, SITE_NAME, locale),
+  ];
+  const logical = path ? logicalPathFromPathname(path) : "";
+  if (logical === "" || path === "/" || path === undefined) {
+    structured.push(buildWebSiteJsonLd(siteUrl, SITE_NAME, siteDescription, locale));
   }
   if (breadcrumbs && breadcrumbs.length > 0) {
-    structured.push(buildBreadcrumbJsonLd(breadcrumbs, siteUrl));
+    structured.push(
+      buildBreadcrumbJsonLd(breadcrumbs, siteUrl, locale),
+    );
   }
   if (extra) {
     structured.push(...(Array.isArray(extra) ? extra : [extra]));
@@ -62,24 +81,52 @@ const SiteSeo = ({
   breadcrumbs,
   jsonLd,
   titleTemplate = true,
+  availableLocales,
 }: SiteSeoProps) => {
-  const fullTitle = titleTemplate ? pageTitle(title) : title;
-  const canonicalUrl =
-    canonical ?? (path !== undefined ? absoluteUrl(path) : absoluteUrl("/"));
+  const locale = useLocale();
+  const t = useT();
+  const siteName = t("site.name");
+  const fullTitle = titleTemplate ? pageTitle(title, siteName) : title;
+  const canonicalPath =
+    path !== undefined ? path : localizePath("/", locale);
+  const canonicalUrl = canonical ?? absoluteUrl(canonicalPath);
   const ogImage = image ?? defaultOgImageUrl();
-  const robots = noIndex ? "noindex, follow" : "index, follow";
-  const structured = buildStructuredGraph(path, breadcrumbs, jsonLd);
+  const logicalPath = logicalPathFromPathname(canonicalPath);
+  const hreflangLocales =
+    availableLocales ?? getAvailableLocalesForPath(logicalPath);
+  const indexBlocked =
+    noIndex || shouldNoIndexFallback(logicalPath, locale);
+  const robots = indexBlocked ? "noindex, follow" : "index, follow";
+  const structured = buildStructuredGraph(
+    canonicalPath,
+    breadcrumbs,
+    jsonLd,
+    locale,
+    t("site.webSiteDescription"),
+  );
+  const alternateLocales = LOCALES.filter((l) =>
+    hreflangLocales.includes(l),
+  );
 
   return (
     <Head>
-      <html lang="en" />
+      <html lang={LOCALE_HTML_LANG[locale]} />
       <title>{fullTitle}</title>
-      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
+      <meta name="description" content={description || t("site.defaultDescription")} />
       <meta name="robots" content={robots} />
       <meta name="googlebot" content={robots} />
-      <meta name="author" content={SITE_NAME} />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="en_US" />
+      <meta name="author" content={siteName} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content={LOCALE_OG[locale]} />
+      {alternateLocales
+        .filter((l) => l !== locale)
+        .map((l) => (
+          <meta
+            key={l}
+            property="og:locale:alternate"
+            content={LOCALE_OG[l]}
+          />
+        ))}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -90,6 +137,19 @@ const SiteSeo = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={canonicalUrl} />
+      {alternateLocales.map((l) => (
+        <link
+          key={l}
+          rel="alternate"
+          hrefLang={LOCALE_HREFLANG[l]}
+          href={absoluteUrl(localizePath(`/${logicalPath}`, l))}
+        />
+      ))}
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href={absoluteUrl(localizePath(`/${logicalPath}`, "en"))}
+      />
       {structured ? (
         <script type="application/ld+json">
           {JSON.stringify(structured)}
@@ -101,4 +161,6 @@ const SiteSeo = ({
 
 export default SiteSeo;
 
-export { DEFAULT_DESCRIPTION, SITE_NAME };
+export function useDefaultDescription(): string {
+  return useT()("site.defaultDescription");
+}

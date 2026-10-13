@@ -23,11 +23,11 @@ export function absoluteUrl(path: string): string {
   return `${base}${normalized}`;
 }
 
-export function pageTitle(title: string): string {
-  if (title === SITE_NAME || title.endsWith(` | ${SITE_NAME}`)) {
+export function pageTitle(title: string, siteName: string = SITE_NAME): string {
+  if (title === siteName || title.endsWith(` | ${siteName}`)) {
     return title;
   }
-  return `${title} | ${SITE_NAME}`;
+  return `${title} | ${siteName}`;
 }
 
 export function defaultOgImageUrl(): string {
