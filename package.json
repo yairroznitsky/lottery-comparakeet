@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.104.1",
+    "flag-icons": "^7.5.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-router-dom": "^6.30.6",

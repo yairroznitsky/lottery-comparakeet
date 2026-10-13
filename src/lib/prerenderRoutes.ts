@@ -1,4 +1,4 @@
-import { getIntlGamePaths } from "@/lib/intlGames";
+import { intlFaqPathsWithContent } from "@/lib/intlFaqs";
 import { getAllStateGamePaths } from "@/lib/stateGames";
 import { stateFaqSlugsWithContent } from "@/lib/stateFaqs";
 
@@ -14,11 +14,17 @@ export function getUsaStateGamePrerenderPaths(): string[] {
   return getAllStateGamePaths();
 }
 
-/** International `region/game` paths (excludes US states). */
+/** International game paths with FAQ content (SEO pages; others are client-rendered). */
 export function getIntlGamePrerenderPaths(): string[] {
-  return getIntlGamePaths();
+  return intlFaqPathsWithContent();
 }
 
-export function getAllGamePrerenderPaths(): string[] {
-  return [...new Set([...getUsaStateGamePrerenderPaths(), ...getIntlGamePrerenderPaths()])].sort();
+/** Paths for `/:region/:game` static generation (USA games + intl FAQ hubs). */
+export function getDrawResultsPrerenderPaths(): string[] {
+  return [
+    ...new Set([
+      ...getUsaStateGamePrerenderPaths(),
+      ...getIntlGamePrerenderPaths(),
+    ]),
+  ].sort();
 }

@@ -14,7 +14,6 @@ import PageLoadingState from "@/components/wordpress/PageLoadingState";
 import {
   useInternationalResults,
   useUsaResults,
-  useUsaStates,
 } from "@/hooks/useLotteryData";
 import { useTheLotterPlayUrl } from "@/hooks/useTheLotterPlayUrl";
 import SiteSeo from "@/components/seo/SiteSeo";
@@ -33,7 +32,7 @@ import {
   intlGameSeoTitle,
 } from "@/lib/intlSeoCopy";
 import {
-  getAllGamePrerenderPaths,
+  getDrawResultsPrerenderPaths,
   getUsaStatePrerenderSlugs,
 } from "@/lib/prerenderRoutes";
 import { buildFaqPageJsonLd } from "@/lib/seo";
@@ -46,10 +45,6 @@ import {
   useWordPressSlug,
 } from "@/hooks/useLocalWordPressContent";
 import type { DrawResultView, ResultsPeriod } from "@/types/lottery";
-import {
-  fetchInternationalResults,
-  fetchUsaResults,
-} from "@/services/lotteryResultsApi";
 import WordPressContent from "@/components/wordpress/WordPressContent";
 
 export interface DrawResultsLoaderData {
@@ -60,9 +55,10 @@ export interface DrawResultsLoaderData {
 }
 
 export function getDrawResultsStaticPaths() {
-  return getAllGamePrerenderPaths();
+  return getDrawResultsPrerenderPaths();
 }
 
+/** Last-year views load draw data on the client; skip SSG (large, low SEO value). */
 export function getDrawResultsLastYearStaticPaths() {
   return [];
 }
@@ -91,20 +87,7 @@ export async function drawResultsLoader({
     ? []
     : await loadIntlFaqItems(region, game, locale);
 
-  if (!import.meta.env.SSR) {
-    return { rows: [], period, isUsa, faqItems };
-  }
-
-  let rows: DrawResultView[] = [];
-  try {
-    rows = isUsa
-      ? await fetchUsaResults(region, game, period)
-      : await fetchInternationalResults(region, game, period);
-  } catch {
-    rows = [];
-  }
-
-  return { rows, period, isUsa, faqItems };
+  return { rows: [], period, isUsa, faqItems };
 }
 
 const DrawResultsPage = () => {
@@ -120,10 +103,9 @@ const DrawResultsPage = () => {
     loaderData?.period ??
     (location.pathname.endsWith("/last-year") ? "lastYear" : "lastTen");
 
-  const { data: states, isPending: statesPending } = useUsaStates();
   const isUsa =
     region !== undefined &&
-    (states?.includes(region) ||
+    (getUsaStatePrerenderSlugs().includes(region) ||
       region === "us" ||
       loaderData?.isUsa === true);
 
@@ -132,12 +114,12 @@ const DrawResultsPage = () => {
     region,
     game,
     period,
-    Boolean(!statesPending && region && game && !isUsa),
+    Boolean(region && game && !isUsa),
   );
 
   const activeQuery = isUsa ? usaQuery : intlQuery;
 
-  const wpEnabled = Boolean(region && game && !statesPending);
+  const wpEnabled = Boolean(region && game);
   const usaWpQuery = useWordPressSlug(game, wpEnabled && isUsa);
   const intlWpQuery = useWordPressIntlGame(
     region,
@@ -173,13 +155,8 @@ const DrawResultsPage = () => {
   }
 
   const rows = rowsPreview;
-  const loading =
-    (statesPending || activeQuery.isPending) &&
-    (!rows || rows.length === 0);
-
-  if (loading) {
-    return <PageLoadingState />;
-  }
+  const resultsLoading =
+    activeQuery.isPending && (!rows || rows.length === 0);
 
   if (activeQuery.isError && !rows?.length) {
     return (
@@ -284,15 +261,21 @@ const DrawResultsPage = () => {
               <h2 className="font-display mb-4 text-xl font-semibold text-brand-950">
                 Latest results
               </h2>
-              {latest ? (
-                <LatestDrawCard
-                  draw={latest}
-                  playHref={playUrl.href}
-                  playLabel={playUrl.label}
-                  className="mb-6"
-                />
-              ) : null}
-              <ResultsTable rows={resultRows} />
+              {resultsLoading ? (
+                <PageLoadingState />
+              ) : (
+                <>
+                  {latest ? (
+                    <LatestDrawCard
+                      draw={latest}
+                      playHref={playUrl.href}
+                      playLabel={playUrl.label}
+                      className="mb-6"
+                    />
+                  ) : null}
+                  <ResultsTable rows={resultRows} />
+                </>
+              )}
             </section>
 
             {hasAbout ? (
@@ -384,17 +367,22 @@ const DrawResultsPage = () => {
         </div>
       </header>
 
-      {latest ? (
-        <LatestDrawCard
-          as="section"
-          draw={latest}
-          playHref={playUrl.href}
-          playLabel={playUrl.label}
-          className="mb-8"
-        />
-      ) : null}
-
-      <ResultsTable rows={resultRows} />
+      {resultsLoading ? (
+        <PageLoadingState />
+      ) : (
+        <>
+          {latest ? (
+            <LatestDrawCard
+              as="section"
+              draw={latest}
+              playHref={playUrl.href}
+              playLabel={playUrl.label}
+              className="mb-8"
+            />
+          ) : null}
+          <ResultsTable rows={resultRows} />
+        </>
+      )}
 
       {wpContent ? (
         <div className="mt-12 border-t border-brand-200 pt-10">

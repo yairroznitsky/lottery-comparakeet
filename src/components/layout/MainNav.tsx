@@ -5,6 +5,7 @@ import {
   LocalizedNavLink,
 } from "@/i18n/LocalizedLink";
 import { useT } from "@/i18n/LocaleContext";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import NavDropdown, { type NavDropdownLink } from "@/components/layout/NavDropdown";
 import {
   POPULAR_USA_STATE_SLUGS,
@@ -265,37 +266,9 @@ const MainNav = () => {
   return (
     <>
       <nav
-        className="flex flex-1 items-center justify-end lg:flex-row"
+        className="flex flex-1 items-center justify-end gap-2 lg:flex-row"
         aria-label={t("nav.primary")}
       >
-        <button
-          ref={toggleRef}
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/30 text-white transition-transform hover:bg-white/10 lg:hidden"
-          aria-label={t("nav.toggleMenu")}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-nav-sheet"
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          <span className="sr-only">
-            {mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
-          </span>
-          <svg
-            className={`h-5 w-5 transition-transform duration-200 ${mobileOpen ? "rotate-90" : ""}`}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden
-          >
-            {mobileOpen ? (
-              <path d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            )}
-          </svg>
-        </button>
-
         <div
           ref={desktopNavRef}
           className="hidden lg:flex lg:flex-row lg:flex-wrap lg:items-center lg:justify-end lg:gap-0.5"
@@ -342,6 +315,36 @@ const MainNav = () => {
             {t("nav.resources")}
           </LocalizedNavLink>
         </div>
+
+        <LanguageSwitcher />
+
+        <button
+          ref={toggleRef}
+          type="button"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/30 text-white transition-transform hover:bg-white/10 lg:hidden"
+          aria-label={t("nav.toggleMenu")}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav-sheet"
+          onClick={() => setMobileOpen((v) => !v)}
+        >
+          <span className="sr-only">
+            {mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+          </span>
+          <svg
+            className={`h-5 w-5 transition-transform duration-200 ${mobileOpen ? "rotate-90" : ""}`}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            aria-hidden
+          >
+            {mobileOpen ? (
+              <path d="M6 6l12 12M18 6L6 18" />
+            ) : (
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            )}
+          </svg>
+        </button>
       </nav>
 
       {mobileOpen ? (

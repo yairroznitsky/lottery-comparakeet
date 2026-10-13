@@ -44,6 +44,16 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   it: "Italiano",
 };
 
+/** ISO 3166-1 alpha-2 codes for flag-icons (`fi fi-xx`). */
+export const LOCALE_FLAG: Record<Locale, string> = {
+  en: "us",
+  es: "es",
+  pt: "br",
+  fr: "fr",
+  de: "de",
+  it: "it",
+};
+
 export function isLocale(value: string | undefined): value is Locale {
   return LOCALES.includes(value as Locale);
 }

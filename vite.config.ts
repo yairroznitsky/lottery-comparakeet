@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   ssgOptions: {
-    concurrency: 3,
+    concurrency: 16,
   },
   server: {
     host: "::",

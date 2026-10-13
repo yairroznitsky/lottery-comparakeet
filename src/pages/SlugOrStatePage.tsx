@@ -11,19 +11,13 @@ import { getWordPressSingleSegmentStaticSlugs } from "@/lib/wordpressContent";
 import StateLandingPage from "@/pages/StateLandingPage";
 import WordPressPage from "@/pages/WordPressPage";
 import PageLoadingState from "@/components/wordpress/PageLoadingState";
-import {
-  fetchUsaResults,
-  fetchUsaStateGames,
-} from "@/services/lotteryResultsApi";
 import type { BrandReviewFaqItem } from "@/types/brandReviewFaq";
-import type { DrawResultView } from "@/types/lottery";
 import type { StateFaqItem } from "@/types/stateFaq";
 
 export interface SlugOrStateLoaderData {
   kind: "state" | "wordpress" | "other";
   slug?: string;
   games?: string[];
-  results?: DrawResultView[];
   faqItems?: StateFaqItem[] | BrandReviewFaqItem[];
 }
 
@@ -60,20 +54,7 @@ export async function slugOrStateLoader({
   }
   const manifestGames = getStateGames(slug);
   const faqItems = await loadStateFaqItems(slug, locale);
-  if (!import.meta.env.SSR) {
-    return { kind: "state", slug, games: manifestGames, faqItems };
-  }
-  let games = manifestGames;
-  let results: DrawResultView[] = [];
-  try {
-    if (games.length === 0) {
-      games = await fetchUsaStateGames(slug);
-    }
-    results = await fetchUsaResults(slug, undefined, "lastTen");
-  } catch {
-    /* build-time API hiccup; page still prerenders from manifest + FAQ */
-  }
-  return { kind: "state", slug, games, results, faqItems };
+  return { kind: "state", slug, games: manifestGames, faqItems };
 }
 
 const SlugOrStatePage = () => {
@@ -104,17 +85,20 @@ const SlugOrStatePage = () => {
       <StateLandingPage
         stateSlug={loaderData.slug}
         initialGames={loaderData.games}
-        initialResults={loaderData.results}
         initialFaqItems={loaderData.faqItems as StateFaqItem[] | undefined}
       />
     );
   }
 
-  if (isPending) {
+  const isStateSlug =
+    getUsaStatePrerenderSlugs().includes(slug) ||
+    Boolean(states?.includes(slug));
+
+  if (isPending && !isStateSlug) {
     return <PageLoadingState />;
   }
 
-  if (states?.includes(slug)) {
+  if (isStateSlug) {
     return <StateLandingPage stateSlug={slug} />;
   }
 
